@@ -2,10 +2,12 @@
 
 import Brands from "@/components/Brands.vue";
 import Project from "@/components/Project.vue";
+import Hero from "@/components/Hero.vue";
 </script>
 
 <template>
-  <div>
+  <div class="container">
+    <Hero />
     <header>
       <div class="brands">
         <Brands
@@ -23,17 +25,31 @@ import Project from "@/components/Project.vue";
   </div>
 </header>
     <Project
-        date="2024"
+        date="Spring 2023"
+        icon="https://yt3.googleusercontent.com/IxJunmeSafWr3Y81_N_g1CZVHUuY6AOAHSOx2AFuetArLsSVojwksdHV2kyqkFzan5Kc_DhvDA=s160-c-k-c0x00ffffff-no-rj"
+        name="Paths"
+        description="Final Project for Programming 2 Course"
+        link="https://mattkje.github.io/"
+    />
+    <Project
+        date="Spring 2024"
+        icon="https://yt3.googleusercontent.com/IxJunmeSafWr3Y81_N_g1CZVHUuY6AOAHSOx2AFuetArLsSVojwksdHV2kyqkFzan5Kc_DhvDA=s160-c-k-c0x00ffffff-no-rj"
+        name="Learniverse Connect"
+        description="Final Project for Web Development Course"
+        link="https://mattkje.github.io/"
+    />
+    <Project
+        date="Fall 2024"
         icon="https://yt3.googleusercontent.com/QvzqDJOtfThI4QVIqw3qORtKEmcE3zd97PCxOAVG0NMdWegygXFbUm7pPmSSfmC8SRH6Ue5Fpw=s160-c-k-c0x00ffffff-no-rj"
         name="Party Poopers"
-        description="First Major Game Project"
+        description="Final Project for Game Development Course"
         link="https://shelstad.itch.io/party-poopers"
     />
     <Project
-        date="2024"
+        date="Spring 2025"
         icon="https://yt3.googleusercontent.com/IxJunmeSafWr3Y81_N_g1CZVHUuY6AOAHSOx2AFuetArLsSVojwksdHV2kyqkFzan5Kc_DhvDA=s160-c-k-c0x00ffffff-no-rj"
-        name="Portfolio"
-        description="First Major Web Project"
+        name="Warehouse Simulator (WWS)"
+        description="Bachelor's Thesis Project"
         link="https://mattkje.github.io/"
     />
   </div>
@@ -45,6 +61,10 @@ import Project from "@/components/Project.vue";
 </template>
 
 <style scoped>
+.container {
+  margin: 0;
+}
+
 header {
   line-height: 1.5;
 }
