@@ -36,14 +36,22 @@ const props = defineProps({
 
 <style scoped>
 .container {
+  border: 1px solid #e3e3e3;
+  border-radius: 4rem;
+  align-content: center;
+  justify-content: center;
+  display: flex;
+  flex-direction: column;
+  padding: 1rem;
+  margin: 1rem 0;
+  transition: background-color 0.3s, border-color 0.3s;
   text-align: center;
-  margin: 20px;
 }
 
 .brand-logo {
   max-width: 100px;
   border-radius: 1.5rem;
-  margin-bottom: 10px;
+  margin: auto;
 }
 
 h1 {

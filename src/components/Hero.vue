@@ -15,9 +15,8 @@
   display: flex;
   align-items: center;
   justify-content: center;
-  height: 100vh;
-  background: linear-gradient(135deg, #6e8efb, #a777e3);
-  color: white;
+  height: 60vh;
+  color: black;
   text-align: center;
   margin: 0;
 }

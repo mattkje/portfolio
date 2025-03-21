@@ -24,24 +24,25 @@ const props = defineProps({
 
 <style scoped>
 .project-box {
-  border: 1px solid var(--color-border);
-  border-radius: 8px;
+  height: 200px;
+  border: 1px solid #e3e3e3;
+  border-radius: 4rem;
+  align-content: flex-start;
+  display: flex;
+  flex-direction: row;
   padding: 1rem;
   margin: 1rem 0;
-  background-color: var(--color-background-soft);
   transition: background-color 0.3s, border-color 0.3s;
 }
 
 .project-box:hover {
-  background-color: var(--color-background-mute);
-  border-color: var(--color-border-hover);
+
 }
 
 .project-icon {
-  width: 50px;
-  height: 50px;
-  border-radius: 50%;
-  margin-bottom: 1rem;
+  height: 100%;
+  border-radius: 3rem;
+  margin-right: 1rem;
 }
 
 .project-details {
