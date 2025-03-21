@@ -4,7 +4,7 @@
 <template>
   <nav class="menubar">
     <div class="logo">
-      <img src="@/assets/images/mk.png" alt="Logo" />
+      <img src="@/assets/logo.svg" alt="Logo" />
     </div>
     <ul class="nav-links">
       <li><router-link to="/">Home</router-link></li>

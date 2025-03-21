@@ -1,20 +1,22 @@
 <script setup>
-defineProps({
+const props = defineProps({
   title: String,
   description: String,
   image: String,
   link: String,
   price: String
 });
+
+const emit = defineEmits(['click']);
 </script>
 
 <template>
-  <div class="game-card">
+  <div class="game-card" @click="$emit('click', title)">
     <img :src="image" :alt="title" class="game-image" />
     <div class="game-info">
       <h2>{{ title }}</h2>
       <p>{{ description }}</p>
-      <p class="price"> {{ price }}</p>
+      <p class="price">{{ price }}</p>
     </div>
   </div>
 </template>

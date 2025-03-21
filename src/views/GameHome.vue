@@ -1,5 +1,6 @@
 <script setup>
 import { ref } from 'vue';
+import { useRouter } from 'vue-router';
 import GameCard from '@/components/Game/GameCard.vue';
 import GameMenubar from "@/components/Game/GameMenubar.vue";
 
@@ -16,9 +17,25 @@ const games = ref([
     description: 'Final Project for Game Development Course',
     image: 'https://img.itch.zone/aW1nLzE4OTY2NDE5LnBuZw==/original/nveufF.png',
     link: 'https://shelstad.itch.io/party-poopers',
-    price: 'Free'
+    price: 'Free',
+    screenshots: [
+      'https://example.com/screenshot3.png',
+      'https://example.com/screenshot4.png'
+    ],
+    downloadLinks: [
+      { url: 'https://shelstad.itch.io/party-poopers', label: 'Download' }
+    ],
+    genre: 'Party',
+    version: '1.1.0',
+    releaseDate: '2023-02-01'
   },
 ]);
+
+const router = useRouter();
+
+const navigateToGameView = (title) => {
+  router.push({ name: 'GameView', params: { title } });
+};
 </script>
 
 <template>
@@ -34,6 +51,7 @@ const games = ref([
         :image="game.image"
         :link="game.link"
         :price="game.price"
+        @click="navigateToGameView"
       />
     </div>
   </div>

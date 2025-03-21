@@ -9,7 +9,7 @@ const handleSearch = () => {
 
 <template>
   <nav class="menubar">
-    <img src="https://yt3.googleusercontent.com/QvzqDJOtfThI4QVIqw3qORtKEmcE3zd97PCxOAVG0NMdWegygXFbUm7pPmSSfmC8SRH6Ue5Fpw=s160-c-k-c0x00ffffff-no-rj" alt="Shelstad Studios Logo" class="logo" />
+    <img src="@/assets/images/game/shelstad-light.svg" alt="Shelstad Studios Logo" class="logo" />
     <ul class="menu-links">
       <li><a href="/">Home</a></li>
       <li><a href="/all-games">All Games</a></li>

@@ -8,6 +8,7 @@ const props = defineProps({
   description: String,
   link: String
 });
+
 </script>
 
 <template>
@@ -41,6 +42,8 @@ const props = defineProps({
 
 .project-icon {
   height: 100%;
+  aspect-ratio: 1 / 1;
+  object-fit: contain;
   border-radius: 3rem;
   margin-right: 1rem;
 }

@@ -4,6 +4,11 @@ import Brands from "@/components/Brands.vue";
 import Project from "@/components/Project.vue";
 import Hero from "@/components/Hero.vue";
 import Menubar from "@/components/Menubar.vue";
+import partyPoopersImage from '@/assets/images/projects/party-poopers.png';
+import warehouseSimulatorImage from '@/assets/images/projects/wws.svg';
+import learniverseConnectImage from '@/assets/images/projects/learniverse-connect.svg';
+import pathsImage from '@/assets/images/projects/paths.png';
+import Skills from "@/components/Skills.vue";
 
 onMounted(() => {
   const menubar = document.querySelector('.menubar');
@@ -19,12 +24,15 @@ onMounted(() => {
     window.removeEventListener('scroll', handleScroll);
   });
 });
+
+
 </script>
 
 <template>
   <Menubar class="menubar"/>
   <div class="container">
     <Hero />
+    <Skills/>
     <header>
       <div class="brands">
         <Brands
@@ -41,34 +49,35 @@ onMounted(() => {
         />
       </div>
     </header>
+    <h1>Featured Projects</h1>
     <div class="project-grid">
       <Project
           date="Spring 2023"
-          icon="https://yt3.googleusercontent.com/IxJunmeSafWr3Y81_N_g1CZVHUuY6AOAHSOx2AFuetArLsSVojwksdHV2kyqkFzan5Kc_DhvDA=s160-c-k-c0x00ffffff-no-rj"
+          :icon="pathsImage"
           name="Paths"
           description="Final Project for Programming 2 Course"
           link="https://mattkje.github.io/"
       />
       <Project
           date="Spring 2024"
-          icon="https://yt3.googleusercontent.com/IxJunmeSafWr3Y81_N_g1CZVHUuY6AOAHSOx2AFuetArLsSVojwksdHV2kyqkFzan5Kc_DhvDA=s160-c-k-c0x00ffffff-no-rj"
+          :icon="learniverseConnectImage"
           name="Learniverse Connect"
           description="Final Project for Web Development Course"
           link="https://mattkje.github.io/"
       />
       <Project
           date="Fall 2024"
-          icon="https://img.itch.zone/aW1nLzE4OTY2NDE5LnBuZw==/original/nveufF.png"
+          :icon="partyPoopersImage"
           name="Party Poopers"
           description="Final Project for Game Development Course"
           link="https://shelstad.itch.io/party-poopers"
       />
       <Project
           date="Spring 2025"
-          icon="https://yt3.googleusercontent.com/IxJunmeSafWr3Y81_N_g1CZVHUuY6AOAHSOx2AFuetArLsSVojwksdHV2kyqkFzan5Kc_DhvDA=s160-c-k-c0x00ffffff-no-rj"
+          :icon="warehouseSimulatorImage"
           name="Warehouse Simulator (WWS)"
           description="Bachelor's Thesis Project"
-          link="https://mattkje.github.io/"
+          link="https://github.com/mattkje/group01-bachelor-2025"
       />
     </div>
   </div>
