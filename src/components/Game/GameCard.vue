@@ -12,10 +12,17 @@ const emit = defineEmits(['click']);
 
 <template>
   <div class="game-card" @click="$emit('click', title)">
-    <img :src="image" :alt="title" class="game-image" />
-    <div class="game-info">
-      <h2>{{ title }}</h2>
-      <p>{{ description }}</p>
+    <div class="left-part">
+      <div class="image-stack">
+        <div class="background-square"></div>
+        <img :src="image" alt="title Icon" class="game-icon" />
+      </div>
+    </div>
+    <div class="right-part">
+      <div class="game-info">
+        <h2>{{ title }}</h2>
+        <p>{{ description }}</p>
+      </div>
       <p class="price">{{ price }}</p>
     </div>
   </div>
@@ -23,14 +30,40 @@ const emit = defineEmits(['click']);
 
 <style scoped>
 .game-card {
-  border: 1px solid #ccc;
+  height: 200px;
+  border: 1px solid #e3e3e3;
+  border-radius: 4rem;
+  justify-content: space-between;
   display: flex;
   flex-direction: row;
-  border-radius: 8px;
-  padding: 1rem;
-  text-align: left;
-  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-  transition: transform 0.3s, box-shadow 0.3s;
+  padding: 1rem 3rem 1rem 1rem;
+  margin: 1rem 0;
+  transition: background-color 0.3s, border-color 0.3s, transform 0.3s;
+}
+
+.left-part {
+  display: flex;
+  flex-direction: row;
+  gap: 1rem;
+}
+
+.right-part {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+.price {
+  align-self: flex-end;
+  text-align: center;
+  color: white;
+  padding: 0.7rem 3rem;
+  border-radius: 1.5rem;
+  background-color: hsla(210, 100%, 50%, 1); /* Blue color */
+  text-decoration: none;
+  font-weight: bold;
+  font-size: 1rem;
+  transition: color 0.3s, transform 0.3s;
 }
 
 .game-card:hover {
@@ -39,24 +72,45 @@ const emit = defineEmits(['click']);
 }
 
 .game-info {
-  margin-left: 1rem;
+  display: flex;
+  flex-direction: column;
+  text-align: left;
 }
 
 .game-info h2 {
-  font-size: 1.2rem;
+  margin-bottom: 0; /* Adjust this value as needed */
 }
 
 .game-info p {
   font-size: 0.8rem;
 }
 
-.game-image {
-  width: 150px;
-  height: 150px;
-  object-fit: cover;
-  border-radius: 8px;
+.image-stack {
+  aspect-ratio: 1 / 1;
+  height: 100%;
+  position: relative;
+  display: inline-block;
 }
 
+.background-square {
+  position: absolute;
+  top: 0;
+  left: 0;
+  aspect-ratio: 1 / 1;
+  height: 100%;
+  background-color: #f5f5f5; /* Dark color */
+  border-radius: 3rem; /* Rounded corners */
+  z-index: 0;
+}
+
+.game-icon {
+  position: relative;
+  z-index: 1;
+  height: 100%;
+  aspect-ratio: 1 / 1;
+  object-fit: contain;
+  border-radius: 3rem;
+}
 .game-link {
   display: inline-block;
   margin-top: 1rem;

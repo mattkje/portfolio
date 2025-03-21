@@ -8,8 +8,8 @@ const handleSearch = () => {
 </script>
 
 <template>
-  <nav class="menubar">
-    <img src="@/assets/images/game/shelstad-light.svg" alt="Shelstad Studios Logo" class="logo" />
+  <nav class="gameMenubar">
+    <img src="@/assets/images/game/shelstad-color.svg" alt="Shelstad Studios Logo" class="logo" />
     <ul class="menu-links">
       <li><a href="/">Home</a></li>
       <li><a href="/all-games">All Games</a></li>
@@ -26,13 +26,14 @@ const handleSearch = () => {
 </template>
 
 <style scoped>
-.menubar {
+.gameMenubar {
   display: flex;
   align-items: center;
   justify-content: space-between;
   padding: 1rem;
-  background-color: #333;
-  color: #fff;
+  background-color: white;
+  border-bottom: #e3e3e3 solid 1px;
+  color: #000;
 }
 
 .logo {
@@ -42,11 +43,12 @@ const handleSearch = () => {
 .menu-links {
   list-style: none;
   display: flex;
-  gap: 1rem;
+  gap: 5rem;
 }
 
 .menu-links a {
-  color: #fff;
+  color: #0071FF;
+  font-weight: bold;
   text-decoration: none;
 }
 
@@ -62,10 +64,10 @@ const handleSearch = () => {
 }
 
 .search-bar button {
-  padding: 0.5rem 1rem;
   border: none;
-  border-radius: 4px;
-  background-color: #42b983;
+  padding: 0.7rem 1.2rem;
+  border-radius: 1.5rem;
+  background-color: hsla(210, 100%, 50%, 1);
   color: #fff;
   cursor: pointer;
   margin-left: 0.5rem;

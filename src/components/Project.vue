@@ -13,13 +13,18 @@ const props = defineProps({
 
 <template>
   <div class="project-box">
-    <img :src="icon" alt="Project Icon" class="project-icon" />
-    <div class="project-details">
-      <h2 class="project-name">{{ name }}</h2>
-      <p class="project-date">{{ date }}</p>
-      <p class="project-description">{{ description }}</p>
-      <a class="link" :href="link"> Project Website </a>
+    <div class="left-part">
+      <div class="image-stack">
+        <div class="background-square"></div>
+        <img :src="icon" alt="Project Icon" class="project-icon" />
+      </div>
+      <div class="project-details">
+        <h2 class="project-name">{{ name }}</h2>
+        <p class="project-date">{{ date }}</p>
+        <p class="project-description">{{ description }}</p>
+      </div>
     </div>
+    <a class="link" :href="link"> Learn more </a>
   </div>
 </template>
 
@@ -28,24 +33,45 @@ const props = defineProps({
   height: 200px;
   border: 1px solid #e3e3e3;
   border-radius: 4rem;
-  align-content: flex-start;
+  justify-content: space-between;
   display: flex;
   flex-direction: row;
-  padding: 1rem;
+  padding: 1rem 3rem 1rem 1rem;
   margin: 1rem 0;
   transition: background-color 0.3s, border-color 0.3s;
 }
 
-.project-box:hover {
+.left-part {
+  display: flex;
+  flex-direction: row;
+  gap: 1rem;
+}
 
+.image-stack {
+  aspect-ratio: 1 / 1;
+  height: 100%;
+  position: relative;
+  display: inline-block;
+}
+
+.background-square {
+  position: absolute;
+  top: 0;
+  left: 0;
+  aspect-ratio: 1 / 1;
+  height: 100%;
+  background-color: #f5f5f5; /* Dark color */
+  border-radius: 3rem; /* Rounded corners */
+  z-index: 0;
 }
 
 .project-icon {
+  position: relative;
+  z-index: 1;
   height: 100%;
   aspect-ratio: 1 / 1;
   object-fit: contain;
   border-radius: 3rem;
-  margin-right: 1rem;
 }
 
 .project-details {
@@ -64,19 +90,23 @@ const props = defineProps({
 }
 
 .project-description {
-  font-size: 1rem;
+  font-size: 0.8rem;
   margin-bottom: 1rem;
 }
 
-.project-links a {
-  display: inline-block;
-  margin-right: 0.5rem;
-  color: hsla(160, 100%, 37%, 1);
+.link {
+  align-self: flex-end;
+  color: white;
+  padding: 0.7rem 1.2rem;
+  border-radius: 1.5rem;
+  background-color: hsla(210, 100%, 50%, 1); /* Blue color */
   text-decoration: none;
-  transition: color 0.3s;
+  font-weight: bold;
+  transition: color 0.3s, transform 0.3s;
+  white-space: nowrap;
 }
-
-.project-links a:hover {
-  color: hsla(160, 100%, 37%, 0.7);
+.link:hover {
+  color: hsl(210, 100%, 92%); /* Lighter blue on hover */
+  transform: scale(1.1); /* Slightly enlarge on hover */
 }
 </style>

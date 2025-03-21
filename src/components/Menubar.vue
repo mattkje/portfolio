@@ -8,7 +8,6 @@
     </div>
     <ul class="nav-links">
       <li><router-link to="/">Home</router-link></li>
-      <li><router-link to="/about">About</router-link></li>
       <li><router-link to="/projects">Projects</router-link></li>
       <li><router-link to="/contact">Contact</router-link></li>
     </ul>
@@ -21,6 +20,7 @@
   justify-content: center;
   align-items: center;
   padding: 1rem 2rem;
+  background-color: white ;
   color: black;
 }
 
@@ -33,7 +33,7 @@
   list-style: none;
   display: flex;
   justify-content: space-between;
-  width: 40%;
+  width: 30%;
   gap: 1.5rem;
 }
 
