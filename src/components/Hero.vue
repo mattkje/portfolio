@@ -1,10 +1,27 @@
 <script setup>
+document.addEventListener('DOMContentLoaded', () => {
+  const elements = document.querySelectorAll('.scroll-animation');
+
+  const observer = new IntersectionObserver((entries) => {
+    entries.forEach(entry => {
+      if (entry.isIntersecting) {
+        entry.target.classList.add('visible');
+      } else {
+        entry.target.classList.remove('visible');
+      }
+    });
+  });
+
+  elements.forEach(element => {
+    observer.observe(element);
+  });
+});
 </script>
 
 <template>
   <div class="hero">
-    <div class="hero-content">
-      <img class="portrait" src="https://avatars.githubusercontent.com/u/40216910?v=4" alt="Logo" />
+    <div class="hero-content scroll-animation">
+      <img class="portrait" src="https://backends.it.ntnu.no/user-profile-service/rest/files/6375c1c4-bde5-3ad1-aec4-7b8a5123edd0" alt="Logo" />
       <div class="hero-text">
         <h1>I'm Matti Kjellstadli</h1>
         <h2>Web Designer & Frontend Developer.</h2>
@@ -62,4 +79,16 @@ h2 {
 p {
   font-size: 1.25rem;
 }
+
+.scroll-animation {
+  opacity: 0;
+  transform: translateY(20px);
+  transition: opacity 0.6s ease-out, transform 0.6s ease-out;
+}
+
+.scroll-animation.visible {
+  opacity: 1;
+  transform: translateY(0);
+}
+
 </style>

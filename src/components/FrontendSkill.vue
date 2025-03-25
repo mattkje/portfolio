@@ -4,10 +4,28 @@ const skills = [
   { name: 'Vue.js, React', icon: '@/assets/icons/vue.svg' },
   { name: 'Asset creation with Photoshop, Affinity Designer', icon: '@/assets/icons/unity.png' }
 ];
+
+document.addEventListener('DOMContentLoaded', () => {
+  const elements = document.querySelectorAll('.scroll-animation');
+
+  const observer = new IntersectionObserver((entries) => {
+    entries.forEach(entry => {
+      if (entry.isIntersecting) {
+        entry.target.classList.add('visible');
+      } else {
+        entry.target.classList.remove('visible');
+      }
+    });
+  });
+
+  elements.forEach(element => {
+    observer.observe(element);
+  });
+});
 </script>
 <template>
-  <h1>Frontend Development & Asset Creation</h1>
-  <div class="skills-section">
+  <h1 class="scroll-animation">Frontend Development & Asset Creation</h1>
+  <div class="skills-section scroll-animation">
     <div class="skill-block">
       <img src="@/assets/icons/js.png" alt="icon missing" class="skill-icon" />
       <p>HTML, CSS, JavaScript</p>
@@ -74,4 +92,16 @@ const skills = [
   color: hsl(210, 100%, 92%); /* Lighter blue on hover */
   transform: scale(1.1); /* Slightly enlarge on hover */
 }
+
+.scroll-animation {
+  opacity: 0;
+  transform: translateY(20px);
+  transition: opacity 0.6s ease-out, transform 0.6s ease-out;
+}
+
+.scroll-animation.visible {
+  opacity: 1;
+  transform: translateY(0);
+}
+
 </style>
