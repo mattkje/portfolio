@@ -5,37 +5,51 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="5cbcede9-ef8b-42d2-8e91-9d65f72643db" name="Changes" comment="Something more added">
-      <change afterPath="$PROJECT_DIR$/shelstad/src/assets/graphics/background-home-2.svg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/shelstad/src/assets/graphics/background-home.svg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/shelstad/src/assets/graphics/not-found.svg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/shelstad/src/assets/main-dark.css" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/dataSources/8b0f0414-3a60-4085-aa47-05f58772a2f5.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/dataSources/8b0f0414-3a60-4085-aa47-05f58772a2f5.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/backend/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/backend/pom.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/backend/src/main/java/no/mattikj/backend/controller/IconController.java" beforeDir="false" afterPath="$PROJECT_DIR$/backend/src/main/java/no/mattikj/backend/controller/IconController.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/backend/src/main/java/no/mattikj/backend/database.sql" beforeDir="false" afterPath="$PROJECT_DIR$/backend/src/main/java/no/mattikj/backend/database.sql" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/backend/src/main/java/no/mattikj/backend/entity/File.java" beforeDir="false" afterPath="$PROJECT_DIR$/backend/src/main/java/no/mattikj/backend/entity/File.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/backend/src/main/java/no/mattikj/backend/entity/Game.java" beforeDir="false" afterPath="$PROJECT_DIR$/backend/src/main/java/no/mattikj/backend/entity/Game.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/backend/src/main/java/no/mattikj/backend/entity/Icon.java" beforeDir="false" afterPath="$PROJECT_DIR$/backend/src/main/java/no/mattikj/backend/entity/Icon.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/backend/src/main/java/no/mattikj/backend/repository/IconRepository.java" beforeDir="false" afterPath="$PROJECT_DIR$/backend/src/main/java/no/mattikj/backend/repository/IconRepository.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/backend/src/main/java/no/mattikj/backend/entity/Tool.java" beforeDir="false" afterPath="$PROJECT_DIR$/backend/src/main/java/no/mattikj/backend/entity/Tool.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/backend/src/main/java/no/mattikj/backend/service/FileService.java" beforeDir="false" afterPath="$PROJECT_DIR$/backend/src/main/java/no/mattikj/backend/service/FileService.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/backend/src/main/java/no/mattikj/backend/service/IconService.java" beforeDir="false" afterPath="$PROJECT_DIR$/backend/src/main/java/no/mattikj/backend/service/IconService.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/backend/src/main/resources/application.properties" beforeDir="false" afterPath="$PROJECT_DIR$/backend/src/main/resources/application.properties" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/portfolio/node_modules/.package-lock.json" beforeDir="false" afterPath="$PROJECT_DIR$/portfolio/node_modules/.package-lock.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/portfolio/node_modules/vite/dist/node/chunks/dep-B0fRCRkQ.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/portfolio/node_modules/vite/dist/node/chunks/dep-BL6Xg-kE.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/portfolio/node_modules/vite/dist/node/chunks/dep-dLifoI9c.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/portfolio/node_modules/vite/dist/node/cli.js" beforeDir="false" afterPath="$PROJECT_DIR$/portfolio/node_modules/vite/dist/node/cli.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/portfolio/node_modules/vite/dist/node/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/portfolio/node_modules/vite/dist/node/index.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/portfolio/node_modules/vite/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/portfolio/node_modules/vite/package.json" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/portfolio/package-lock.json" beforeDir="false" afterPath="$PROJECT_DIR$/portfolio/package-lock.json" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/portfolio/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/portfolio/package.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/shelstad/jsconfig.json" beforeDir="false" afterPath="$PROJECT_DIR$/shelstad/tsconfig.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/shelstad/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/shelstad/index.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/shelstad/node_modules/.package-lock.json" beforeDir="false" afterPath="$PROJECT_DIR$/shelstad/node_modules/.package-lock.json" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/shelstad/node_modules/.vite/deps/_metadata.json" beforeDir="false" afterPath="$PROJECT_DIR$/shelstad/node_modules/.vite/deps/_metadata.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/shelstad/node_modules/.vite/deps/vue-router.js" beforeDir="false" afterPath="$PROJECT_DIR$/shelstad/node_modules/.vite/deps/vue-router.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/shelstad/node_modules/.vite/deps/vue-router.js.map" beforeDir="false" afterPath="$PROJECT_DIR$/shelstad/node_modules/.vite/deps/vue-router.js.map" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/shelstad/node_modules/.vite/deps/vue.js" beforeDir="false" afterPath="$PROJECT_DIR$/shelstad/node_modules/.vite/deps/vue.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/shelstad/node_modules/vite/dist/node/chunks/dep-B0fRCRkQ.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/shelstad/node_modules/vite/dist/node/chunks/dep-BL6Xg-kE.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/shelstad/node_modules/vite/dist/node/chunks/dep-dLifoI9c.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/shelstad/node_modules/vite/dist/node/cli.js" beforeDir="false" afterPath="$PROJECT_DIR$/shelstad/node_modules/vite/dist/node/cli.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/shelstad/node_modules/vite/dist/node/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/shelstad/node_modules/vite/dist/node/index.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/shelstad/node_modules/vite/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/shelstad/node_modules/vite/package.json" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/shelstad/package-lock.json" beforeDir="false" afterPath="$PROJECT_DIR$/shelstad/package-lock.json" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/shelstad/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/shelstad/package.json" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/shelstad/src/App.vue" beforeDir="false" afterPath="$PROJECT_DIR$/shelstad/src/App.vue" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/shelstad/src/assets/graphics/background-home-2.svg" beforeDir="false" afterPath="$PROJECT_DIR$/shelstad/src/assets/graphics/background-home-2.svg" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/shelstad/src/assets/graphics/background-home.svg" beforeDir="false" afterPath="$PROJECT_DIR$/shelstad/src/assets/graphics/background-home.svg" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/shelstad/src/assets/main.css" beforeDir="false" afterPath="$PROJECT_DIR$/shelstad/src/assets/main.css" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/shelstad/src/components/GameCard.vue" beforeDir="false" afterPath="$PROJECT_DIR$/shelstad/src/components/GameCard.vue" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/shelstad/src/components/IconButton.vue" beforeDir="false" afterPath="$PROJECT_DIR$/shelstad/src/components/IconButton.vue" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/shelstad/src/components/Menubar.vue" beforeDir="false" afterPath="$PROJECT_DIR$/shelstad/src/components/Menubar.vue" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/shelstad/src/components/ToolCard.vue" beforeDir="false" afterPath="$PROJECT_DIR$/shelstad/src/components/ToolCard.vue" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/shelstad/src/views/GamePage.vue" beforeDir="false" afterPath="$PROJECT_DIR$/shelstad/src/views/GamePage.vue" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/shelstad/src/views/Games.vue" beforeDir="false" afterPath="$PROJECT_DIR$/shelstad/src/views/Games.vue" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/shelstad/src/views/Home.vue" beforeDir="false" afterPath="$PROJECT_DIR$/shelstad/src/views/Home.vue" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/shelstad/src/views/IconPage.vue" beforeDir="false" afterPath="$PROJECT_DIR$/shelstad/src/views/IconPage.vue" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/shelstad/src/views/ToolPage.vue" beforeDir="false" afterPath="$PROJECT_DIR$/shelstad/src/views/ToolPage.vue" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/shelstad/src/views/Tools.vue" beforeDir="false" afterPath="$PROJECT_DIR$/shelstad/src/views/Tools.vue" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -119,10 +133,10 @@
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
       <recent name="$PROJECT_DIR$/shelstad/src/assets/graphics" />
+      <recent name="$PROJECT_DIR$/shelstad/src/assets" />
       <recent name="$PROJECT_DIR$/src/assets/icons" />
       <recent name="$PROJECT_DIR$/src/assets/graphics" />
       <recent name="$PROJECT_DIR$/src/assets/images/game" />
-      <recent name="$PROJECT_DIR$/src/assets/images/projects" />
     </key>
     <key name="MoveFile.RECENT_KEYS">
       <recent name="$PROJECT_DIR$/" />
@@ -200,7 +214,7 @@
       <workItem from="1742589777553" duration="6733000" />
       <workItem from="1742814533615" duration="335000" />
       <workItem from="1742830957133" duration="3117000" />
-      <workItem from="1742920512862" duration="30233000" />
+      <workItem from="1742920512862" duration="53178000" />
     </task>
     <task id="LOCAL-00001" summary="Something more added">
       <option name="closed" value="true" />
@@ -219,5 +233,17 @@
   <component name="VcsManagerConfiguration">
     <MESSAGE value="Something more added" />
     <option name="LAST_COMMIT_MESSAGE" value="Something more added" />
+  </component>
+  <component name="XDebuggerManager">
+    <breakpoint-manager>
+      <breakpoints>
+        <line-breakpoint enabled="true" type="javascript">
+          <url>file://$PROJECT_DIR$/shelstad/src/views/Games.vue</url>
+          <line>2</line>
+          <properties lambdaOrdinal="-1" />
+          <option name="timeStamp" value="4" />
+        </line-breakpoint>
+      </breakpoints>
+    </breakpoint-manager>
   </component>
 </project>

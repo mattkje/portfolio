@@ -6,12 +6,14 @@ const welcomeMessage = ref('Welcome to Shelstad Studios!');
 
 <template>
   <div class="home">
-    <img src="../assets/images/game/shelstad-color.svg" alt="Shelstad Studios Logo" class="main-logo" />
-    <h1>{{ welcomeMessage }}</h1>
-    <p>Independent solo developer</p>
-    <div class="links">
-      <router-link to="/games" class="link-button">View Games</router-link>
-      <router-link to="/icons" class="link-button">View Icons</router-link>
+    <div class="home-items">
+      <img src="../assets/images/game/shelstad-color.svg" alt="Shelstad Studios Logo" class="main-logo" />
+      <h1>{{ welcomeMessage }}</h1>
+      <p>Independent solo developer</p>
+      <div class="links">
+        <router-link to="/games" class="link-button">View Games</router-link>
+        <router-link to="/icons" class="link-button">View Icons</router-link>
+      </div>
     </div>
   </div>
 </template>
@@ -23,18 +25,8 @@ html, body {
   margin: 0;
 }
 
-.home {
-  background: url("@/assets/graphics/background-home-2.svg") no-repeat 0 calc(100% + 10rem);
-  background-size: calc(100% + 1rem);
-  text-align: center;
-  height: 100vh;
-  display: flex;
-  flex-direction: column;
-  justify-content: flex-start;
-}
-
-.home img {
-  margin-top: 10rem;
+.home-items {
+  margin: 10rem auto 0 auto;
 }
 
 .main-logo {

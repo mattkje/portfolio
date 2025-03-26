@@ -39,6 +39,7 @@ onMounted(fetchTools);
 
 <template>
   <div class="game-store">
+    <h1>Tools</h1>
     <div class="game-grid">
       <ToolCard
           v-for="tool in tools || []"
@@ -57,14 +58,15 @@ onMounted(fetchTools);
 
 <style scoped>
 .game-store {
-  text-align: center;
-  margin-top: 100px;
-  padding: 2rem;
+  text-align: left;
+  padding: 5rem 2rem 0 2rem;
 }
 
 .game-grid {
+  max-width: 1920px;
   display: grid;
-  grid-template-columns: repeat(auto-fill, minmax(500px, 1fr));
+  grid-template-columns: repeat(auto-fill, minmax(400px, 1fr));
   gap: 1rem;
+  margin: auto;
 }
 </style>

@@ -13,7 +13,6 @@ package no.mattikj.backend.entity;
         private Long id;
 
         private String fileName;
-        private String filePath;
 
         public void setId(Long id) {
             this.id = id;
@@ -21,14 +20,6 @@ package no.mattikj.backend.entity;
 
         public Long getId() {
             return id;
-        }
-
-        public String getFilePath() {
-            return filePath;
-        }
-
-        public void setFilePath(String filePath) {
-            this.filePath = filePath;
         }
 
         public String getFileName() {

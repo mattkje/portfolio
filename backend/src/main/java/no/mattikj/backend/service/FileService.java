@@ -37,7 +37,6 @@ package no.mattikj.backend.service;
 
                 File fileEntity = new File();
                 fileEntity.setFileName(file.getOriginalFilename());
-                fileEntity.setFilePath(path.toString());
                 fileRepository.save(fileEntity);
 
                 return file.getOriginalFilename();

@@ -9,7 +9,7 @@ const props = defineProps({
   version: String,
   iconId: Number,
   link: String,
-  price: String,
+  price: Number,
   createdAt: String,
 });
 
@@ -38,7 +38,8 @@ const handleClick = () => {
         <p><strong>Release Date:</strong> {{ new Date(createdAt).toLocaleDateString() }}</p>
         <p><strong>Current Version:</strong> {{ props.version }}</p>
       </div>
-      <p class="price" v-if="price === 0">Free</p>
+      <p class="unavailable-price" v-if="price === -1">Unavailable</p>
+      <p class="price" v-else-if="price === 0">Free</p>
       <p class="price" v-else>{{ price }}</p>
     </div>
   </router-link>
@@ -47,7 +48,7 @@ const handleClick = () => {
 <style scoped>
 .game-card {
   height: 150px;
-  border: 1px solid #e3e3e3;
+  border: 1px solid var(--border-color);
   text-decoration: none;
   color: inherit; /* Inherit color from parent */
   border-radius: 3rem;
@@ -80,6 +81,19 @@ const handleClick = () => {
   padding: 0.5rem 2rem;
   border-radius: 1.5rem;
   background-color: hsla(210, 100%, 50%, 1); /* Blue color */
+  text-decoration: none;
+  font-weight: 900;
+  font-size: 0.8rem;
+  transition: color 0.3s, transform 0.3s;
+}
+
+.unavailable-price {
+  align-self: flex-end;
+  text-align: center;
+  color: white;
+  padding: 0.5rem 2rem;
+  border-radius: 1.5rem;
+  background-color: hsl(0, 0%, 53%); /* Blue color */
   text-decoration: none;
   font-weight: 900;
   font-size: 0.8rem;
@@ -120,7 +134,7 @@ const handleClick = () => {
   left: 0;
   aspect-ratio: 1 / 1;
   height: 100%;
-  background-color: #f5f5f5; /* Dark color */
+  background-color: var(--border-color); /* Dark color */
   border-radius: 2rem; /* Rounded corners */
   z-index: 0;
 }
@@ -132,12 +146,5 @@ const handleClick = () => {
   aspect-ratio: 1 / 1;
   object-fit: contain;
   border-radius: 2rem;
-}
-.game-link {
-  display: inline-block;
-  margin-top: 1rem;
-  color: #42b983;
-  font-size: 0.8rem;
-  text-decoration: none;
 }
 </style>

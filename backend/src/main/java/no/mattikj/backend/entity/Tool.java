@@ -1,7 +1,6 @@
 package no.mattikj.backend.entity;
 
 import jakarta.persistence.*;
-import java.math.BigDecimal;
 import java.sql.Timestamp;
 
 @Entity
@@ -10,30 +9,39 @@ public class Tool {
 
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
-    private int id;
+    private Long id;
 
-    @Column(nullable = false, length = 255)
+    @Column(name = "name")
     private String name;
 
-    @Column(nullable = false, columnDefinition = "TEXT")
+    @Column(name = "description")
     private String description;
 
     @Column(name = "version")
     private String version;
 
-    @Column(nullable = false, precision = 10, scale = 2)
-    private BigDecimal price;
+    @Column(name = "icon_id")
+    private Long iconId;
 
+    @Column(name = "screenshot")
+    private String screenshot;
+
+    @Column(name = "price")
+    private double price;
+
+    @Column(name = "link")
+    private String link;
+
+    //created at (timestamp in sql)
     @Column(name = "created_at", nullable = false, updatable = false, insertable = false, columnDefinition = "TIMESTAMP DEFAULT CURRENT_TIMESTAMP")
     private Timestamp createdAt;
 
-    // Getters and Setters
-    public int getId() {
-        return id;
+    public Tool() {
     }
 
-    public void setId(int id) {
-        this.id = id;
+    public Tool(Tool tool) {
+        this.id = tool.getId();
+        this.name = tool.getName();
     }
 
     public String getName() {
@@ -52,14 +60,6 @@ public class Tool {
         this.description = description;
     }
 
-    public BigDecimal getPrice() {
-        return price;
-    }
-
-    public void setPrice(BigDecimal price) {
-        this.price = price;
-    }
-
     public Timestamp getCreatedAt() {
         return createdAt;
     }
@@ -74,5 +74,45 @@ public class Tool {
 
     public void setVersion(String version) {
         this.version = version;
+    }
+
+    public Long getId() {
+        return id;
+    }
+
+    public void setId(Long id) {
+        this.id = id;
+    }
+
+    public double getPrice() {
+        return price;
+    }
+
+    public void setPrice(double price) {
+        this.price = price;
+    }
+
+    public String getLink() {
+        return link;
+    }
+
+    public void setLink(String link) {
+        this.link = link;
+    }
+
+    public String getScreenshot() {
+        return screenshot;
+    }
+
+    public void setScreenshot(String screenshot) {
+        this.screenshot = screenshot;
+    }
+
+    public Long getIconId() {
+        return iconId;
+    }
+
+    public void setIconId(Long iconId) {
+        this.iconId = iconId;
     }
 }

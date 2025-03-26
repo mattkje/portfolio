@@ -10,7 +10,7 @@ CREATE TABLE IF NOT EXISTS games
     description TEXT,
     icon_id     INT          NOT NULL,
     screenshot  TEXT,
-    price       DECIMAL(10, 2),
+    price       DECIMAL(10, 2) DEFAULT -1,
     link        VARCHAR(255),
     created_at  TIMESTAMP DEFAULT CURRENT_TIMESTAMP
 );
@@ -33,7 +33,6 @@ CREATE TABLE IF NOT EXISTS icons
 (
     id         INT AUTO_INCREMENT PRIMARY KEY,
     file_name  VARCHAR(255) NOT NULL,
-    file_path  VARCHAR(255) NOT NULL,
     created_at TIMESTAMP DEFAULT CURRENT_TIMESTAMP
 );
 
@@ -41,7 +40,6 @@ CREATE TABLE IF NOT EXISTS files
 (
     id         INT AUTO_INCREMENT PRIMARY KEY,
     file_name  VARCHAR(255) NOT NULL,
-    file_path  VARCHAR(255) NOT NULL,
     created_at TIMESTAMP DEFAULT CURRENT_TIMESTAMP
 );
 
@@ -91,17 +89,67 @@ Now you''re ready to dive into the world of interactive storytelling!
 
 ## 2023 Exam
 Paths was originally developed as part of a Computer Science exam assignment at NTNU in May 2023. It''s a testament to the project''s academic roots and commitment to excellence in interactive storytelling.
-', '1.0.0', 0, 2, '3', '', '2023-06-01 00:00:00');
+', '1.0.0', -1, 2, '3', '', '2023-06-01 00:00:00'),
+    ('The Car Game','
+## This is a simple car sandbox where you can drive around crashing into objects with no other goal than to relax.
 
-INSERT INTO tools (name, description, version, price, icon_id, screenshot, link)
-VALUES ('WWS', 'A warehouse workflow simulator', '1.0.0', 0, 3, '2', ''),
-       ('GitLocker', 'A simple tool for managing git keys', '1.0.0', 0, 3, '2', '');
+### Controls:
+
+- Move: WASD
+- Increase FOV: F
+- Decrease FOV: G
+- Toggle Perspective (1st/3rd person): V
+- Toggle Orthographic/Perspective: 1
+
+### Features:
+
+- Eight different obstacles:
+  - Glass
+  - Light post
+  - Green Car
+  - Red Truck
+  - Concrete Barrier
+  - Football
+  - Benches
+  - Wheels
+- Physics-focused car (rolling wheels and momentum)
+- Fancy lighting
+', '1.0.0', 0, 3, '1', '', '2024-10-09 00:00:00');
+
+INSERT INTO tools (name, description, version, price, icon_id, screenshot, link, created_at)
+VALUES ('WWS', 'A warehouse workflow simulator', '1.0.0', -1, 1, '2', '', '2025-05-20 00:00:00'),
+       ('GitLocker', 'A simple tool for managing git keys', '1.0.0', -1, 2, '2', '','2023-10-17 00:00:00');
 
 
 -- Insert dummy data into icons table
-INSERT INTO icons (file_name, file_path)
-VALUES ('pause.svg', '/home/mattikjellstadli/Downloads/shelstad/pause.svg');
+INSERT INTO icons (file_name)
+VALUES ('pause'),
+         ('play'),
+         ('add'),
+         ('bell'),
+         ('bell-update'),
+         ('busy'),
+         ('check'),
+         ('edit'),
+         ('error'),
+         ('fast-forward-1x'),
+       ('fast-forward-2x'),
+       ('fast-forward-5x'),
+       ('fast-forward-10x'),
+         ('clock'),
+         ('factory'),
+         ('ready'),
+         ('settings'),
+         ('simulation'),
+         ('skip'),
+         ('staff'),
+         ('copy'),
+         ('trash'),
+         ('warning-red'),
+         ('warning-yellow'),
+         ('profile'),
+         ('panels');
 -- Insert dummy data into projects table
 
-INSERT INTO files (file_name, file_path)
-VALUES ('pause.svg', '/home/mattikjellstadli/Downloads/shelstad/pause.svg');
+INSERT INTO files (file_name)
+VALUES ('pause.svg');

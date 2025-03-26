@@ -7,10 +7,12 @@ interface Game {
   id: number;
   name: string;
   description: string;
+  version: string;
   iconId: number;
   screenshot: string;
   price: number;
   link: string;
+  createdAt: string;
 }
 
 const games = ref<Game[] | null>(null);
@@ -60,14 +62,15 @@ onMounted(fetchGames);
 
 <style scoped>
 .game-store {
-
   text-align: left;
   padding: 5rem 2rem 0 2rem;
 }
 
 .game-grid {
+  max-width: 1920px;
   display: grid;
-  grid-template-columns: repeat(auto-fill, minmax(30%, 1fr));
+  grid-template-columns: repeat(auto-fill, minmax(400px, 1fr));
   gap: 1rem;
+  margin: auto;
 }
 </style>

@@ -1,0 +1,48 @@
+@import './base.css';
+
+:root {
+  --border-color: #233244;
+  --text-color-1: #dae9fd;
+  --text-color-2: #3b4e6c;
+}
+
+#app {
+  font-family: Avenir, Helvetica, Arial, sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  text-align: center;
+  color: #dae9fd;
+}
+
+html, body {
+  background-color: #18212c;
+  height: 100%;
+  margin: 0;
+}
+
+.menubar {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  background-color: #18212c;
+}
+
+.menu-links a {
+  color: #dae9fd;
+  text-decoration: none;
+}
+
+.home {
+  background: url("@/assets/graphics/background-home-3.svg") no-repeat 0 calc(100% + 10rem);
+  background-size: calc(100% + 1rem);
+  text-align: center;
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+}
+
+
+
+

@@ -28,7 +28,7 @@ public class Game {
     private String screenshot;
 
     @Column(name = "price")
-    private float price;
+    private double price;
 
     @Column(name = "link")
     private String link;
@@ -85,11 +85,11 @@ public class Game {
         this.screenshot = screenshot;
     }
 
-    public float getPrice() {
+    public double getPrice() {
         return price;
     }
 
-    public void setPrice(float price) {
+    public void setPrice(double price) {
         this.price = price;
     }
 

@@ -45,7 +45,6 @@ public class IconService {
 
         Icon iconEntity = new Icon();
         iconEntity.setFileName(file.getOriginalFilename());
-        iconEntity.setFilePath(path.toString());
         iconRepository.save(iconEntity);
 
         return file.getOriginalFilename();
