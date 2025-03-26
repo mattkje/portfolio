@@ -2,8 +2,8 @@
 import { onMounted, ref } from 'vue';
 import { useRoute } from 'vue-router';
 
-// Import or define the Game type
-interface Game {
+// Import or define the Tool type
+interface Tool {
   id: number;
   name: string;
   description: string;
@@ -13,58 +13,58 @@ interface Game {
 }
 
 const route = useRoute();
-const game = ref<Game | null>(null);
-const gameLinks = ref<{ [key: string]: string | null }>({});
+const tool = ref<Tool | null>(null);
+const toolLinks = ref<{ [key: string]: string | null }>({});
 
-const fetchGame = async (id: number) => {
-  const response = await fetch(`http://localhost:8080/api/games/${id}`);
-  game.value = await response.json();
-  await fetchGameLinks();
+const fetchTool = async (id: number) => {
+  const response = await fetch(`http://localhost:8080/api/tools/${id}`);
+  tool.value = await response.json();
+  await fetchToolLinks();
 };
 
-const fetchGameLinks = async () => {
-  if (!game.value) return;
+const fetchToolLinks = async () => {
+  if (!tool.value) return;
 
   const platforms = ['win', 'mac', 'lin'];
   for (const platform of platforms) {
-    const link = `http://localhost:8080/api/files/${game.value.name.trim().replace(/ /g, '')}-${platform}.zip`;
+    const link = `http://localhost:8080/api/files/${tool.value.name.trim().replace(/ /g, '')}-${platform}.zip`;
     try {
       const response = await fetch(link, { method: 'HEAD' });
       if (response.status === 404) {
-        gameLinks.value[platform] = null;
+        toolLinks.value[platform] = null;
       } else {
-        gameLinks.value[platform] = link;
+        toolLinks.value[platform] = link;
       }
     } catch (error) {
       console.error('Error checking link:', error);
-      gameLinks.value[platform] = '';
+      toolLinks.value[platform] = '';
     }
   }
 };
 
 onMounted(() => {
-  const gameId = Number(route.params.id);
-  fetchGame(gameId);
+  const toolId = Number(route.params.id);
+  fetchTool(toolId);
 });
 </script>
 
 <template>
-  <div v-if="game" class="game-page">
-    <h1>{{ game.name }}</h1>
+  <div v-if="tool" class="tool-page">
+    <h1>{{ tool.name }}</h1>
     <div class="screenshots">
       <div class="screenshot-gallery">
-        <img v-for="index in parseInt(game.screenshot)" :key="index" :src="`http://localhost:8080/api/files/game${game.id}-${index}.png`" :alt="`Screenshot ${index + 1}`" />
+        <img v-for="index in parseInt(tool.screenshot)" :key="index" :src="`http://localhost:8080/api/files/tool${tool.id}-${index}.png`" :alt="`Screenshot ${index + 1}`" />
       </div>
     </div>
-    <p>{{ game.description }}</p>
-    <p v-if="game.price === 0">Free</p>
-    <p v-else>\${{ game.price }}</p>
+    <p>{{ tool.description }}</p>
+    <p v-if="tool.price === 0">Free</p>
+    <p v-else>\${{ tool.price }}</p>
     <div class="download-box">
-      <img :src="`http://localhost:8080/api/files/game${game.iconId}.png`" alt="Game Icon" />
+      <img :src="`http://localhost:8080/api/files/tool${tool.iconId}.png`" alt="Tool Icon" />
       <div class="download-buttons">
-        <a v-if="gameLinks.win" class="download-button" :href="gameLinks.win" download>Download for Windows</a>
-        <a v-if="gameLinks.mac" class="download-button" :href="gameLinks.mac" download>Download for Mac</a>
-        <a v-if="gameLinks.lin" class="download-button" :href="gameLinks.lin" download>Download for Linux</a>
+        <a v-if="toolLinks.win" class="download-button" :href="toolLinks.win" download>Download for Windows</a>
+        <a v-if="toolLinks.mac" class="download-button" :href="toolLinks.mac" download>Download for Mac</a>
+        <a v-if="toolLinks.lin" class="download-button" :href="toolLinks.lin" download>Download for Linux</a>
       </div>
     </div>
   </div>
@@ -74,13 +74,13 @@ onMounted(() => {
 </template>
 
 <style scoped>
-.game-page {
+.tool-page {
   text-align: center;
   margin-top: 100px;
   padding: 2rem;
 }
 
-.game-page img {
+.tool-page img {
   width: 200px;
   height: auto;
   border-radius: 3rem;

@@ -11,10 +11,10 @@ const handleSearch = () => {
   <nav class="gameMenubar">
     <img src="../assets/images/game/shelstad-color.svg" alt="Shelstad Studios Logo" class="logo" />
     <ul class="menu-links">
-      <li><a href="/public">Home</a></li>
-      <li><a href="/all-games">Games</a></li>
-      <li><a href="/contact">Tools</a></li>
-      <li><a href="/contact">Icons</a></li>
+      <li><a href="/">Home</a></li>
+      <li><a href="/games">Games</a></li>
+      <li><a href="/tools">Tools</a></li>
+      <li><a href="/icons">Icons</a></li>
     </ul>
     <div class="search-bar">
       <input

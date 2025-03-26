@@ -1,72 +1,50 @@
 <script setup>
 import { ref } from 'vue';
-import { useRouter } from 'vue-router';
-import GameCard from '@/components/GameCard.vue';
-import Menubar from "@/components/Menubar.vue";
-import partyPoopersImage from '@/assets/images/projects/party-poopers.svg';
-import pathsImage from '@/assets/images/projects/paths.png';
 
-const games = ref([
-  {
-    title: 'Paths',
-    description: 'Final Project for Programming 2 Course',
-    image: pathsImage,
-    link: 'https://mattkje.github.io/',
-    price: 'Free'
-  },
-  {
-    title: 'Party Poopers',
-    description: 'Final Project for Game Development Course',
-    image: partyPoopersImage,
-    link: 'https://shelstad.itch.io/party-poopers',
-    price: 'Free',
-    screenshots: [
-      'https://example.com/screenshot3.png',
-      'https://example.com/screenshot4.png'
-    ],
-    downloadLinks: [
-      { url: 'https://shelstad.itch.io/party-poopers', label: 'Download' }
-    ],
-    genre: 'Party',
-    version: '1.1.0',
-    releaseDate: '2023-02-01'
-  },
-]);
-
-const router = useRouter();
-
-const navigateToGameView = (title) => {
-  router.push({ name: 'GameView', params: { title } });
-};
+const welcomeMessage = ref('Welcome to Shelstad Studios!');
 </script>
 
 <template>
-  <div class="game-store">
-    <div class="game-grid">
-      <GameCard
-        v-for="game in games"
-        :key="game.title"
-        :title="game.title"
-        :description="game.description"
-        :image="game.image"
-        :link="game.link"
-        :price="game.price"
-        @click="navigateToGameView"
-      />
+  <div class="home">
+    <img src="../assets/images/game/shelstad-color.svg" alt="Shelstad Studios Logo" class="main-logo" />
+    <h1>{{ welcomeMessage }}</h1>
+    <p>Explore our collection of games and tools.</p>
+    <div class="links">
+      <router-link to="/games" class="link-button">View Games</router-link>
+      <router-link to="/icons" class="link-button">View Icons</router-link>
     </div>
   </div>
 </template>
 
 <style scoped>
-.game-store {
+.home {
   text-align: center;
   margin-top: 100px;
   padding: 2rem;
 }
 
-.game-grid {
-  display: grid;
-  grid-template-columns: repeat(auto-fill, minmax(500px, 1fr));
-  gap: 1rem;
+.main-logo {
+  height: 300px;
+}
+
+.links {
+  display: flex;
+  justify-content: center;
+  gap: 2rem;
+  margin-top: 2rem;
+}
+
+.link-button {
+  padding: 1rem 2rem;
+  border-radius: 1.5rem;
+  background-color: hsla(210, 100%, 50%, 1);
+  color: white;
+  text-decoration: none;
+  font-weight: bold;
+  transition: transform 0.3s, color 0.3s;
+}
+
+.link-button:hover {
+  transform: scale(1.1);
 }
 </style>

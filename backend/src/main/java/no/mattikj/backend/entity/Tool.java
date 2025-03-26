@@ -5,8 +5,8 @@ import java.math.BigDecimal;
 import java.sql.Timestamp;
 
 @Entity
-@Table(name = "projects")
-public class Project {
+@Table(name = "tools")
+public class Tool {
 
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
@@ -17,6 +17,9 @@ public class Project {
 
     @Column(nullable = false, columnDefinition = "TEXT")
     private String description;
+
+    @Column(name = "version")
+    private String version;
 
     @Column(nullable = false, precision = 10, scale = 2)
     private BigDecimal price;
@@ -63,5 +66,13 @@ public class Project {
 
     public void setCreatedAt(Timestamp createdAt) {
         this.createdAt = createdAt;
+    }
+
+    public String getVersion() {
+        return version;
+    }
+
+    public void setVersion(String version) {
+        this.version = version;
     }
 }

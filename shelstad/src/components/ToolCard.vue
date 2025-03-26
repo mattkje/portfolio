@@ -11,7 +11,7 @@ const props = defineProps({
 const emit = defineEmits(['game-clicked']);
 
 const getIcon = (iconId: number) => {
-  return `http://localhost:8080/api/files/game${iconId}.png`;
+  return `http://localhost:8080/api/files/tool${iconId}.png`;
 };
 
 const handleClick = () => {
@@ -20,11 +20,11 @@ const handleClick = () => {
 </script>
 
 <template>
-<router-link class="game-card" :to="'/game/' + id">
+  <router-link class="game-card" :to="'/tool/' + id">
     <div class="left-part">
       <div class="image-stack">
         <div class="background-square"></div>
-        <img :src="getIcon(iconId)" alt="title Icon" class="game-icon" />
+        <img :src="getIcon(id)" alt="title Icon" class="game-icon" />
       </div>
     </div>
     <div class="right-part">

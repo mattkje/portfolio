@@ -5,18 +5,40 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="5cbcede9-ef8b-42d2-8e91-9d65f72643db" name="Changes" comment="Something more added">
-      <change afterPath="$PROJECT_DIR$/backend/src/main/java/no/mattikj/backend/config/WebConfig.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/backend/src/main/java/no/mattikj/backend/controller/GameController.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/backend/src/main/java/no/mattikj/backend/controller/IconController.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/backend/src/main/java/no/mattikj/backend/controller/ProjectController.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/backend/src/main/java/no/mattikj/backend/database.sql" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/backend/src/main/java/no/mattikj/backend/entity/Game.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/backend/src/main/java/no/mattikj/backend/entity/Icon.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/backend/src/main/java/no/mattikj/backend/entity/Project.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/backend/src/main/java/no/mattikj/backend/repository/GameRepository.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/backend/src/main/java/no/mattikj/backend/service/GameService.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/modules.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/modules.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/backend/src/main/java/no/mattikj/backend/config/SecurityConfiguration.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/backend/src/main/java/no/mattikj/backend/controller/FileController.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/backend/src/main/java/no/mattikj/backend/controller/ToolController.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/backend/src/main/java/no/mattikj/backend/entity/File.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/backend/src/main/java/no/mattikj/backend/repository/FileRepository.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/backend/src/main/java/no/mattikj/backend/repository/IconRepository.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/backend/src/main/java/no/mattikj/backend/repository/ToolRepository.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/backend/src/main/java/no/mattikj/backend/service/FileService.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/backend/src/main/java/no/mattikj/backend/service/IconService.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/backend/src/main/java/no/mattikj/backend/service/ToolService.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/shelstad/src/components/ToolCard.vue" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/shelstad/src/views/Games.vue" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/shelstad/src/views/ToolPage.vue" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/dataSources/8b0f0414-3a60-4085-aa47-05f58772a2f5.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/dataSources/8b0f0414-3a60-4085-aa47-05f58772a2f5.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/backend/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/backend/pom.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/backend/src/main/java/no/mattikj/backend/config/WebConfig.java" beforeDir="false" afterPath="$PROJECT_DIR$/backend/src/main/java/no/mattikj/backend/config/WebConfig.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/backend/src/main/java/no/mattikj/backend/controller/GameController.java" beforeDir="false" afterPath="$PROJECT_DIR$/backend/src/main/java/no/mattikj/backend/controller/GameController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/backend/src/main/java/no/mattikj/backend/controller/IconController.java" beforeDir="false" afterPath="$PROJECT_DIR$/backend/src/main/java/no/mattikj/backend/controller/IconController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/backend/src/main/java/no/mattikj/backend/controller/ProjectController.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/backend/src/main/java/no/mattikj/backend/database.sql" beforeDir="false" afterPath="$PROJECT_DIR$/backend/src/main/java/no/mattikj/backend/database.sql" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/backend/src/main/java/no/mattikj/backend/entity/Game.java" beforeDir="false" afterPath="$PROJECT_DIR$/backend/src/main/java/no/mattikj/backend/entity/Game.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/backend/src/main/java/no/mattikj/backend/entity/Project.java" beforeDir="false" afterPath="$PROJECT_DIR$/backend/src/main/java/no/mattikj/backend/entity/Tool.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/backend/src/main/java/no/mattikj/backend/repository/GameRepository.java" beforeDir="false" afterPath="$PROJECT_DIR$/backend/src/main/java/no/mattikj/backend/repository/GameRepository.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/backend/src/main/java/no/mattikj/backend/service/GameService.java" beforeDir="false" afterPath="$PROJECT_DIR$/backend/src/main/java/no/mattikj/backend/service/GameService.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/backend/src/main/resources/application.properties" beforeDir="false" afterPath="$PROJECT_DIR$/backend/src/main/resources/application.properties" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/shelstad/node_modules/.vite/deps/_metadata.json" beforeDir="false" afterPath="$PROJECT_DIR$/shelstad/node_modules/.vite/deps/_metadata.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/shelstad/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/shelstad/package.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/shelstad/src/components/GameCard.vue" beforeDir="false" afterPath="$PROJECT_DIR$/shelstad/src/components/GameCard.vue" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/shelstad/src/components/Menubar.vue" beforeDir="false" afterPath="$PROJECT_DIR$/shelstad/src/components/Menubar.vue" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/shelstad/src/router/index.ts" beforeDir="false" afterPath="$PROJECT_DIR$/shelstad/src/router/index.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/shelstad/src/views/About.vue" beforeDir="false" afterPath="$PROJECT_DIR$/shelstad/src/views/Tools.vue" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/shelstad/src/views/GamePage.vue" beforeDir="false" afterPath="$PROJECT_DIR$/shelstad/src/views/GamePage.vue" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/shelstad/src/views/Home.vue" beforeDir="false" afterPath="$PROJECT_DIR$/shelstad/src/views/Home.vue" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -29,9 +51,9 @@
   <component name="FileTemplateManagerImpl">
     <option name="RECENT_TEMPLATES">
       <list>
-        <option value="Vue Composition API Component" />
         <option value="Interface" />
         <option value="Class" />
+        <option value="Vue Composition API Component" />
       </list>
     </option>
   </component>
@@ -116,7 +138,7 @@
       <recent name="no.mattikj.backend.config" />
     </key>
   </component>
-  <component name="RunManager" selected="Spring Boot.BackendApplication">
+  <component name="RunManager" selected="npm.Shelstad">
     <configuration name="BackendApplication" type="SpringBootApplicationConfigurationType" factoryName="Spring Boot" nameIsGenerated="true">
       <option name="ALTERNATIVE_JRE_PATH" value="openjdk-24" />
       <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="true" />
@@ -136,8 +158,8 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="Portfolio" type="js.build_tools.npm" temporary="true">
-      <package-json value="$PROJECT_DIR$/package.json" />
+    <configuration name="Shelstad" type="js.build_tools.npm" temporary="true">
+      <package-json value="$PROJECT_DIR$/shelstad/package.json" />
       <command value="run" />
       <scripts>
         <script value="dev" />
@@ -146,37 +168,14 @@
       <envs />
       <method v="2" />
     </configuration>
-    <configuration name="Shelstad" type="js.build_tools.npm" temporary="true">
-      <package-json value="$PROJECT_DIR$/../shelstad/package.json" />
-      <command value="run" />
-      <scripts>
-        <script value="dev-1" />
-      </scripts>
-      <node-interpreter value="project" />
-      <envs />
-      <method v="2" />
-    </configuration>
-    <configuration name="build" type="js.build_tools.npm" temporary="true" nameIsGenerated="true">
-      <package-json value="$PROJECT_DIR$/../shelstad/package.json" />
-      <command value="run" />
-      <scripts>
-        <script value="build" />
-      </scripts>
-      <node-interpreter value="project" />
-      <envs />
-      <method v="2" />
-    </configuration>
     <list>
-      <item itemvalue="npm.build" />
-      <item itemvalue="npm.Portfolio" />
       <item itemvalue="npm.Shelstad" />
       <item itemvalue="Spring Boot.BackendApplication" />
     </list>
     <recent_temporary>
       <list>
         <item itemvalue="npm.Shelstad" />
-        <item itemvalue="npm.build" />
-        <item itemvalue="npm.Portfolio" />
+        <item itemvalue="npm.Shelstad" />
       </list>
     </recent_temporary>
   </component>
@@ -204,7 +203,7 @@
       <workItem from="1742589777553" duration="6733000" />
       <workItem from="1742814533615" duration="335000" />
       <workItem from="1742830957133" duration="3117000" />
-      <workItem from="1742920512862" duration="7228000" />
+      <workItem from="1742920512862" duration="18987000" />
     </task>
     <task id="LOCAL-00001" summary="Something more added">
       <option name="closed" value="true" />
@@ -223,17 +222,5 @@
   <component name="VcsManagerConfiguration">
     <MESSAGE value="Something more added" />
     <option name="LAST_COMMIT_MESSAGE" value="Something more added" />
-  </component>
-  <component name="XDebuggerManager">
-    <breakpoint-manager>
-      <breakpoints>
-        <line-breakpoint enabled="true" type="javascript">
-          <url>file://$PROJECT_DIR$/shelstad/src/components/Menubar.vue</url>
-          <line>26</line>
-          <properties lambdaOrdinal="-1" />
-          <option name="timeStamp" value="1" />
-        </line-breakpoint>
-      </breakpoints>
-    </breakpoint-manager>
   </component>
 </project>
