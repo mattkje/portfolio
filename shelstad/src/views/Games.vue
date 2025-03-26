@@ -39,6 +39,7 @@ onMounted(fetchGames);
 
 <template>
   <div class="game-store">
+    <h1>Games</h1>
     <div class="game-grid">
       <GameCard
           v-for="game in games || []"
@@ -46,9 +47,11 @@ onMounted(fetchGames);
           :id="game.id"
           :title="game.name"
           :description="game.description"
+          :version="game.version"
           :icon-id="game.iconId"
           :link="game.link"
           :price="game.price"
+          :created-at="game.createdAt"
           @game-clicked="navigateToGameView"
       />
     </div>
@@ -57,14 +60,14 @@ onMounted(fetchGames);
 
 <style scoped>
 .game-store {
-  text-align: center;
-  margin-top: 100px;
-  padding: 2rem;
+
+  text-align: left;
+  padding: 5rem 2rem 0 2rem;
 }
 
 .game-grid {
   display: grid;
-  grid-template-columns: repeat(auto-fill, minmax(500px, 1fr));
+  grid-template-columns: repeat(auto-fill, minmax(30%, 1fr));
   gap: 1rem;
 }
 </style>

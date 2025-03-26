@@ -1,139 +1,271 @@
 <script setup lang="ts">
-import { onMounted, ref } from 'vue';
-import { useRoute } from 'vue-router';
+import {computed, onMounted, ref} from 'vue';
+  import { useRoute } from 'vue-router';
+  import { marked } from 'marked';
 
-// Import or define the Game type
-interface Game {
-  id: number;
-  name: string;
-  description: string;
-  price: number;
-  screenshot: string;
-  iconId: number;
-}
-
-const route = useRoute();
-const game = ref<Game | null>(null);
-const gameLinks = ref<{ [key: string]: string | null }>({});
-
-const fetchGame = async (id: number) => {
-  const response = await fetch(`http://localhost:8080/api/games/${id}`);
-  game.value = await response.json();
-  await fetchGameLinks();
-};
-
-const fetchGameLinks = async () => {
-  if (!game.value) return;
-
-  const platforms = ['win', 'mac', 'lin'];
-  for (const platform of platforms) {
-    const link = `http://localhost:8080/api/files/${game.value.name.trim().replace(/ /g, '')}-${platform}.zip`;
-    try {
-      const response = await fetch(link, { method: 'HEAD' });
-      if (response.status === 404) {
-        gameLinks.value[platform] = null;
-      } else {
-        gameLinks.value[platform] = link;
-      }
-    } catch (error) {
-      console.error('Error checking link:', error);
-      gameLinks.value[platform] = '';
-    }
+  // Import or define the Game type
+  interface Game {
+    id: number;
+    name: string;
+    description: string;
+    price: number;
+    screenshot: string;
+    iconId: number;
+    link: string;
   }
-};
 
-onMounted(() => {
-  const gameId = Number(route.params.id);
-  fetchGame(gameId);
-});
-</script>
+  const route = useRoute();
+  const game = ref<Game | null>(null);
+  const gameLinks = ref<{ [key: string]: string | null }>({});
+  const activeIndex = ref(0);
 
-<template>
-  <div v-if="game" class="game-page">
-    <h1>{{ game.name }}</h1>
-    <div class="screenshots">
-      <div class="screenshot-gallery">
-        <img v-for="index in parseInt(game.screenshot)" :key="index" :src="`http://localhost:8080/api/files/game${game.id}-${index}.png`" :alt="`Screenshot ${index + 1}`" />
+  const fetchGame = async (id: number) => {
+    const response = await fetch(`http://localhost:8080/api/games/${id}`);
+    game.value = await response.json();
+    await fetchGameLinks();
+  };
+
+  const fetchGameLinks = async () => {
+    if (!game.value) return;
+
+    const platforms = ['win', 'mac', 'lin'];
+    for (const platform of platforms) {
+      const link = `http://localhost:8080/api/files/${game.value.name.trim().replace(/ /g, '')}-${platform}.zip`;
+      try {
+        const response = await fetch(link, { method: 'HEAD' });
+        if (response.status === 404) {
+          gameLinks.value[platform] = null;
+        } else {
+          gameLinks.value[platform] = link;
+        }
+      } catch (error) {
+        console.error('Error checking link:', error);
+        gameLinks.value[platform] = '';
+      }
+    }
+  };
+
+  const updateActiveIndex = () => {
+    const gallery = document.querySelector('.screenshot-gallery');
+    if (gallery) {
+      const scrollLeft = gallery.scrollLeft;
+      const childWidth = gallery.firstElementChild?.clientWidth || 0;
+      const gap = parseInt(getComputedStyle(gallery).gap) || 0;
+      activeIndex.value = Math.round(scrollLeft / (childWidth + gap));
+    }
+  };
+
+  onMounted(() => {
+    const gameId = Number(route.params.id);
+    fetchGame(gameId);
+
+    const gallery = document.querySelector('.screenshot-gallery');
+    if (gallery) {
+      gallery.addEventListener('scroll', updateActiveIndex);
+    }
+  });
+  </script>
+
+  <template>
+    <div v-if="game" class="game-page">
+      <div class="screenshots">
+        <div class="screenshot-gallery">
+          <iframe
+              v-if="game.link"
+              :src="game.link"
+              frameborder="0"
+              allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+              allowfullscreen
+              class="youtube-miniplayer"
+          ></iframe>
+          <img v-for="index in parseInt(game.screenshot)" :key="index" :src="`http://localhost:8080/api/files/game${game.id}-${index}.png`" :alt="`Screenshot ${index + 1}`" />
+        </div>
+        <div class="dots">
+          <span v-for="index in parseInt(game.screenshot)" :key="index" :class="{ active: index - 1 === activeIndex.value }"></span>
+        </div>
       </div>
-    </div>
-    <p>{{ game.description }}</p>
-    <p v-if="game.price === 0">Free</p>
-    <p v-else>\${{ game.price }}</p>
-    <div class="download-box">
-      <img :src="`http://localhost:8080/api/files/game${game.iconId}.png`" alt="Game Icon" />
-      <div class="download-buttons">
-        <a v-if="gameLinks.win" class="download-button" :href="gameLinks.win" download>Download for Windows</a>
-        <a v-if="gameLinks.mac" class="download-button" :href="gameLinks.mac" download>Download for Mac</a>
-        <a v-if="gameLinks.lin" class="download-button" :href="gameLinks.lin" download>Download for Linux</a>
+      <div class="game-info">
+        <div class="left-part">
+          <img :src="`http://localhost:8080/api/files/game${game.iconId}.png`" alt="Game Icon" />
+          <div class="game-details">
+            <h1>{{ game.name }}</h1>
+            <p><strong>Release Date:</strong> {{ new Date(game.createdAt).toLocaleDateString() }}</p>
+            <p><strong>Current Version:</strong> {{ game.version }}</p>
+          </div>
+        </div>
+        <div class="download-box">
+          <div class="download-buttons">
+            <p v-if="game.price === 0">Download for Free</p>
+            <p v-else>\${{ game.price }}</p>
+            <a v-if="gameLinks.win" class="download-button" :href="gameLinks.win" download>Download Windows</a>
+            <a v-if="gameLinks.mac" class="download-button" :href="gameLinks.mac" download>Download Mac</a>
+            <a v-if="gameLinks.lin" class="download-button" :href="gameLinks.lin" download>Download Linux</a>
+            <p v-if="!gameLinks.win && !gameLinks.mac && !gameLinks.lin">No downloads available</p>
+          </div>
+        </div>
       </div>
+      <hr class="horizontal-separator">
+      <div class="description-text" v-html="marked(game.description)"></div>
     </div>
-  </div>
-  <div v-else>
-    <p>Loading...</p>
-  </div>
-</template>
+    <div v-else>
+      <p>Loading...</p>
+    </div>
+  </template>
 
-<style scoped>
-.game-page {
-  text-align: center;
-  margin-top: 100px;
-  padding: 2rem;
-}
+  <style scoped>
+  .game-page {
+    text-align: left;
+    margin-top: 100px;
+    padding: 2rem 0;
+  }
 
-.game-page img {
-  width: 200px;
-  height: auto;
-  border-radius: 3rem;
-}
+  .game-page h1 {
+    font-size: 2rem;
+  }
 
-.download-buttons {
-  display: flex;
-  flex-direction: column;
-  gap: 1rem;
-  justify-content: center;
-  margin-top: 2rem;
-}
+  .game-page p {
+    font-size: 1rem;
+  }
 
-.download-button {
-  align-self: flex-end;
-  text-align: center;
-  color: white;
-  padding: 0.7rem 3rem;
-  border-radius: 1.5rem;
-  background-color: hsla(210, 100%, 50%, 1); /* Blue color */
-  text-decoration: none;
-  font-weight: bold;
-  font-size: 1rem;
-  margin: 0 auto;
-  transition: transform 0.3s, color 0.3s;
-}
+  .game-page img {
+    width: 200px;
+    height: auto;
+    border-radius: 3rem;
+  }
 
-.download-button:hover {
-  transform: scale(1.1);
-}
+  .game-info {
+    display: flex;
+    width: 70%;
+    margin: auto;
+    flex-direction: row;
+    justify-content: space-between;
+  }
 
-.screenshot-gallery {
-  display: flex;
-  gap: 1rem;
-  overflow-x: auto;
-  justify-content: center;
-}
+  .game-info img {
+    width: 200px;
+    height: 200px;
+    margin: auto 1.5rem auto 0;
+  }
 
-.screenshot-gallery img {
-  width: 700px;
-  height: auto;
-  border-radius: 1rem;
-}
+  .left-part {
+    display: flex;
+    flex-direction: row;
+    gap: 1rem;
+  }
 
-.download-box {
-  display: flex;
-  border: #e3e3e3 solid 1px;
-  width: 600px;
-  margin: auto;
-  padding: 1rem;
-  border-radius: 4rem;
-  gap: 2rem;
-  justify-content: space-between;
-  align-items: center;
-}
-</style>
+  .download-buttons {
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+    justify-content: center;
+    margin: auto;
+  }
+
+  .download-buttons p {
+    font-size: 1rem;
+    margin: 0 auto;
+  }
+
+  .download-button {
+    align-self: flex-end;
+    text-align: center;
+    width: 250px;
+    color: white;
+    padding: 0.6rem 2rem;
+    border-radius: 1.5rem;
+    background-color: hsla(210, 100%, 50%, 1); /* Blue color */
+    text-decoration: none;
+    font-weight: bold;
+    font-size: 1rem;
+    transition: transform 0.3s, color 0.3s;
+  }
+
+  .download-button:hover {
+    transform: scale(1.1);
+  }
+
+  .screenshot-gallery {
+    display: flex;
+    gap: 1rem;
+    width: 100%;
+    padding: 0 0 2.5rem 0;
+    overflow-x: scroll;
+    scroll-snap-type: x mandatory;
+    position: relative;
+    scrollbar-width: none; /* Firefox */
+    -ms-overflow-style: none;  /* Internet Explorer 10+ */
+  }
+
+  .screenshot-gallery::-webkit-scrollbar {
+    display: none; /* Safari and Chrome */
+  }
+
+  .screenshot-gallery::before,
+  .screenshot-gallery::after {
+    content: '';
+    min-width: 15%;
+    flex-shrink: 0;
+  }
+
+  .screenshot-gallery img {
+    min-width: 70%;
+    border-radius: 3rem;
+    scroll-snap-align: center;
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+  }
+
+  .youtube-miniplayer {
+    min-width: 70%;
+    border-radius: 3rem;
+    scroll-snap-align: center;
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+  }
+
+  .dots {
+    display: flex;
+    justify-content: center;
+    margin-top: 1rem;
+  }
+
+  .dots span {
+    width: 10px;
+    height: 10px;
+    background-color: #ccc;
+    border-radius: 50%;
+    margin: 0 5px;
+    transition: background-color 0.3s;
+  }
+
+  .dots span.active {
+    background-color: #000;
+  }
+
+  .download-box {
+    display: flex;
+    padding: 1rem;
+    border-radius: 4rem;
+    gap: 2rem;
+    justify-content: space-between;
+    align-items: center;
+  }
+
+  .description-text {
+    width: 70%;
+    margin: 2rem auto;
+    font-size: 1rem;
+  }
+
+  .vertical-separator {
+    border: none;
+    border-left: 3px solid #e3e3e3;
+    margin: 3rem 0;
+    border-radius: 5px;
+  }
+
+  .horizontal-separator {
+    border: none;
+    border-top: 3px solid #e3e3e3;
+    width: 70%;
+    border-radius: 5px;
+  }
+  </style>

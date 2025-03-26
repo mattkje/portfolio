@@ -1,53 +1,40 @@
-<script setup>
+<script setup lang="ts">
 import { defineProps } from 'vue';
 
-const props = defineProps({
-  icon: {
-    type: String,
-    required: true
-  },
-  title: {
-    type: String,
-    required: true
-  }
-});
+interface Icon {
+  id: number;
+  fileName: string;
+  filePath: string;
+}
+
+const props = defineProps<{ icon: Icon }>();
 </script>
 
 <template>
-  <button class="icon-button">
-    <img :src="icon" :alt="title" class="icon" />
-    <span class="title">{{ title }}</span>
-  </button>
+  <div class="icon-button">
+      <img :src="`http://localhost:8080/api/icons/${props.icon.fileName}`" :alt="props.icon.fileName.split('.')[0]" class="icon-image" />
+  </div>
 </template>
 
 <style scoped>
 .icon-button {
   display: flex;
-  flex-direction: column;
+  justify-content: center;
   align-items: center;
-  padding: 1rem;
-  border: #e3e3e3 solid 1px;
+  border: 1px solid #e3e3e3;
   border-radius: 1rem;
-  background: none;
+  padding: 1rem;
   cursor: pointer;
-  transition: transform 0.3s, background-color 0.3s;
+  transition: transform 0.3s;
 }
 
 .icon-button:hover {
-  background-color: #f9f9f9;
-  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
-  transform: scale(1.05);
+  transform: scale(1.1);
 }
 
-.icon {
+.icon-image {
   width: 100px;
-  margin-bottom: 0.5rem;
-}
-
-.title {
-  font-weight: 900;
-  color: #444444;
-  font-size: 1rem;
-  text-align: center;
+  height: auto;
+  border-radius: 1rem;
 }
 </style>

@@ -108,4 +108,12 @@ public class Game {
     public void setVersion(String version) {
         this.version = version;
     }
+
+    public Timestamp getCreatedAt() {
+        return createdAt;
+    }
+
+    public void setCreatedAt(Timestamp createdAt) {
+        this.createdAt = createdAt;
+    }
 }
