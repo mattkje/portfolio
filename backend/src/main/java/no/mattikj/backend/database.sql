@@ -114,10 +114,11 @@ Paths was originally developed as part of a Computer Science exam assignment at 
   - Wheels
 - Physics-focused car (rolling wheels and momentum)
 - Fancy lighting
-', '1.0.0', 0, 3, '1', '', '2024-10-09 00:00:00');
+', '1.0.0', 0, 3, '1', '', '2024-10-09 00:00:00'),
+    ('Base Brawlers', 'Team shooter', 'Alpha 0.0.1', -2,4,'1', '','2026-12-12 00:00:00');
 
 INSERT INTO tools (name, description, version, price, icon_id, screenshot, link, created_at)
-VALUES ('WWS', 'A warehouse workflow simulator', '1.0.0', -1, 1, '2', '', '2025-05-20 00:00:00'),
+VALUES ('WWS', 'A warehouse workflow simulator', '1.0.0', -2, 1, '2', '', '2025-05-20 00:00:00'),
        ('GitLocker', 'A simple tool for managing git keys', '1.0.0', -1, 2, '2', '','2023-10-17 00:00:00');
 
 

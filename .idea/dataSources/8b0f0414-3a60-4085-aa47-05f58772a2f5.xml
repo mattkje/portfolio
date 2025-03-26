@@ -1008,7 +1008,7 @@ sys|schema||mysql.sys|localhost|TRIGGER|G</Grants>
       <CollationName>utf8mb4_0900_ai_ci</CollationName>
     </schema>
     <schema id="291" parent="1" name="shelstad">
-      <LastIntrospectionLocalTimestamp>2025-03-26.22:29:08</LastIntrospectionLocalTimestamp>
+      <LastIntrospectionLocalTimestamp>2025-03-26.22:40:57</LastIntrospectionLocalTimestamp>
       <CollationName>utf8mb4_0900_ai_ci</CollationName>
     </schema>
     <schema id="292" parent="1" name="sys">
@@ -1079,7 +1079,7 @@ sys|schema||mysql.sys|localhost|TRIGGER|G</Grants>
       <UnderlyingIndexName>PRIMARY</UnderlyingIndexName>
     </key>
     <column id="307" parent="299" name="id">
-      <AutoIncrement>4</AutoIncrement>
+      <AutoIncrement>5</AutoIncrement>
       <NotNull>1</NotNull>
       <Position>1</Position>
       <StoredType>int|0s</StoredType>

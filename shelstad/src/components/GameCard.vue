@@ -38,7 +38,8 @@ const handleClick = () => {
         <p><strong>Release Date:</strong> {{ new Date(createdAt).toLocaleDateString() }}</p>
         <p><strong>Current Version:</strong> {{ props.version }}</p>
       </div>
-      <p class="unavailable-price" v-if="price === -1">Unavailable</p>
+      <p class="pre-release-price" v-if="price === -2">Coming Soon</p>
+      <p class="unavailable-price" v-else-if="price === -1">Unavailable</p>
       <p class="price" v-else-if="price === 0">Free</p>
       <p class="price" v-else>{{ price }}</p>
     </div>
@@ -94,6 +95,19 @@ const handleClick = () => {
   padding: 0.5rem 2rem;
   border-radius: 1.5rem;
   background-color: hsl(0, 0%, 53%); /* Blue color */
+  text-decoration: none;
+  font-weight: 900;
+  font-size: 0.8rem;
+  transition: color 0.3s, transform 0.3s;
+}
+
+.pre-release-price {
+  align-self: flex-end;
+  text-align: center;
+  color: white;
+  padding: 0.5rem 2rem;
+  border-radius: 1.5rem;
+  background-color: hsl(215, 35%, 32%); /* Blue color */
   text-decoration: none;
   font-weight: 900;
   font-size: 0.8rem;
