@@ -3,8 +3,25 @@ import Hero from "@/components/Hero.vue";
 import FrontendSkill from "@/components/FrontendSkill.vue";
 import Contact from "@/components/Contact.vue";
 import FeaturedProjects from "@/components/FeaturedProjects.vue";
+import {onMounted} from "vue";
 
+onMounted(() => {
+  const elements = document.querySelectorAll('.scroll-animation');
 
+  const observer = new IntersectionObserver((entries) => {
+    entries.forEach(entry => {
+      if (entry.isIntersecting) {
+        entry.target.classList.add('visible');
+      } else {
+        entry.target.classList.remove('visible');
+      }
+    });
+  });
+
+  elements.forEach(element => {
+    observer.observe(element);
+  });
+});
 
 </script>
 
@@ -12,8 +29,9 @@ import FeaturedProjects from "@/components/FeaturedProjects.vue";
   <div class="container">
     <Hero />
     <FrontendSkill/>
-    <FeaturedProjects/>
     <Contact/>
+    <FeaturedProjects/>
+
   </div>
 </template>
 

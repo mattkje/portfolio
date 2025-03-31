@@ -4,49 +4,39 @@ const skills = [
   { name: 'Vue.js, React', icon: '@/assets/icons/vue.svg' },
   { name: 'Asset creation with Photoshop, Affinity Designer', icon: '@/assets/icons/unity.png' }
 ];
-
-document.addEventListener('DOMContentLoaded', () => {
-  const elements = document.querySelectorAll('.scroll-animation');
-
-  const observer = new IntersectionObserver((entries) => {
-    entries.forEach(entry => {
-      if (entry.isIntersecting) {
-        entry.target.classList.add('visible');
-      } else {
-        entry.target.classList.remove('visible');
-      }
-    });
-  });
-
-  elements.forEach(element => {
-    observer.observe(element);
-  });
-});
 </script>
 <template>
-  <h1 class="scroll-animation">Frontend Development & Asset Creation</h1>
-  <div class="skills-section scroll-animation">
-    <div class="skill-block">
-      <img src="@/assets/icons/js.png" alt="icon missing" class="skill-icon" />
-      <p>HTML, CSS, JavaScript</p>
-      <button class="link">Learn more</button>
+  <div class="container scroll-animation">
+    <h1>Frontend Development & Asset Creation</h1>
+    <div class="skills-section scroll-animation">
+      <div class="skill-block">
+        <img src="@/assets/icons/js.png" alt="icon missing" class="skill-icon" />
+        <p>HTML, CSS, JavaScript</p>
+      </div>
+      <div class="skill-block">
+        <img src="@/assets/icons/vue.svg" alt="icon missing" class="skill-icon" />
+        <p>Vue.js, React</p>
+      </div>
+      <div class="skill-block">
+        <img src="@/assets/icons/affinity.png" alt="icon missing" class="skill-icon" />
+        <p>Asset creation with Adobe Photoshop, Affinity Designer and Figma</p>
+        <button class="link">Check Out My Icon library</button>
+      </div>
     </div>
-    <div class="skill-block">
-      <img src="@/assets/icons/vue.svg" alt="icon missing" class="skill-icon" />
-      <p>Vue.js, React</p>
-      <button class="link">Learn more</button>
-    </div>
-    <div class="skill-block">
-      <img src="@/assets/icons/affinity.png" alt="icon missing" class="skill-icon" />
-      <p>Asset creation with Adobe Photoshop, Affinity Designer</p>
-      <button class="link">Check Out My Icon library</button>
-    </div>
+    <button class="more-link link">View all my skills</button>
   </div>
 </template>
 
 <style scoped>
+.container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
 .skills-section {
   width: 70%;
+  height: 10rem;
   display: flex;
   justify-content: space-around;
   margin: auto;
@@ -54,8 +44,8 @@ document.addEventListener('DOMContentLoaded', () => {
 
 .skill-block {
   border: #e3e3e3 solid 1px;
-  width: 300px;
-  height: 400px;
+  width: 25%;
+  height: 100%;
   border-radius: 2rem;
   padding: 1.5rem;
   display: flex;
@@ -63,6 +53,13 @@ document.addEventListener('DOMContentLoaded', () => {
   justify-content: center;
   align-items: center;
   text-align: center;
+  box-shadow: 0 0 40px rgba(0, 0, 0, 0.1);
+  transition: transform 0.7s ease-in-out, box-shadow 0.3s ease-in-out;
+}
+
+.skill-block:hover {
+  transform: scale(1.05);
+  box-shadow: 0 0 50px rgba(0, 0, 0, 0.15);
 }
 
 .skill-icon {
@@ -102,6 +99,10 @@ document.addEventListener('DOMContentLoaded', () => {
 .scroll-animation.visible {
   opacity: 1;
   transform: translateY(0);
+}
+
+.more-link {
+  margin-top: 5rem;
 }
 
 </style>

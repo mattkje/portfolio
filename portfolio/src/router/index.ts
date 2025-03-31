@@ -1,9 +1,11 @@
 // src/router/index.ts
 import { createRouter, createWebHistory } from 'vue-router';
-import Home from '../views/Home.vue';
+import Home from '@/views/Home.vue';
+import Projects from "@/views/Projects.vue";
 
 const routes = [
     { path: '/', component: Home },
+    { path: '/projects', component: Projects}
 ];
 
 const router = createRouter({
