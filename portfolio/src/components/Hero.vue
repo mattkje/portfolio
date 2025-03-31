@@ -1,4 +1,17 @@
 <script setup>
+import { ref, onMounted } from 'vue';
+
+const avatarUrl = ref('');
+
+onMounted(async () => {
+  try {
+    const response = await fetch('https://api.github.com/users/mattkje');
+    const data = await response.json();
+    avatarUrl.value = data.avatar_url;
+  } catch (error) {
+    console.error('Error fetching GitHub profile image:', error);
+  }
+});
 </script>
 
 <template>
@@ -15,7 +28,8 @@
             <img class="planet planet2" src="@/assets/graphics/ball.svg"/>
             <img class="planet planet3" src="@/assets/graphics/ball.svg"/>
           </div>
-          <img class="portrait" src="https://cloudcommercepro.com/wp-content/uploads/2022/06/dummy-customer.jpg"
+          <img class="portrait"
+               :src="avatarUrl"
                alt="Logo"/>
 
         </div>
@@ -128,8 +142,23 @@
 .planet {
   position: absolute;
   width: 15%;
-  animation: float 20s ease-in-out infinite;
+  animation: floatAndSwirl 20s ease-in-out infinite;
   transition: transform 0.3s ease-in-out;
+}
+
+@keyframes floatAndSwirl {
+  0%, 100% {
+    transform: translateY(0) translateX(0) rotateZ(0);
+  }
+  25% {
+    transform: translateY(-10px) translateX(10px) rotateZ(20deg);
+  }
+  50% {
+    transform: translateY(0) translateX(-10px) rotateZ(0deg);
+  }
+  75% {
+    transform: translateY(10px) translateX(10px) rotateZ(-20deg);
+  }
 }
 
 .planet1 {
@@ -190,7 +219,7 @@
 h1 {
   font-size: 2.5rem;
   text-align: left;
-  color: #007BFF;
+  color: #608AFF;
   font-weight: 900;
   margin-bottom: 0;
 }

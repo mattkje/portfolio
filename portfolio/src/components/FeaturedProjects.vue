@@ -1,12 +1,12 @@
 <script setup>
-
+import { onMounted, onUnmounted } from 'vue';
 import pathsImage from "@/assets/images/projects/paths.png";
 import learniverseConnectImage from "@/assets/images/projects/learniverse-connect.svg";
 import partyPoopersImage from "@/assets/images/projects/party-poopers.svg";
 import warehouseSimulatorImage from "@/assets/images/projects/wws.svg";
-import Project from "@/components/Project.vue";
+import FeaturedProject from "@/components/FeaturedProject.vue";
 
-document.addEventListener('DOMContentLoaded', () => {
+onMounted(() => {
   const elements = document.querySelectorAll('.scroll-animation, .project-grid-item-animation');
 
   const observer = new IntersectionObserver((entries) => {
@@ -22,6 +22,12 @@ document.addEventListener('DOMContentLoaded', () => {
   elements.forEach(element => {
     observer.observe(element);
   });
+
+  onUnmounted(() => {
+    elements.forEach(element => {
+      observer.unobserve(element);
+    });
+  });
 });
 </script>
 
@@ -35,28 +41,28 @@ document.addEventListener('DOMContentLoaded', () => {
   </div>
   </div>
   <div class="project-grid">
-    <Project class="project-grid-item-animation"
+    <FeaturedProject class="project-grid-item-animation"
         date="Spring 2023"
         :icon="pathsImage"
         name="Paths"
         description="Final Project for Programming 2 Course"
         link="https://mattkje.github.io/"
     />
-    <Project class="project-grid-item-animation"
+    <FeaturedProject class="project-grid-item-animation"
         date="Spring 2024"
         :icon="learniverseConnectImage"
         name="Learniverse Connect"
         description="Final Project for Web Development Course"
         link="https://mattkje.github.io/"
     />
-    <Project class="project-grid-item-animation"
+    <FeaturedProject class="project-grid-item-animation"
         date="Fall 2024"
         :icon="partyPoopersImage"
         name="Party Poopers"
         description="Final Project for Game Development Course"
         link="https://shelstad.itch.io/party-poopers"
     />
-    <Project class="project-grid-item-animation"
+    <FeaturedProject class="project-grid-item-animation"
         date="Spring 2025"
         :icon="warehouseSimulatorImage"
         name="Warehouse Simulator (WWS)"

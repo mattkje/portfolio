@@ -1,25 +1,161 @@
 <script setup>
+import Project from '@/components/Project.vue';
+import pathsImage from "@/assets/images/projects/paths.png";
+import learniverseConnectImage from "@/assets/images/projects/learniverse-connect.svg";
+import partyPoopersImage from "@/assets/images/projects/party-poopers.svg";
+import warehouseSimulatorImage from "@/assets/images/projects/wws.svg";
+import baseBrwalersImage from "@/assets/images/projects/base-brawlers.png";
+import gitLockerImage from "@/assets/images/projects/gitlocker.png";
+import theCarGameImage from "@/assets/images/projects/the-car-game.png";
+import fitnessImage from "@/assets/images/projects/fitness.png";
+import fluentiaImage from "@/assets/images/projects/fluentia.png";
+import econImage from "@/assets/images/projects/econ.png";
+
+import {onMounted, onUnmounted} from "vue";
+
+onMounted(() => {
+  const elements = document.querySelectorAll('.scroll-animation, .project-grid-item-animation, .project-box');
+
+  const observer = new IntersectionObserver((entries) => {
+    entries.forEach(entry => {
+      if (entry.isIntersecting) {
+        entry.target.classList.add('visible');
+      } else {
+        entry.target.classList.remove('visible');
+      }
+    });
+  });
+
+  elements.forEach(element => {
+    observer.observe(element);
+  });
+
+  onUnmounted(() => {
+    elements.forEach(element => {
+      observer.unobserve(element);
+    });
+  });
+});
+
 const projects = [
-  { year: "2023", title: "Project A", description: "Description of Project A", icon: "path/to/iconA.png", link: "https://example.com/projectA", context: 'School' },
-  { year: "2023", title: "Project B", description: "Description of Project B", icon: "path/to/iconB.png", link: "https://example.com/projectB", context: 'Solo' },
-  { year: "2022", title: "Project C", description: "Description of Project C", icon: "path/to/iconC.png", link: "https://example.com/projectC", context: 'School' }
+  {
+    date: "12/12/2024",
+    title: "Party Poopers",
+    description: "A 4-player multiplayer minigame bonanza",
+    icon: partyPoopersImage,
+    link: "",
+    shelstadLink: "https://shelstad.store",
+    context: 'School'
+  },
+  {
+    date: "31/05/2023",
+    title: "Paths",
+    description: "Simple story game made in Java",
+    icon: pathsImage,
+    link: "https://github.com/mattkje/Paths",
+    shelstadLink: "https://shelstad.store",
+    context: 'School'
+  },
+  {
+    date: "08/10/2024",
+    title: "The Car Game",
+    description: "Simple car game made in Unity",
+    icon: theCarGameImage,
+    link: "",
+    shelstadLink: "https://shelstad.store",
+    context: 'School'
+  },
+  {
+    date: "20/05/2025",
+    title: "WWS",
+    description: "Warehouse Simulator",
+    icon: warehouseSimulatorImage,
+    link: "https://github.com/mattkje/group01-bachelor-2025",
+    shelstadLink: "https://shelstad.store",
+    context: 'School'
+  },
+  {
+    date: "23/05/2024",
+    title: "Learniverse Connect",
+    description: "Course store concept website",
+    icon: learniverseConnectImage,
+    link: "https://github.com/mattkje/course-project-team-5",
+    shelstadLink: "https://shelstad.store",
+    context: 'School'
+  },
+  {
+    date: "",
+    title: "Base Brawlers",
+    description: "Multiplayer team shooter made in unity",
+    icon: baseBrwalersImage,
+    link: "",
+    shelstadLink: "https://shelstad.store",
+    context: 'Solo'
+  },
+  {
+    date: "16/10/2023",
+    title: "GitLocker",
+    description: "Simple git key manager made in jave",
+    icon: gitLockerImage,
+    link: "",
+    shelstadLink: "https://shelstad.store",
+    context: 'Solo'
+  },
+  {
+    date: "",
+    title: "Fluentia",
+    description: "A speach training app for patients with aphasia",
+    icon: fluentiaImage,
+    link: "",
+    shelstadLink: "https://shelstad.store",
+    context: 'Group'
+  },
+  {
+    date: "02/12/2024",
+    title: "G5 Fitness",
+    description: "A personal fitness app",
+    icon: fitnessImage,
+    link: "https://github.com/AbsolutelyHaakon/FitnessApp-IDATA2503",
+    shelstadLink: "https://shelstad.store",
+    context: 'School'
+  },
+  {
+    date: "02/05/2023",
+    title: "Econ&Me",
+    description: "A personal and commercial finance app",
+    icon: econImage,
+    link: "https://github.com/mattkje/idata1002_2023_05",
+    shelstadLink: "https://shelstad.store",
+    context: 'School'
+  },
   // Add more projects as needed
 ];
+
+// Function to parse date strings in the format "DD/MM/YYYY"
+const parseDate = (dateString) => {
+  if (!dateString) return null; // Handle empty date strings
+  const [day, month, year] = dateString.split('/').map(Number);
+  return new Date(year, month - 1, day);
+};
+
+// Sort projects by date, placing those without a date at the end
+projects.sort((a, b) => {
+  const dateA = parseDate(a.date);
+  const dateB = parseDate(b.date);
+
+  if (dateA === null) return 1; // a has no date, place it after b
+  if (dateB === null) return -1; // b has no date, place it after a
+
+  return dateB - dateA; // Sort by date in descending order
+});
 </script>
 
 <template>
   <div class="timeline">
-    <h1>Projects Timeline</h1>
-    <ul>
-      <li v-for="project in projects" :key="project.title" :class="['timeline-item', project.context.toLowerCase()]">
-        <div class="timeline-content">
-          <img :src="project.icon" alt="Project Icon" class="project-icon" />
-          <h2>{{ project.year }}</h2>
-          <h3><a :href="project.link" target="_blank">{{ project.title }}</a></h3>
-          <p>{{ project.description }}</p>
-        </div>
-      </li>
-    </ul>
+    <h1>Major Projects Timeline</h1>
+    <div class="project-timeline">
+      <Project v-for="project in projects" :key="project.title" :project="project"/>
+    </div>
   </div>
 </template>
 
@@ -34,67 +170,9 @@ const projects = [
   margin-bottom: 2rem;
 }
 
-.timeline ul {
-  list-style: none;
-  padding: 0;
-}
-
-.timeline-item {
-  height: 200px;
-  border: 1px solid #e3e3e3;
-  border-radius: 4rem;
-  justify-content: space-between;
-  display: flex;
-  padding: 1rem 3rem 1rem 1rem;
-  transition: background-color 0.3s, border-color 0.3s;
-  flex-direction: column;
-  margin: 2rem auto;
-  width: 70%;
-}
-
-.timeline-item.school {
-  border-left: 5px solid #00bfa5;
-}
-
-.timeline-item.solo {
-  border-left: 5px solid #ff9800;
-}
-
-.timeline-content {
+.project-timeline {
   display: flex;
   flex-direction: column;
   align-items: center;
-}
-
-.project-icon {
-  width: 50px;
-  height: 50px;
-  margin-bottom: 1rem;
-}
-
-.timeline-content h2 {
-  margin: 0;
-  font-size: 1.5rem;
-  color: #00bfa5;
-}
-
-.timeline-content h3 {
-  margin: 0.5rem 0;
-  font-size: 1.25rem;
-}
-
-.timeline-content p {
-  margin: 0;
-  font-size: 1rem;
-  color: #666;
-}
-
-.timeline-content a {
-  text-decoration: none;
-  color: inherit;
-}
-
-.timeline-content a:hover {
-  text-decoration: underline;
 }
 </style>

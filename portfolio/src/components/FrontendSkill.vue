@@ -79,8 +79,9 @@ const skills = [
   color: white;
   padding: 0.7rem 1.2rem;
   margin: 0 auto;
+  border: none;
   border-radius: 1.5rem;
-  background-color: hsla(210, 100%, 50%, 1); /* Blue color */
+  background-color: #608AFF;
   text-decoration: none;
   font-weight: bold;
   transition: color 0.3s, transform 0.3s;

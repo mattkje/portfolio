@@ -5,12 +5,27 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="5cbcede9-ef8b-42d2-8e91-9d65f72643db" name="Changes" comment="Something more added">
+      <change afterPath="$PROJECT_DIR$/portfolio/src/assets/images/projects/econ.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/portfolio/src/components/FeaturedProject.vue" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/portfolio/dist/assets/index-jAM458to.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/portfolio/dist/assets/index-tzOWaUKq.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/portfolio/dist/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/portfolio/dist/index.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/portfolio/node_modules/.package-lock.json" beforeDir="false" afterPath="$PROJECT_DIR$/portfolio/node_modules/.package-lock.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/portfolio/package-lock.json" beforeDir="false" afterPath="$PROJECT_DIR$/portfolio/package-lock.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/portfolio/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/portfolio/package.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/portfolio/src/components/FeaturedProjects.vue" beforeDir="false" afterPath="$PROJECT_DIR$/portfolio/src/components/FeaturedProjects.vue" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/portfolio/src/components/FrontendSkill.vue" beforeDir="false" afterPath="$PROJECT_DIR$/portfolio/src/components/FrontendSkill.vue" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/portfolio/src/components/Hero.vue" beforeDir="false" afterPath="$PROJECT_DIR$/portfolio/src/components/Hero.vue" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/portfolio/src/components/Menubar.vue" beforeDir="false" afterPath="$PROJECT_DIR$/portfolio/src/components/Menubar.vue" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/portfolio/src/components/Project.vue" beforeDir="false" afterPath="$PROJECT_DIR$/portfolio/src/components/Project.vue" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/portfolio/src/router/index.ts" beforeDir="false" afterPath="$PROJECT_DIR$/portfolio/src/router/index.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/portfolio/src/views/Home.vue" beforeDir="false" afterPath="$PROJECT_DIR$/portfolio/src/views/Home.vue" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/portfolio/src/views/About.vue" beforeDir="false" afterPath="$PROJECT_DIR$/portfolio/src/views/About.vue" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/portfolio/src/views/Contact.vue" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/portfolio/src/views/Projects.vue" beforeDir="false" afterPath="$PROJECT_DIR$/portfolio/src/views/Projects.vue" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/shelstad/node_modules/.package-lock.json" beforeDir="false" afterPath="$PROJECT_DIR$/shelstad/node_modules/.package-lock.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/shelstad/package-lock.json" beforeDir="false" afterPath="$PROJECT_DIR$/shelstad/package-lock.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/shelstad/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/shelstad/package.json" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -25,8 +40,8 @@
       <list>
         <option value="Interface" />
         <option value="Class" />
-        <option value="Vue Composition API Component" />
         <option value="TypeScript File" />
+        <option value="Vue Composition API Component" />
       </list>
     </option>
   </component>
@@ -53,52 +68,52 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent">{
-  &quot;keyToString&quot;: {
-    &quot;RequestMappingsPanelOrder0&quot;: &quot;0&quot;,
-    &quot;RequestMappingsPanelOrder1&quot;: &quot;1&quot;,
-    &quot;RequestMappingsPanelWidth0&quot;: &quot;75&quot;,
-    &quot;RequestMappingsPanelWidth1&quot;: &quot;75&quot;,
-    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
-    &quot;RunOnceActivity.git.unshallow&quot;: &quot;true&quot;,
-    &quot;Spring Boot.BackendApplication.executor&quot;: &quot;Run&quot;,
-    &quot;dart.analysis.tool.window.visible&quot;: &quot;false&quot;,
-    &quot;git-widget-placeholder&quot;: &quot;master&quot;,
-    &quot;kotlin-language-version-configured&quot;: &quot;true&quot;,
-    &quot;last_opened_file_path&quot;: &quot;/Users/mattikjellstadli/Programming/Mobile Applications/portfolio/shelstad/src/assets/graphics&quot;,
-    &quot;node.js.detected.package.eslint&quot;: &quot;true&quot;,
-    &quot;node.js.detected.package.tslint&quot;: &quot;true&quot;,
-    &quot;node.js.selected.package.eslint&quot;: &quot;(autodetect)&quot;,
-    &quot;node.js.selected.package.tslint&quot;: &quot;(autodetect)&quot;,
-    &quot;nodejs_package_manager_path&quot;: &quot;npm&quot;,
-    &quot;npm.Shelstad.executor&quot;: &quot;Run&quot;,
-    &quot;npm.build.executor&quot;: &quot;Run&quot;,
-    &quot;npm.dev-1.executor&quot;: &quot;Run&quot;,
-    &quot;npm.dev.executor&quot;: &quot;Run&quot;,
-    &quot;project.structure.last.edited&quot;: &quot;Project&quot;,
-    &quot;project.structure.proportion&quot;: &quot;0.15&quot;,
-    &quot;project.structure.side.proportion&quot;: &quot;0.2&quot;,
-    &quot;settings.editor.selected.configurable&quot;: &quot;reference.settings.project.maven.repository.indices&quot;,
-    &quot;show.migrate.to.gradle.popup&quot;: &quot;false&quot;,
-    &quot;ts.external.directory.path&quot;: &quot;/Users/mattikjellstadli/Applications/IntelliJ IDEA Ultimate.app/Contents/plugins/javascript-plugin/jsLanguageServicesImpl/external&quot;,
-    &quot;vue.rearranger.settings.migration&quot;: &quot;true&quot;
+  <component name="PropertiesComponent"><![CDATA[{
+  "keyToString": {
+    "RequestMappingsPanelOrder0": "0",
+    "RequestMappingsPanelOrder1": "1",
+    "RequestMappingsPanelWidth0": "75",
+    "RequestMappingsPanelWidth1": "75",
+    "RunOnceActivity.ShowReadmeOnStart": "true",
+    "RunOnceActivity.git.unshallow": "true",
+    "Spring Boot.BackendApplication.executor": "Run",
+    "dart.analysis.tool.window.visible": "false",
+    "git-widget-placeholder": "master",
+    "kotlin-language-version-configured": "true",
+    "last_opened_file_path": "/Users/mattikjellstadli/Programming/Mobile Applications/portfolio/portfolio/src/assets/images/projects",
+    "node.js.detected.package.eslint": "true",
+    "node.js.detected.package.tslint": "true",
+    "node.js.selected.package.eslint": "(autodetect)",
+    "node.js.selected.package.tslint": "(autodetect)",
+    "nodejs_package_manager_path": "npm",
+    "npm.Shelstad.executor": "Run",
+    "npm.build.executor": "Run",
+    "npm.dev-1.executor": "Run",
+    "npm.dev.executor": "Run",
+    "project.structure.last.edited": "Project",
+    "project.structure.proportion": "0.15",
+    "project.structure.side.proportion": "0.2",
+    "settings.editor.selected.configurable": "reference.settings.project.maven.repository.indices",
+    "show.migrate.to.gradle.popup": "false",
+    "ts.external.directory.path": "/Users/mattikjellstadli/Applications/IntelliJ IDEA Ultimate.app/Contents/plugins/javascript-plugin/jsLanguageServicesImpl/external",
+    "vue.rearranger.settings.migration": "true"
   },
-  &quot;keyToStringList&quot;: {
-    &quot;DatabaseDriversLRU&quot;: [
-      &quot;mysql&quot;
+  "keyToStringList": {
+    "DatabaseDriversLRU": [
+      "mysql"
     ],
-    &quot;vue.recent.templates&quot;: [
-      &quot;Vue Composition API Component&quot;
+    "vue.recent.templates": [
+      "Vue Composition API Component"
     ]
   }
-}</component>
+}]]></component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/portfolio/src/assets/images/projects" />
       <recent name="$PROJECT_DIR$/shelstad/src/assets/graphics" />
       <recent name="$PROJECT_DIR$/shelstad/src/assets" />
       <recent name="$PROJECT_DIR$/src/assets/icons" />
       <recent name="$PROJECT_DIR$/src/assets/graphics" />
-      <recent name="$PROJECT_DIR$/src/assets/images/game" />
     </key>
     <key name="MoveFile.RECENT_KEYS">
       <recent name="$PROJECT_DIR$/" />
@@ -111,7 +126,7 @@
       <recent name="no.mattikj.backend.config" />
     </key>
   </component>
-  <component name="RunManager" selected="npm.build">
+  <component name="RunManager" selected="npm.Shelstad">
     <configuration name="BackendApplication" type="SpringBootApplicationConfigurationType" factoryName="Spring Boot" nameIsGenerated="true">
       <option name="ALTERNATIVE_JRE_PATH" value="openjdk-24" />
       <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="true" />
@@ -169,9 +184,9 @@
     </list>
     <recent_temporary>
       <list>
+        <item itemvalue="npm.Shelstad" />
         <item itemvalue="npm.build" />
         <item itemvalue="npm.dev" />
-        <item itemvalue="npm.Shelstad" />
         <item itemvalue="npm.Shelstad" />
       </list>
     </recent_temporary>
@@ -203,7 +218,7 @@
       <workItem from="1742920512862" duration="54154000" />
       <workItem from="1743059545539" duration="599000" />
       <workItem from="1743069736217" duration="611000" />
-      <workItem from="1743074675127" duration="14095000" />
+      <workItem from="1743074675127" duration="27618000" />
     </task>
     <task id="LOCAL-00001" summary="Something more added">
       <option name="closed" value="true" />

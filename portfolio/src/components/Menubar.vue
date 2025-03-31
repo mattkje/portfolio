@@ -3,13 +3,11 @@
 
 <template>
   <nav class="menubar">
-    <div class="logo">
-      <img src="@/assets/logo.svg" alt="Logo" />
-    </div>
-    <ul class="nav-links">
-      <li><router-link to="/">Home</router-link></li>
-      <li><router-link to="/projects">Projects</router-link></li>
-      <li><router-link to="/contact">Contact</router-link></li>
+    <ul class="menu-links">
+      <img class="logo" src="@/assets/logo.svg" alt="Logo" />
+      <router-link class="nav-link" to="/">Home</router-link>
+      <router-link class="nav-link" to="/projects">Projects</router-link>
+      <router-link class="nav-link" to="/about">About</router-link>
     </ul>
   </nav>
 </template>
@@ -19,32 +17,33 @@
   display: flex;
   justify-content: center;
   align-items: center;
-  padding: 1rem 2rem;
-  background-color: white ;
-  color: black;
+  width: 100%;
+  height: 5rem;
+  color: #18212c;
+  background-color: white;
 }
 
-.logo img {
+.logo {
   height: 50px;
-  padding: 0 5rem;
 }
 
-.nav-links {
+.menu-links {
   list-style: none;
   display: flex;
-  justify-content: space-between;
-  width: 30%;
-  gap: 1.5rem;
+  padding: 1rem;
+  gap: 5rem;
+  align-items: center;
 }
 
-.nav-links a {
-  color: black;
+.nav-link {
+  color: #18212c;
+  font-weight: bold;
   text-decoration: none;
-  font-size: 1rem;
-  transition: color 0.3s;
+  transition: transform 0.3s;
 }
 
-.nav-links a:hover {
-  color: #00bfa5;
+.nav-link:hover {
+  color: #608AFF;
+  transform: scale(1.1);
 }
 </style>
