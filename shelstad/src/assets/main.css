@@ -25,6 +25,7 @@ html, body {
   align-items: center;
   width: 100%;
   color: #18212c;
+  background-color: white;
 }
 
 .menu-links a {

@@ -9,7 +9,7 @@ const welcomeMessage = ref('Welcome to Shelstad Studios!');
     <div class="home-items">
       <img src="../assets/images/game/shelstad-color.svg" alt="Shelstad Studios Logo" class="main-logo" />
       <h1>{{ welcomeMessage }}</h1>
-      <p>Independent solo developer</p>
+      <p>Independent Solo Developer</p>
       <div class="links">
         <router-link to="/games" class="link-button">View Games</router-link>
         <router-link to="/icons" class="link-button">View Icons</router-link>

@@ -2,16 +2,7 @@
 import { onMounted, ref } from 'vue';
 import { useRouter } from 'vue-router';
 import ToolCard from "@/components/ToolCard.vue";
-
-interface Tool {
-  id: number;
-  name: string;
-  description: string;
-  iconId: number;
-  screenshot: string;
-  price: number;
-  link: string;
-}
+import { Tool } from "@/assets/types";
 
 const tools = ref<Tool[] | null>(null);
 
@@ -47,9 +38,11 @@ onMounted(fetchTools);
           :id="tool.id"
           :title="tool.name"
           :description="tool.description"
+          :version="tool.version"
           :icon-id="tool.iconId"
           :link="tool.link"
           :price="tool.price"
+          :created-at="tool.createdAt"
           @game-clicked="navigateToToolView"
       />
     </div>

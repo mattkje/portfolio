@@ -149,7 +149,9 @@ VALUES ('pause'),
          ('warning-red'),
          ('warning-yellow'),
          ('profile'),
-         ('panels');
+         ('panels'),
+         ('tasks'),
+         ('info');
 -- Insert dummy data into projects table
 
 INSERT INTO files (file_name)

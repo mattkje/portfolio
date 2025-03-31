@@ -2,18 +2,7 @@
 import { onMounted, ref } from 'vue';
 import { useRouter } from 'vue-router';
 import GameCard from '@/components/GameCard.vue';
-
-interface Game {
-  id: number;
-  name: string;
-  description: string;
-  version: string;
-  iconId: number;
-  screenshot: string;
-  price: number;
-  link: string;
-  createdAt: string;
-}
+import { Game } from '@/assets/types';
 
 const games = ref<Game[] | null>(null);
 

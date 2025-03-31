@@ -1,12 +1,7 @@
 <script setup lang="ts">
     import { ref, computed, onMounted } from 'vue';
     import IconButton from '@/components/IconButton.vue';
-
-    interface Icon {
-      id: number;
-      fileName: string;
-      filePath: string;
-    }
+    import { Icon } from '@/assets/types';
 
     const icons = ref<Icon[]>([]);
     const searchQuery = ref<string>('');

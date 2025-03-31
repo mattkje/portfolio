@@ -1,59 +1,54 @@
 <script setup lang="ts">
-      import { defineProps, ref, onMounted } from 'vue';
+import {defineProps, ref, onMounted} from 'vue';
+import {Icon} from '@/assets/types';
 
-      interface Icon {
-        id: number;
-        fileName: string;
-        filePath: string;
+const svgToPng = async (icon: Icon): Promise<string> => {
+  const response = await fetch(`http://localhost:8080/api/icons/${icon.fileName}.svg`);
+  const svg = await response.text();
+
+  const svgBlob = new Blob([svg], {type: 'image/svg+xml;charset=utf-8'});
+  const url = URL.createObjectURL(svgBlob);
+
+  const img = new Image();
+  img.src = url;
+
+  return new Promise<string>((resolve, reject) => {
+    img.onload = () => {
+      const canvas = document.createElement('canvas');
+      canvas.width = 200;
+      canvas.height = 200;
+      const ctx = canvas.getContext('2d');
+      if (ctx) {
+        ctx.drawImage(img, 0, 0, 200, 200);
+        URL.revokeObjectURL(url);
+        resolve(canvas.toDataURL('image/png'));
+      } else {
+        reject(new Error('Failed to get canvas context'));
       }
+    };
+    img.onerror = (error) => {
+      URL.revokeObjectURL(url);
+      reject(error);
+    };
+  });
+};
 
-      const svgToPng = async (icon: Icon): Promise<string> => {
-        const response = await fetch(`http://localhost:8080/api/icons/${icon.fileName}.svg`);
-        const svg = await response.text();
+const props = defineProps<{ icon: Icon }>();
+const imageSrc = ref<string>('');
 
-        const svgBlob = new Blob([svg], { type: 'image/svg+xml;charset=utf-8' });
-        const url = URL.createObjectURL(svgBlob);
+onMounted(async () => {
+  imageSrc.value = await svgToPng(props.icon);
+});
+</script>
 
-        const img = new Image();
-        img.src = url;
-
-        return new Promise<string>((resolve, reject) => {
-          img.onload = () => {
-            const canvas = document.createElement('canvas');
-            canvas.width = 200;
-            canvas.height = 200;
-            const ctx = canvas.getContext('2d');
-            if (ctx) {
-              ctx.drawImage(img, 0, 0, 200, 200);
-              URL.revokeObjectURL(url);
-              resolve(canvas.toDataURL('image/png'));
-            } else {
-              reject(new Error('Failed to get canvas context'));
-            }
-          };
-          img.onerror = (error) => {
-            URL.revokeObjectURL(url);
-            reject(error);
-          };
-        });
-      };
-
-      const props = defineProps<{ icon: Icon }>();
-      const imageSrc = ref<string>('');
-
-      onMounted(async () => {
-        imageSrc.value = await svgToPng(props.icon);
-      });
-      </script>
-
-      <template>
-        <a class="icon-button" :href="`http://localhost:8080/api/icons/${icon.fileName}.svg`">
-          <img :src="imageSrc" :alt="props.icon.fileName.split('.')[0]" class="icon-image" />
-          <div class="bottom-box">
-            <p>{{props.icon.fileName}}</p>
-          </div>
-        </a>
-      </template>
+<template>
+  <a class="icon-button" :href="`http://localhost:8080/api/icons/${icon.fileName}.svg`">
+    <img :src="imageSrc" :alt="props.icon.fileName.split('.')[0]" class="icon-image"/>
+    <div class="bottom-box">
+      <p>{{ props.icon.fileName }}</p>
+    </div>
+  </a>
+</template>
 
 <style scoped>
 .icon-button {

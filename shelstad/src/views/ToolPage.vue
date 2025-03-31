@@ -2,17 +2,7 @@
 import { computed, onMounted, ref } from 'vue';
 import { useRoute } from 'vue-router';
 import { marked } from 'marked';
-
-// Import or define the Tool type
-interface Tool {
-  id: number;
-  name: string;
-  description: string;
-  price: number;
-  screenshot: string;
-  iconId: number;
-  link: string;
-}
+import { Tool } from '@/assets/types';
 
 const route = useRoute();
 const tool = ref<Tool | null>(null);
@@ -178,7 +168,10 @@ onMounted(() => {
     </div>
     <div class="tool-info">
       <div class="left-part">
-        <img :src="`http://localhost:8080/api/files/tool${tool.id}.png`" alt="Tool Icon" />
+        <div class="image-stack">
+          <div class="background-square"></div>
+          <img class="game-icon" :src="`http://localhost:8080/api/files/tool${tool.id}.png`" alt="Tool Icon" />
+        </div>
         <div class="tool-details">
           <h1>{{ tool.name }}</h1>
           <p><strong>Release Date:</strong> {{ new Date(tool.createdAt).toLocaleDateString() }}</p>
@@ -188,7 +181,8 @@ onMounted(() => {
       <div class="download-box">
         <div class="download-buttons">
           <p v-if="tool.price === 0">Download for Free</p>
-          <p v-else-if="tool.price === -1">This tool is unavailable</p>
+          <p v-else-if="tool.price === -1">This game is unavailable</p>
+          <p v-else-if="tool.price === -2">Coming Soon</p>
           <p v-else>{{ tool.price }}</p>
           <a v-if="toolLinks.win" class="download-button" :href="toolLinks.win" download>Download Windows</a>
           <a v-if="toolLinks.mac" class="download-button" :href="toolLinks.mac" download>Download Mac</a>
@@ -371,6 +365,34 @@ onMounted(() => {
   width: 70%;
   margin: 2rem auto;
   font-size: 1rem;
+}
+
+.image-stack {
+  width: 200px;
+  height: 200px;
+  aspect-ratio: 1 / 1;
+  position: relative;
+  display: inline-block;
+}
+
+.background-square {
+  position: absolute;
+  top: 0;
+  left: 0;
+  aspect-ratio: 1 / 1;
+  height: 100%;
+  background-color: var(--border-color);
+  border-radius: 3rem; /* Rounded corners */
+  z-index: 0;
+}
+
+.game-icon {
+  position: relative;
+  z-index: 1;
+  height: 100%;
+  aspect-ratio: 1 / 1;
+  object-fit: contain;
+  border-radius: 2rem;
 }
 
 .carousel-button {

@@ -2,9 +2,7 @@
 import {ref, watch, onMounted} from 'vue';
 import {useDark, useToggle} from '@vueuse/core';
 
-// Bruk VueUse for å håndtere dark mode
 const isDark = useDark();
-const toggleDarkMode = useToggle(isDark);
 
 
 const updateTheme = () => {

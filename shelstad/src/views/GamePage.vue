@@ -2,17 +2,7 @@
 import {computed, onMounted, ref} from 'vue';
 import {useRoute} from 'vue-router';
 import {marked} from 'marked';
-
-// Import or define the Game type
-interface Game {
-  id: number;
-  name: string;
-  description: string;
-  price: number;
-  screenshot: string;
-  iconId: number;
-  link: string;
-}
+import {Game} from "@/assets/types";
 
 const route = useRoute();
 const game = ref<Game | null>(null);
@@ -189,6 +179,7 @@ onMounted(() => {
         <div class="download-buttons">
           <p v-if="game.price === 0">Download for Free</p>
           <p v-else-if="game.price === -1">This game is unavailable</p>
+          <p v-else-if="game.price === -2">Coming Soon</p>
           <p v-else>{{ game.price }}</p>
           <a v-if="gameLinks.win" class="download-button" :href="gameLinks.win" download>Download Windows</a>
           <a v-if="gameLinks.mac" class="download-button" :href="gameLinks.mac" download>Download Mac</a>
