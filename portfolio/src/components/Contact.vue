@@ -1,93 +1,120 @@
 <script setup>
-const platforms = [
-  { name: 'GitHub', url: 'https://github.com/mattkje', icon: '/path/to/github-icon.svg' },
-  { name: 'LinkedIn', url: 'https://www.linkedin.com/in/mattkje', icon: '/path/to/linkedin-icon.svg' },
-  { name: 'YouTube', url: 'https://www.youtube.com/channel/UCmattkje', icon: '/path/to/youtube-icon.svg' },
-  { name: 'Shelstad Store', url: 'https://shelstadstore.com', icon: '/path/to/store-icon.svg' }
-];
-</script>
+    import { computed } from 'vue';
+    import githubIcon from '/src/assets/icons/github.png';
+    import linkedinIcon from '/src/assets/icons/linkedin.png';
+    import youtubeIcon from '/src/assets/icons/youtube.png';
+    import storeIcon from '/src/assets/images/game/shelstad-color.svg';
 
-<template>
-  <div class="contact-section">
-    <h2>Contact & Platforms</h2>
-    <div class="platforms">
+    const platforms = [
+      { name: 'GitHub', url: 'https://github.com/mattkje', icon: githubIcon },
+      { name: 'LinkedIn', url: 'https://www.linkedin.com/in/mattkje', icon: linkedinIcon },
+      { name: 'YouTube', url: 'https://www.youtube.com/@shelstad', icon: youtubeIcon },
+      { name: 'Shelstad Store', url: 'https://shelstad.store', icon: storeIcon }
+    ];
 
-        <a href="https://github.com/mattkje" target="_blank" rel="noopener noreferrer">
-          <img src="@/assets/icons/github.png" alt="?" class="platform-icon" />
-          <p>GitHub</p>
-        </a>
-        <a href="https://www.linkedin.com/in/matti-kjellstadli-39a0a028a/" target="_blank" rel="noopener noreferrer">
-          <img src="@/assets/icons/linkedin.png" alt="?" class="platform-icon" />
-          <p>LinkedIn</p>
-        </a>
-        <a href="https://www.youtube.com/@Shelstad" target="_blank" rel="noopener noreferrer">
-          <img src="@/assets/icons/youtube.png" alt="?" class="platform-icon" />
-          <p>YouTube</p>
-        </a>
-        <a href="https://shelstad.store" target="_blank" rel="noopener noreferrer">
-          <img src="@/assets/images/game/shelstad-color.svg" alt="?" class="platform-icon" />
-          <p>Shelstad Store</p>
-        </a>
+    const props = defineProps({
+      isMobile: {
+        type: Boolean,
+        default: false
+      }
+    });
 
-    </div>
-  </div>
-</template>
+    const containerClass = computed(() => (props.isMobile ? 'contact-section-mobile' : 'contact-section'));
+    const platformClass = computed(() => (props.isMobile ? 'platform-mobile' : 'platform'));
+    const iconClass = computed(() => (props.isMobile ? 'platform-icon-mobile' : 'platform-icon'));
+    </script>
 
-<style scoped>
-.contact-section {
-  margin-bottom: 5rem;
-  text-align: center;
-}
+    <template>
+      <div :class="containerClass">
+        <h2>Contact & Platforms</h2>
+        <div class="platforms">
+          <a v-for="platform in platforms" :key="platform.name" :href="platform.url" target="_blank" rel="noopener noreferrer" :class="platformClass">
+            <img :src="platform.icon" alt="?" :class="iconClass" />
+            <p>{{ platform.name }}</p>
+          </a>
+        </div>
+      </div>
+    </template>
 
-.platforms {
-  border-bottom: #e3e3e3 solid 1px;
-  border-top: #e3e3e3 solid 1px;
-  width: 50%;
-  padding-top: 2rem;
-  margin: auto;
-  display: flex;
-  justify-content: space-around;
-  flex-wrap: wrap;
-}
+    <style scoped>
+    .contact-section {
+      margin-bottom: 5rem;
+      text-align: center;
+    }
 
-.platform {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  text-align: center;
-  margin: 1rem;
-}
+    .contact-section-mobile {
+      margin-bottom: 2rem;
+      text-align: center;
+    }
 
-.platform-icon {
-  width: 50px;
-  height: 50px;
-  object-fit: contain;
-  margin-bottom: 0.5rem;
-  filter: grayscale(100%);
-  transition: transform 0.3s ease, filter 0.3s ease;
-}
+    .platforms {
+      border-bottom: #e3e3e3 solid 1px;
+      border-top: #e3e3e3 solid 1px;
+      width: 50%;
+      padding-top: 2rem;
+      margin: auto;
+      display: flex;
+      justify-content: space-around;
+      flex-wrap: wrap;
+    }
 
-.platform-icon:hover {
-  transform: scale(1.2);
-  filter: grayscale(0%);
-}
+    .platform {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      text-align: center;
+      margin: 1rem;
+    }
 
-.platform p {
-  font-size: 1rem;
-  margin: 0;
-}
+    .platform-mobile {
+      width: min-content;
+      margin: 0.5rem 0;
+    }
 
-a {
-  text-decoration: none;
-}
+    .platform-icon {
+      width: 50px;
+      height: 50px;
+      object-fit: contain;
+      margin-bottom: 0.5rem;
+      filter: grayscale(100%);
+      transition: transform 0.3s ease, filter 0.3s ease;
+    }
 
-a p {
-  margin-top: 0;
-  color: #a9a9a9;
-  transition: color 0.3s;
-}
+    .platform-icon-mobile {
+      width: 30px;
+      height: 30px;
+      object-fit: contain;
+      margin-bottom: 0.5rem;
+      filter: grayscale(100%);
+      transition: transform 0.3s ease, filter 0.3s ease;
+    }
 
-a:hover p {
-  color: black;
-}
-</style>
+    .platform-icon:hover {
+      transform: scale(1.2);
+      filter: grayscale(0%);
+    }
+
+    .platform-icon-mobile:hover {
+      transform: scale(1.2);
+      filter: grayscale(0%);
+    }
+
+    .platform p {
+      font-size: 1rem;
+      margin: 0;
+    }
+
+    a {
+      text-decoration: none;
+    }
+
+    a p {
+      margin-top: 0;
+      color: #a9a9a9;
+      transition: color 0.3s;
+    }
+
+    a:hover p {
+      color: black;
+    }
+    </style>

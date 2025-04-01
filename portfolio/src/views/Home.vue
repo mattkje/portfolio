@@ -29,7 +29,7 @@ onMounted(() => {
   <div class="container">
     <Hero />
     <FrontendSkill/>
-    <Contact/>
+    <Contact :is-mobile="false"/>
     <FeaturedProjects/>
 
   </div>

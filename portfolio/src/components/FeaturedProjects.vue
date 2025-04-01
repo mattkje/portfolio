@@ -46,14 +46,14 @@ onMounted(() => {
         :icon="pathsImage"
         name="Paths"
         description="Final Project for Programming 2 Course"
-        link="https://mattkje.github.io/"
+        link="https://github.com/mattkje/Paths/"
     />
     <FeaturedProject class="project-grid-item-animation"
         date="Spring 2024"
         :icon="learniverseConnectImage"
         name="Learniverse Connect"
         description="Final Project for Web Development Course"
-        link="https://mattkje.github.io/"
+        link="https://github.com/mattkje/course-project-team-5"
     />
     <FeaturedProject class="project-grid-item-animation"
         date="Fall 2024"

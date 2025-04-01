@@ -7,7 +7,7 @@
       <img class="logo" src="@/assets/logo.svg" alt="Logo" />
       <router-link class="nav-link" to="/">Home</router-link>
       <router-link class="nav-link" to="/projects">Projects</router-link>
-      <router-link class="nav-link" to="/about">About</router-link>
+      <router-link class="nav-link" to="/about">CV</router-link>
     </ul>
   </nav>
 </template>

@@ -5,16 +5,16 @@ import learniverseConnectImage from "@/assets/images/projects/learniverse-connec
 import partyPoopersImage from "@/assets/images/projects/party-poopers.svg";
 import warehouseSimulatorImage from "@/assets/images/projects/wws.svg";
 import baseBrwalersImage from "@/assets/images/projects/base-brawlers.png";
-import gitLockerImage from "@/assets/images/projects/gitlocker.png";
+import gitLockerImage from "@/assets/images/projects/gitlocker.svg";
 import theCarGameImage from "@/assets/images/projects/the-car-game.png";
 import fitnessImage from "@/assets/images/projects/fitness.png";
-import fluentiaImage from "@/assets/images/projects/fluentia.png";
+import fluentiaImage from "@/assets/images/projects/fluentia.svg";
 import econImage from "@/assets/images/projects/econ.png";
 
 import {onMounted, onUnmounted} from "vue";
 
 onMounted(() => {
-  const elements = document.querySelectorAll('.scroll-animation, .project-grid-item-animation, .project-box');
+  const elements = document.querySelectorAll('.scroll-animation, .project-grid-item-animation, .project-box, .vertical-timeline');
 
   const observer = new IntersectionObserver((entries) => {
     entries.forEach(entry => {

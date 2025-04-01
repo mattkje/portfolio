@@ -66,6 +66,22 @@ const props = defineProps({
   flex-direction: column;
   align-items: center;
   margin: 0;
+  transition: opacity 0.6s ease-out, transform 0.6s ease-out;
+}
+
+.vertical-timeline.visible {
+  animation: slideInBottom 0.6s forwards;
+}
+
+@keyframes slideInBottom {
+  from {
+    opacity: 0;
+    transform: translateY(20%);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
 }
 
 .timeline-date {
@@ -180,7 +196,7 @@ const props = defineProps({
 }
 
 .group {
-  background-color: #ffb74d;
+  background-color: #86e3a2;
 }
 
 .project-name {

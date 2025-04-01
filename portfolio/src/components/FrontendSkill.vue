@@ -1,25 +1,29 @@
 <script setup>
-const skills = [
-  { name: 'HTML, CSS, JavaScript', icon: '@/assets/icons/js.png' },
-  { name: 'Vue.js, React', icon: '@/assets/icons/vue.svg' },
-  { name: 'Asset creation with Photoshop, Affinity Designer', icon: '@/assets/icons/unity.png' }
-];
+
 </script>
 <template>
   <div class="container scroll-animation">
     <h1>Frontend Development & Asset Creation</h1>
     <div class="skills-section scroll-animation">
-      <div class="skill-block">
-        <img src="@/assets/icons/js.png" alt="icon missing" class="skill-icon" />
-        <p>HTML, CSS, JavaScript</p>
+      <div class="skill-block card-hand">
+        <img src="@/assets/icons/js.png" alt="icon missing" class="skill-icon card" />
+        <img src="@/assets/icons/ts.png" alt="icon missing" class="skill-icon card" />
+        <img src="@/assets/icons/html.svg" alt="icon missing" class="skill-icon card" />
+        <img src="@/assets/icons/css.svg" alt="icon missing" class="skill-icon card" />
+        <p>HTML, CSS, JavaScript, Typescript</p>
       </div>
-      <div class="skill-block">
-        <img src="@/assets/icons/vue.svg" alt="icon missing" class="skill-icon" />
-        <p>Vue.js, React</p>
+      <div class="skill-block card-hand">
+        <img src="@/assets/icons/vue.svg" alt="icon missing" class="skill-icon card" />
+        <img src="@/assets/icons/react.png" alt="icon missing" class="skill-icon card" />
+        <img src="@/assets/icons/unity.png" alt="icon missing" class="skill-icon card" />
+        <img src="@/assets/icons/flutter.png" alt="icon missing" class="skill-icon card" />
+        <p>Vue.js, React, Unity UI, Flutter</p>
       </div>
-      <div class="skill-block">
-        <img src="@/assets/icons/affinity.png" alt="icon missing" class="skill-icon" />
-        <p>Asset creation with Adobe Photoshop, Affinity Designer and Figma</p>
+      <div class="skill-block card-hand">
+        <img src="@/assets/icons/ps.png" alt="icon missing" class="skill-icon card" />
+        <img src="@/assets/icons/affinity.png" alt="icon missing" class="skill-icon card" />
+        <img src="@/assets/icons/figma.png" alt="icon missing" class="skill-icon card" />
+        <p>Adobe Photoshop, Affinity Designer and Figma</p>
         <button class="link">Check Out My Icon library</button>
       </div>
     </div>
@@ -39,13 +43,13 @@ const skills = [
   height: 10rem;
   display: flex;
   justify-content: space-around;
-  margin: auto;
+  margin: 5rem auto 0 auto;
 }
 
 .skill-block {
   border: #e3e3e3 solid 1px;
   width: 25%;
-  height: 100%;
+  height: 60%;
   border-radius: 2rem;
   padding: 1.5rem;
   display: flex;
@@ -65,13 +69,14 @@ const skills = [
 .skill-icon {
   width: 50px;
   height: 50px;
+  border-radius: 0.5rem;
   margin-bottom: 0.5rem;
 }
 
 .skill-block p {
   font-size: 1rem;
   line-height: 1.5rem;
-  margin: 0;
+  margin: 2rem 0 0 0;
 }
 
 .link {
@@ -106,4 +111,48 @@ const skills = [
   margin-top: 5rem;
 }
 
+.card-hand {
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.card {
+  position: absolute;
+  bottom: 7rem;
+  transition: transform 0.3s;
+}
+
+.card:nth-child(1) {
+  transform: rotate(0deg) translateX(0);
+}
+
+.card:nth-child(2) {
+  transform: rotate(0deg) translateX(0);
+}
+
+.card:nth-child(3) {
+  transform: rotate(0deg) translateX(0);
+}
+
+.card:nth-child(4) {
+  transform: rotate(0deg) translateX(0);
+}
+
+.card-hand:hover .card:nth-child(1) {
+  transform: rotate(-15deg) translateX(-60px);
+}
+
+.card-hand:hover .card:nth-child(2) {
+  transform: rotate(-5deg) translateX(-20px);
+}
+
+.card-hand:hover .card:nth-child(3) {
+  transform: rotate(5deg) translateX(20px);
+}
+
+.card-hand:hover .card:nth-child(4) {
+  transform: rotate(15deg) translateX(60px);
+}
 </style>

@@ -5,27 +5,17 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="5cbcede9-ef8b-42d2-8e91-9d65f72643db" name="Changes" comment="Something more added">
-      <change afterPath="$PROJECT_DIR$/portfolio/src/assets/images/projects/econ.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/portfolio/src/components/FeaturedProject.vue" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/portfolio/dist/assets/index-jAM458to.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/portfolio/dist/assets/index-tzOWaUKq.css" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/portfolio/dist/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/portfolio/dist/index.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/portfolio/node_modules/.package-lock.json" beforeDir="false" afterPath="$PROJECT_DIR$/portfolio/node_modules/.package-lock.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/portfolio/package-lock.json" beforeDir="false" afterPath="$PROJECT_DIR$/portfolio/package-lock.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/portfolio/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/portfolio/package.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/portfolio/node_modules/.vite/deps/_metadata.json" beforeDir="false" afterPath="$PROJECT_DIR$/portfolio/node_modules/.vite/deps/_metadata.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/portfolio/src/assets/icons/unity.png" beforeDir="false" afterPath="$PROJECT_DIR$/portfolio/src/assets/icons/unity.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/portfolio/src/components/Contact.vue" beforeDir="false" afterPath="$PROJECT_DIR$/portfolio/src/components/Contact.vue" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/portfolio/src/components/FeaturedProjects.vue" beforeDir="false" afterPath="$PROJECT_DIR$/portfolio/src/components/FeaturedProjects.vue" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/portfolio/src/components/FrontendSkill.vue" beforeDir="false" afterPath="$PROJECT_DIR$/portfolio/src/components/FrontendSkill.vue" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/portfolio/src/components/Hero.vue" beforeDir="false" afterPath="$PROJECT_DIR$/portfolio/src/components/Hero.vue" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/portfolio/src/components/Menubar.vue" beforeDir="false" afterPath="$PROJECT_DIR$/portfolio/src/components/Menubar.vue" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/portfolio/src/components/Project.vue" beforeDir="false" afterPath="$PROJECT_DIR$/portfolio/src/components/Project.vue" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/portfolio/src/router/index.ts" beforeDir="false" afterPath="$PROJECT_DIR$/portfolio/src/router/index.ts" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/portfolio/src/views/About.vue" beforeDir="false" afterPath="$PROJECT_DIR$/portfolio/src/views/About.vue" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/portfolio/src/views/Contact.vue" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/portfolio/src/views/Home.vue" beforeDir="false" afterPath="$PROJECT_DIR$/portfolio/src/views/Home.vue" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/portfolio/src/views/Projects.vue" beforeDir="false" afterPath="$PROJECT_DIR$/portfolio/src/views/Projects.vue" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/shelstad/node_modules/.package-lock.json" beforeDir="false" afterPath="$PROJECT_DIR$/shelstad/node_modules/.package-lock.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/shelstad/package-lock.json" beforeDir="false" afterPath="$PROJECT_DIR$/shelstad/package-lock.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/shelstad/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/shelstad/package.json" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -116,17 +106,17 @@
       <recent name="$PROJECT_DIR$/src/assets/graphics" />
     </key>
     <key name="MoveFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/portfolio/src/assets/icons" />
       <recent name="$PROJECT_DIR$/" />
       <recent name="$PROJECT_DIR$/portfolio" />
       <recent name="$PROJECT_DIR$" />
       <recent name="$PROJECT_DIR$/../shelstad/src/components" />
-      <recent name="$PROJECT_DIR$/src/views" />
     </key>
     <key name="CopyClassDialog.RECENTS_KEY">
       <recent name="no.mattikj.backend.config" />
     </key>
   </component>
-  <component name="RunManager" selected="npm.Shelstad">
+  <component name="RunManager" selected="npm.build">
     <configuration name="BackendApplication" type="SpringBootApplicationConfigurationType" factoryName="Spring Boot" nameIsGenerated="true">
       <option name="ALTERNATIVE_JRE_PATH" value="openjdk-24" />
       <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="true" />
@@ -184,9 +174,9 @@
     </list>
     <recent_temporary>
       <list>
-        <item itemvalue="npm.Shelstad" />
         <item itemvalue="npm.build" />
         <item itemvalue="npm.dev" />
+        <item itemvalue="npm.Shelstad" />
         <item itemvalue="npm.Shelstad" />
       </list>
     </recent_temporary>
@@ -218,7 +208,7 @@
       <workItem from="1742920512862" duration="54154000" />
       <workItem from="1743059545539" duration="599000" />
       <workItem from="1743069736217" duration="611000" />
-      <workItem from="1743074675127" duration="27618000" />
+      <workItem from="1743074675127" duration="38368000" />
     </task>
     <task id="LOCAL-00001" summary="Something more added">
       <option name="closed" value="true" />
