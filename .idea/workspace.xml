@@ -5,38 +5,8 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="5cbcede9-ef8b-42d2-8e91-9d65f72643db" name="Changes" comment="Something more added">
-      <change beforePath="$PROJECT_DIR$/.idea/dataSources.local.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/dataSources.local.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/backend/src/main/java/no/mattikj/backend/config/WebConfig.java" beforeDir="false" afterPath="$PROJECT_DIR$/backend/src/main/java/no/mattikj/backend/config/WebConfig.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/backend/src/main/resources/application.properties" beforeDir="false" afterPath="$PROJECT_DIR$/backend/src/main/resources/application.properties" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/portfolio/dist/assets/gitlocker-DjIYp7OI.svg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/portfolio/dist/assets/index-DxcpgpKX.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/portfolio/dist/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/portfolio/dist/index.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/portfolio/src/assets/images/projects/gitlocker.svg" beforeDir="false" afterPath="$PROJECT_DIR$/portfolio/src/assets/images/projects/gitlocker.svg" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/portfolio/src/router/index.ts" beforeDir="false" afterPath="$PROJECT_DIR$/portfolio/src/router/index.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/shelstad/dist/assets/index-C1Fcz7sG.css" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/shelstad/dist/assets/index-tyjio_r1.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/shelstad/dist/assets/party-poopers-qfghrwt_.svg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/shelstad/dist/assets/paths-2Ka4Bjca.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/shelstad/dist/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/shelstad/dist/index.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/shelstad/src/components/GameCard.vue" beforeDir="false" afterPath="$PROJECT_DIR$/shelstad/src/components/GameCard.vue" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/shelstad/src/components/IconButton.vue" beforeDir="false" afterPath="$PROJECT_DIR$/shelstad/src/components/IconButton.vue" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/shelstad/src/components/Menubar.vue" beforeDir="false" afterPath="$PROJECT_DIR$/shelstad/src/components/Menubar.vue" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/shelstad/src/components/ToolCard.vue" beforeDir="false" afterPath="$PROJECT_DIR$/shelstad/src/components/ToolCard.vue" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/shelstad/src/components/icons/IconCommunity.vue" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/shelstad/src/components/icons/IconDocumentation.vue" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/shelstad/src/components/icons/IconEcosystem.vue" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/shelstad/src/components/icons/IconSupport.vue" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/shelstad/src/components/icons/IconTooling.vue" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/shelstad/src/main.js" beforeDir="false" afterPath="$PROJECT_DIR$/shelstad/src/main.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/shelstad/src/router/index.ts" beforeDir="false" afterPath="$PROJECT_DIR$/shelstad/src/router/index.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/shelstad/src/views/GamePage.vue" beforeDir="false" afterPath="$PROJECT_DIR$/shelstad/src/views/GamePage.vue" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/shelstad/src/views/Games.vue" beforeDir="false" afterPath="$PROJECT_DIR$/shelstad/src/views/Games.vue" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/shelstad/src/views/IconPage.vue" beforeDir="false" afterPath="$PROJECT_DIR$/shelstad/src/views/IconPage.vue" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/shelstad/src/views/ToolPage.vue" beforeDir="false" afterPath="$PROJECT_DIR$/shelstad/src/views/ToolPage.vue" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/shelstad/src/views/Tools.vue" beforeDir="false" afterPath="$PROJECT_DIR$/shelstad/src/views/Tools.vue" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/shelstad/vite.config.js" beforeDir="false" afterPath="$PROJECT_DIR$/shelstad/vite.config.js" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -247,7 +217,7 @@
       <workItem from="1743513173476" duration="706000" />
       <workItem from="1743514264552" duration="1005000" />
       <workItem from="1743516470868" duration="524000" />
-      <workItem from="1743708625049" duration="10203000" />
+      <workItem from="1743708625049" duration="12322000" />
     </task>
     <task id="LOCAL-00001" summary="Something more added">
       <option name="closed" value="true" />
