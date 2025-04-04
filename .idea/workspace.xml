@@ -5,8 +5,20 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="5cbcede9-ef8b-42d2-8e91-9d65f72643db" name="Changes" comment="Something more added">
+      <change afterPath="$PROJECT_DIR$/backend/src/main/resources/keystore.p12" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/shelstad/src/router/index.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/backend/src/main/java/no/mattikj/backend/config/WebConfig.java" beforeDir="false" afterPath="$PROJECT_DIR$/backend/src/main/java/no/mattikj/backend/config/WebConfig.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/backend/src/main/resources/application.properties" beforeDir="false" afterPath="$PROJECT_DIR$/backend/src/main/resources/application.properties" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/shelstad/dist/assets/background-home-2-DQL9v_WN.svg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/shelstad/dist/assets/index-Dedgsrqh.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/shelstad/dist/assets/index-DqqmBpGq.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/shelstad/dist/assets/shelstad-color-Do1IZe26.svg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/shelstad/dist/favicon.ico" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/shelstad/dist/index.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/shelstad/src/main.js" beforeDir="false" afterPath="$PROJECT_DIR$/shelstad/src/main.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/shelstad/src/router/index.ts" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/shelstad/vite.config.js" beforeDir="false" afterPath="$PROJECT_DIR$/shelstad/vite.config.js" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -49,66 +61,66 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent">{
-  &quot;keyToString&quot;: {
-    &quot;RequestMappingsPanelOrder0&quot;: &quot;0&quot;,
-    &quot;RequestMappingsPanelOrder1&quot;: &quot;1&quot;,
-    &quot;RequestMappingsPanelWidth0&quot;: &quot;75&quot;,
-    &quot;RequestMappingsPanelWidth1&quot;: &quot;75&quot;,
-    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
-    &quot;RunOnceActivity.git.unshallow&quot;: &quot;true&quot;,
-    &quot;Spring Boot.BackendApplication.executor&quot;: &quot;Run&quot;,
-    &quot;dart.analysis.tool.window.visible&quot;: &quot;false&quot;,
-    &quot;git-widget-placeholder&quot;: &quot;master&quot;,
-    &quot;kotlin-language-version-configured&quot;: &quot;true&quot;,
-    &quot;last_opened_file_path&quot;: &quot;/Users/mattikjellstadli/Programming/Mobile Applications/portfolio/portfolio/src/assets/images/projects&quot;,
-    &quot;node.js.detected.package.eslint&quot;: &quot;true&quot;,
-    &quot;node.js.detected.package.tslint&quot;: &quot;true&quot;,
-    &quot;node.js.selected.package.eslint&quot;: &quot;(autodetect)&quot;,
-    &quot;node.js.selected.package.tslint&quot;: &quot;(autodetect)&quot;,
-    &quot;nodejs_package_manager_path&quot;: &quot;npm&quot;,
-    &quot;npm.Shelstad.executor&quot;: &quot;Run&quot;,
-    &quot;npm.build (1).executor&quot;: &quot;Run&quot;,
-    &quot;npm.build.executor&quot;: &quot;Run&quot;,
-    &quot;npm.dev-1.executor&quot;: &quot;Run&quot;,
-    &quot;npm.dev.executor&quot;: &quot;Run&quot;,
-    &quot;project.structure.last.edited&quot;: &quot;Project&quot;,
-    &quot;project.structure.proportion&quot;: &quot;0.15&quot;,
-    &quot;project.structure.side.proportion&quot;: &quot;0.2&quot;,
-    &quot;settings.editor.selected.configurable&quot;: &quot;reference.settings.project.maven.repository.indices&quot;,
-    &quot;show.migrate.to.gradle.popup&quot;: &quot;false&quot;,
-    &quot;ts.external.directory.path&quot;: &quot;/Users/mattikjellstadli/Applications/IntelliJ IDEA Ultimate.app/Contents/plugins/javascript-plugin/jsLanguageServicesImpl/external&quot;,
-    &quot;vue.rearranger.settings.migration&quot;: &quot;true&quot;
+  <component name="PropertiesComponent"><![CDATA[{
+  "keyToString": {
+    "RequestMappingsPanelOrder0": "0",
+    "RequestMappingsPanelOrder1": "1",
+    "RequestMappingsPanelWidth0": "75",
+    "RequestMappingsPanelWidth1": "75",
+    "RunOnceActivity.ShowReadmeOnStart": "true",
+    "RunOnceActivity.git.unshallow": "true",
+    "Spring Boot.BackendApplication.executor": "Run",
+    "dart.analysis.tool.window.visible": "false",
+    "git-widget-placeholder": "master",
+    "kotlin-language-version-configured": "true",
+    "last_opened_file_path": "/Users/mattikjellstadli/Programming/Mobile Applications/portfolio/shelstad/src/router",
+    "node.js.detected.package.eslint": "true",
+    "node.js.detected.package.tslint": "true",
+    "node.js.selected.package.eslint": "(autodetect)",
+    "node.js.selected.package.tslint": "(autodetect)",
+    "nodejs_package_manager_path": "npm",
+    "npm.Shelstad.executor": "Run",
+    "npm.build (1).executor": "Run",
+    "npm.build.executor": "Run",
+    "npm.dev-1.executor": "Run",
+    "npm.dev.executor": "Run",
+    "project.structure.last.edited": "Project",
+    "project.structure.proportion": "0.15",
+    "project.structure.side.proportion": "0.2",
+    "settings.editor.selected.configurable": "reference.settings.project.maven.repository.indices",
+    "show.migrate.to.gradle.popup": "false",
+    "ts.external.directory.path": "/Users/mattikjellstadli/Applications/IntelliJ IDEA Ultimate.app/Contents/plugins/javascript-plugin/jsLanguageServicesImpl/external",
+    "vue.rearranger.settings.migration": "true"
   },
-  &quot;keyToStringList&quot;: {
-    &quot;DatabaseDriversLRU&quot;: [
-      &quot;mysql&quot;
+  "keyToStringList": {
+    "DatabaseDriversLRU": [
+      "mysql"
     ],
-    &quot;vue.recent.templates&quot;: [
-      &quot;Vue Composition API Component&quot;
+    "vue.recent.templates": [
+      "Vue Composition API Component"
     ]
   }
-}</component>
+}]]></component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/shelstad/src/router" />
       <recent name="$PROJECT_DIR$/portfolio/src/assets/images/projects" />
       <recent name="$PROJECT_DIR$/shelstad/src/assets/graphics" />
       <recent name="$PROJECT_DIR$/shelstad/src/assets" />
       <recent name="$PROJECT_DIR$/src/assets/icons" />
-      <recent name="$PROJECT_DIR$/src/assets/graphics" />
     </key>
     <key name="MoveFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/backend/src/main/resources" />
+      <recent name="$PROJECT_DIR$/shelstad/src/router" />
       <recent name="$PROJECT_DIR$/portfolio/src/assets/icons" />
       <recent name="$PROJECT_DIR$/" />
       <recent name="$PROJECT_DIR$/portfolio" />
-      <recent name="$PROJECT_DIR$" />
-      <recent name="$PROJECT_DIR$/../shelstad/src/components" />
     </key>
     <key name="CopyClassDialog.RECENTS_KEY">
       <recent name="no.mattikj.backend.config" />
     </key>
   </component>
-  <component name="RunManager" selected="Spring Boot.BackendApplication">
+  <component name="RunManager" selected="npm.build (1)">
     <configuration name="BackendApplication" type="SpringBootApplicationConfigurationType" factoryName="Spring Boot" nameIsGenerated="true">
       <option name="ALTERNATIVE_JRE_PATH" value="openjdk-24" />
       <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="true" />
@@ -217,7 +229,7 @@
       <workItem from="1743513173476" duration="706000" />
       <workItem from="1743514264552" duration="1005000" />
       <workItem from="1743516470868" duration="524000" />
-      <workItem from="1743708625049" duration="12322000" />
+      <workItem from="1743708625049" duration="18203000" />
     </task>
     <task id="LOCAL-00001" summary="Something more added">
       <option name="closed" value="true" />
