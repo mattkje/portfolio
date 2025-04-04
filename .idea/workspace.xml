@@ -5,20 +5,8 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="5cbcede9-ef8b-42d2-8e91-9d65f72643db" name="Changes" comment="Something more added">
-      <change afterPath="$PROJECT_DIR$/backend/src/main/resources/keystore.p12" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/shelstad/src/router/index.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/backend/src/main/java/no/mattikj/backend/config/WebConfig.java" beforeDir="false" afterPath="$PROJECT_DIR$/backend/src/main/java/no/mattikj/backend/config/WebConfig.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/backend/src/main/resources/application.properties" beforeDir="false" afterPath="$PROJECT_DIR$/backend/src/main/resources/application.properties" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/shelstad/dist/assets/background-home-2-DQL9v_WN.svg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/shelstad/dist/assets/index-Dedgsrqh.css" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/shelstad/dist/assets/index-DqqmBpGq.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/shelstad/dist/assets/shelstad-color-Do1IZe26.svg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/shelstad/dist/favicon.ico" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/shelstad/dist/index.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/shelstad/src/main.js" beforeDir="false" afterPath="$PROJECT_DIR$/shelstad/src/main.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/shelstad/src/router/index.ts" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/shelstad/vite.config.js" beforeDir="false" afterPath="$PROJECT_DIR$/shelstad/vite.config.js" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -229,7 +217,7 @@
       <workItem from="1743513173476" duration="706000" />
       <workItem from="1743514264552" duration="1005000" />
       <workItem from="1743516470868" duration="524000" />
-      <workItem from="1743708625049" duration="18203000" />
+      <workItem from="1743708625049" duration="19181000" />
     </task>
     <task id="LOCAL-00001" summary="Something more added">
       <option name="closed" value="true" />
