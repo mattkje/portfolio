@@ -1,5 +1,5 @@
 <script setup lang="ts">
-import { onMounted, ref } from 'vue';
+import {getCurrentInstance, onMounted, ref} from 'vue';
 import { useRouter } from 'vue-router';
 import ToolCard from "@/components/ToolCard.vue";
 import { Tool } from "@/assets/types";
@@ -8,7 +8,9 @@ const tools = ref<Tool[] | null>(null);
 
 const fetchTools = async () => {
   try {
-    const response = await fetch('http://localhost:8080/api/tools');
+    const { appContext } = getCurrentInstance()!;
+    const apiAddress = appContext.config.globalProperties.$apiAddress;
+    const response = await fetch(`${apiAddress}/tools`);
     if (!response.ok) {
       throw new Error('Network response was not ok');
     }

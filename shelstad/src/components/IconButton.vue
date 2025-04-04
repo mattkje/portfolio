@@ -1,9 +1,11 @@
 <script setup lang="ts">
-import {defineProps, ref, onMounted} from 'vue';
+import {defineProps, ref, onMounted, getCurrentInstance} from 'vue';
 import {Icon} from '@/assets/types';
 
 const svgToPng = async (icon: Icon): Promise<string> => {
-  const response = await fetch(`http://localhost:8080/api/icons/${icon.fileName}.svg`);
+  const { appContext } = getCurrentInstance()!;
+  const apiAddress = appContext.config.globalProperties.$apiAddress;
+  const response = await fetch(`${apiAddress}/icons/${icon.fileName}.svg`);
   const svg = await response.text();
 
   const svgBlob = new Blob([svg], {type: 'image/svg+xml;charset=utf-8'});
@@ -42,7 +44,7 @@ onMounted(async () => {
 </script>
 
 <template>
-  <a class="icon-button" :href="`http://localhost:8080/api/icons/${icon.fileName}.svg`">
+  <a class="icon-button" :href="`${getCurrentInstance().appContext.config.globalProperties.$apiAddress}/icons/${props.icon.fileName}.svg`">
     <img :src="imageSrc" :alt="props.icon.fileName.split('.')[0]" class="icon-image"/>
     <div class="bottom-box">
       <p>{{ props.icon.fileName }}</p>

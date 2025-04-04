@@ -5,17 +5,38 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="5cbcede9-ef8b-42d2-8e91-9d65f72643db" name="Changes" comment="Something more added">
+      <change beforePath="$PROJECT_DIR$/.idea/dataSources.local.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/dataSources.local.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/portfolio/node_modules/.vite/deps/_metadata.json" beforeDir="false" afterPath="$PROJECT_DIR$/portfolio/node_modules/.vite/deps/_metadata.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/portfolio/src/assets/icons/unity.png" beforeDir="false" afterPath="$PROJECT_DIR$/portfolio/src/assets/icons/unity.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/portfolio/src/components/Contact.vue" beforeDir="false" afterPath="$PROJECT_DIR$/portfolio/src/components/Contact.vue" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/portfolio/src/components/FeaturedProjects.vue" beforeDir="false" afterPath="$PROJECT_DIR$/portfolio/src/components/FeaturedProjects.vue" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/portfolio/src/components/FrontendSkill.vue" beforeDir="false" afterPath="$PROJECT_DIR$/portfolio/src/components/FrontendSkill.vue" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/portfolio/src/components/Menubar.vue" beforeDir="false" afterPath="$PROJECT_DIR$/portfolio/src/components/Menubar.vue" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/portfolio/src/components/Project.vue" beforeDir="false" afterPath="$PROJECT_DIR$/portfolio/src/components/Project.vue" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/portfolio/src/views/About.vue" beforeDir="false" afterPath="$PROJECT_DIR$/portfolio/src/views/About.vue" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/portfolio/src/views/Home.vue" beforeDir="false" afterPath="$PROJECT_DIR$/portfolio/src/views/Home.vue" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/portfolio/src/views/Projects.vue" beforeDir="false" afterPath="$PROJECT_DIR$/portfolio/src/views/Projects.vue" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/backend/src/main/java/no/mattikj/backend/config/WebConfig.java" beforeDir="false" afterPath="$PROJECT_DIR$/backend/src/main/java/no/mattikj/backend/config/WebConfig.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/backend/src/main/resources/application.properties" beforeDir="false" afterPath="$PROJECT_DIR$/backend/src/main/resources/application.properties" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/portfolio/dist/assets/gitlocker-DjIYp7OI.svg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/portfolio/dist/assets/index-DxcpgpKX.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/portfolio/dist/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/portfolio/dist/index.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/portfolio/src/assets/images/projects/gitlocker.svg" beforeDir="false" afterPath="$PROJECT_DIR$/portfolio/src/assets/images/projects/gitlocker.svg" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/portfolio/src/router/index.ts" beforeDir="false" afterPath="$PROJECT_DIR$/portfolio/src/router/index.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/shelstad/dist/assets/index-C1Fcz7sG.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/shelstad/dist/assets/index-tyjio_r1.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/shelstad/dist/assets/party-poopers-qfghrwt_.svg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/shelstad/dist/assets/paths-2Ka4Bjca.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/shelstad/dist/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/shelstad/dist/index.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/shelstad/src/components/GameCard.vue" beforeDir="false" afterPath="$PROJECT_DIR$/shelstad/src/components/GameCard.vue" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/shelstad/src/components/IconButton.vue" beforeDir="false" afterPath="$PROJECT_DIR$/shelstad/src/components/IconButton.vue" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/shelstad/src/components/Menubar.vue" beforeDir="false" afterPath="$PROJECT_DIR$/shelstad/src/components/Menubar.vue" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/shelstad/src/components/ToolCard.vue" beforeDir="false" afterPath="$PROJECT_DIR$/shelstad/src/components/ToolCard.vue" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/shelstad/src/components/icons/IconCommunity.vue" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/shelstad/src/components/icons/IconDocumentation.vue" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/shelstad/src/components/icons/IconEcosystem.vue" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/shelstad/src/components/icons/IconSupport.vue" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/shelstad/src/components/icons/IconTooling.vue" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/shelstad/src/main.js" beforeDir="false" afterPath="$PROJECT_DIR$/shelstad/src/main.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/shelstad/src/router/index.ts" beforeDir="false" afterPath="$PROJECT_DIR$/shelstad/src/router/index.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/shelstad/src/views/GamePage.vue" beforeDir="false" afterPath="$PROJECT_DIR$/shelstad/src/views/GamePage.vue" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/shelstad/src/views/Games.vue" beforeDir="false" afterPath="$PROJECT_DIR$/shelstad/src/views/Games.vue" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/shelstad/src/views/IconPage.vue" beforeDir="false" afterPath="$PROJECT_DIR$/shelstad/src/views/IconPage.vue" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/shelstad/src/views/ToolPage.vue" beforeDir="false" afterPath="$PROJECT_DIR$/shelstad/src/views/ToolPage.vue" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/shelstad/src/views/Tools.vue" beforeDir="false" afterPath="$PROJECT_DIR$/shelstad/src/views/Tools.vue" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/shelstad/vite.config.js" beforeDir="false" afterPath="$PROJECT_DIR$/shelstad/vite.config.js" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -58,45 +79,46 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent"><![CDATA[{
-  "keyToString": {
-    "RequestMappingsPanelOrder0": "0",
-    "RequestMappingsPanelOrder1": "1",
-    "RequestMappingsPanelWidth0": "75",
-    "RequestMappingsPanelWidth1": "75",
-    "RunOnceActivity.ShowReadmeOnStart": "true",
-    "RunOnceActivity.git.unshallow": "true",
-    "Spring Boot.BackendApplication.executor": "Run",
-    "dart.analysis.tool.window.visible": "false",
-    "git-widget-placeholder": "master",
-    "kotlin-language-version-configured": "true",
-    "last_opened_file_path": "/Users/mattikjellstadli/Programming/Mobile Applications/portfolio/portfolio/src/assets/images/projects",
-    "node.js.detected.package.eslint": "true",
-    "node.js.detected.package.tslint": "true",
-    "node.js.selected.package.eslint": "(autodetect)",
-    "node.js.selected.package.tslint": "(autodetect)",
-    "nodejs_package_manager_path": "npm",
-    "npm.Shelstad.executor": "Run",
-    "npm.build.executor": "Run",
-    "npm.dev-1.executor": "Run",
-    "npm.dev.executor": "Run",
-    "project.structure.last.edited": "Project",
-    "project.structure.proportion": "0.15",
-    "project.structure.side.proportion": "0.2",
-    "settings.editor.selected.configurable": "reference.settings.project.maven.repository.indices",
-    "show.migrate.to.gradle.popup": "false",
-    "ts.external.directory.path": "/Users/mattikjellstadli/Applications/IntelliJ IDEA Ultimate.app/Contents/plugins/javascript-plugin/jsLanguageServicesImpl/external",
-    "vue.rearranger.settings.migration": "true"
+  <component name="PropertiesComponent">{
+  &quot;keyToString&quot;: {
+    &quot;RequestMappingsPanelOrder0&quot;: &quot;0&quot;,
+    &quot;RequestMappingsPanelOrder1&quot;: &quot;1&quot;,
+    &quot;RequestMappingsPanelWidth0&quot;: &quot;75&quot;,
+    &quot;RequestMappingsPanelWidth1&quot;: &quot;75&quot;,
+    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.git.unshallow&quot;: &quot;true&quot;,
+    &quot;Spring Boot.BackendApplication.executor&quot;: &quot;Run&quot;,
+    &quot;dart.analysis.tool.window.visible&quot;: &quot;false&quot;,
+    &quot;git-widget-placeholder&quot;: &quot;master&quot;,
+    &quot;kotlin-language-version-configured&quot;: &quot;true&quot;,
+    &quot;last_opened_file_path&quot;: &quot;/Users/mattikjellstadli/Programming/Mobile Applications/portfolio/portfolio/src/assets/images/projects&quot;,
+    &quot;node.js.detected.package.eslint&quot;: &quot;true&quot;,
+    &quot;node.js.detected.package.tslint&quot;: &quot;true&quot;,
+    &quot;node.js.selected.package.eslint&quot;: &quot;(autodetect)&quot;,
+    &quot;node.js.selected.package.tslint&quot;: &quot;(autodetect)&quot;,
+    &quot;nodejs_package_manager_path&quot;: &quot;npm&quot;,
+    &quot;npm.Shelstad.executor&quot;: &quot;Run&quot;,
+    &quot;npm.build (1).executor&quot;: &quot;Run&quot;,
+    &quot;npm.build.executor&quot;: &quot;Run&quot;,
+    &quot;npm.dev-1.executor&quot;: &quot;Run&quot;,
+    &quot;npm.dev.executor&quot;: &quot;Run&quot;,
+    &quot;project.structure.last.edited&quot;: &quot;Project&quot;,
+    &quot;project.structure.proportion&quot;: &quot;0.15&quot;,
+    &quot;project.structure.side.proportion&quot;: &quot;0.2&quot;,
+    &quot;settings.editor.selected.configurable&quot;: &quot;reference.settings.project.maven.repository.indices&quot;,
+    &quot;show.migrate.to.gradle.popup&quot;: &quot;false&quot;,
+    &quot;ts.external.directory.path&quot;: &quot;/Users/mattikjellstadli/Applications/IntelliJ IDEA Ultimate.app/Contents/plugins/javascript-plugin/jsLanguageServicesImpl/external&quot;,
+    &quot;vue.rearranger.settings.migration&quot;: &quot;true&quot;
   },
-  "keyToStringList": {
-    "DatabaseDriversLRU": [
-      "mysql"
+  &quot;keyToStringList&quot;: {
+    &quot;DatabaseDriversLRU&quot;: [
+      &quot;mysql&quot;
     ],
-    "vue.recent.templates": [
-      "Vue Composition API Component"
+    &quot;vue.recent.templates&quot;: [
+      &quot;Vue Composition API Component&quot;
     ]
   }
-}]]></component>
+}</component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
       <recent name="$PROJECT_DIR$/portfolio/src/assets/images/projects" />
@@ -116,7 +138,7 @@
       <recent name="no.mattikj.backend.config" />
     </key>
   </component>
-  <component name="RunManager" selected="npm.build">
+  <component name="RunManager" selected="Spring Boot.BackendApplication">
     <configuration name="BackendApplication" type="SpringBootApplicationConfigurationType" factoryName="Spring Boot" nameIsGenerated="true">
       <option name="ALTERNATIVE_JRE_PATH" value="openjdk-24" />
       <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="true" />
@@ -146,6 +168,16 @@
       <envs />
       <method v="2" />
     </configuration>
+    <configuration name="build (1)" type="js.build_tools.npm" temporary="true" nameIsGenerated="true">
+      <package-json value="$PROJECT_DIR$/shelstad/package.json" />
+      <command value="run" />
+      <scripts>
+        <script value="build" />
+      </scripts>
+      <node-interpreter value="project" />
+      <envs />
+      <method v="2" />
+    </configuration>
     <configuration name="build" type="js.build_tools.npm" temporary="true" nameIsGenerated="true">
       <package-json value="$PROJECT_DIR$/portfolio/package.json" />
       <command value="run" />
@@ -167,6 +199,7 @@
       <method v="2" />
     </configuration>
     <list>
+      <item itemvalue="npm.build (1)" />
       <item itemvalue="npm.build" />
       <item itemvalue="npm.dev" />
       <item itemvalue="npm.Shelstad" />
@@ -174,9 +207,10 @@
     </list>
     <recent_temporary>
       <list>
+        <item itemvalue="npm.build (1)" />
+        <item itemvalue="npm.Shelstad" />
         <item itemvalue="npm.build" />
         <item itemvalue="npm.dev" />
-        <item itemvalue="npm.Shelstad" />
         <item itemvalue="npm.Shelstad" />
       </list>
     </recent_temporary>
@@ -208,7 +242,12 @@
       <workItem from="1742920512862" duration="54154000" />
       <workItem from="1743059545539" duration="599000" />
       <workItem from="1743069736217" duration="611000" />
-      <workItem from="1743074675127" duration="38368000" />
+      <workItem from="1743074675127" duration="42107000" />
+      <workItem from="1743511350799" duration="1057000" />
+      <workItem from="1743513173476" duration="706000" />
+      <workItem from="1743514264552" duration="1005000" />
+      <workItem from="1743516470868" duration="524000" />
+      <workItem from="1743708625049" duration="10203000" />
     </task>
     <task id="LOCAL-00001" summary="Something more added">
       <option name="closed" value="true" />

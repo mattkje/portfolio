@@ -1,5 +1,5 @@
 <script setup lang="ts">
-import { onMounted, ref } from 'vue';
+import { onMounted, ref, getCurrentInstance } from 'vue';
 import { useRouter } from 'vue-router';
 import GameCard from '@/components/GameCard.vue';
 import { Game } from '@/assets/types';
@@ -8,7 +8,9 @@ const games = ref<Game[] | null>(null);
 
 const fetchGames = async () => {
   try {
-    const response = await fetch('http://localhost:8080/api/games');
+    const { appContext } = getCurrentInstance()!;
+    const apiAddress = appContext.config.globalProperties.$apiAddress;
+    const response = await fetch(`${apiAddress}/games`);
     if (!response.ok) {
       throw new Error('Network response was not ok');
     }

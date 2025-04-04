@@ -1,8 +1,8 @@
 <script setup lang="ts">
-import {computed, onMounted, ref} from 'vue';
-import {useRoute} from 'vue-router';
-import {marked} from 'marked';
-import {Game} from "@/assets/types";
+import { computed, getCurrentInstance, onMounted, ref } from 'vue';
+import { useRoute } from 'vue-router';
+import { marked } from 'marked';
+import { Game } from "@/assets/types";
 
 const route = useRoute();
 const game = ref<Game | null>(null);
@@ -10,7 +10,9 @@ const gameLinks = ref<{ [key: string]: string | null }>({});
 const activeIndex = ref(0);
 
 const fetchGame = async (id: number) => {
-  const response = await fetch(`http://localhost:8080/api/games/${id}`);
+  const { appContext } = getCurrentInstance()!;
+  const apiAddress = appContext.config.globalProperties.$apiAddress;
+  const response = await fetch(`${apiAddress}/games/${id}`);
   game.value = await response.json();
   await fetchGameLinks();
 };
@@ -18,11 +20,13 @@ const fetchGame = async (id: number) => {
 const fetchGameLinks = async () => {
   if (!game.value) return;
 
+  const { appContext } = getCurrentInstance()!;
+  const apiAddress = appContext.config.globalProperties.$apiAddress;
   const platforms = ['win', 'mac', 'lin'];
   for (const platform of platforms) {
-    const link = `http://localhost:8080/api/files/${game.value.name.trim().replace(/ /g, '')}-${platform}.zip`;
+    const link = `${apiAddress}/files/${game.value.name.trim().replace(/ /g, '')}-${platform}.zip`;
     try {
-      const response = await fetch(link, {method: 'HEAD'});
+      const response = await fetch(link, { method: 'HEAD' });
       if (response.status === 404) {
         gameLinks.value[platform] = null;
       } else {
@@ -147,12 +151,12 @@ onMounted(() => {
             :class="{ active: activeIndex === 0 }"
         ></iframe>
         <img  v-for="index in parseInt(game.screenshot)" :key="index"
-             :src="`http://localhost:8080/api/files/game${game.id}-${index}.png`" :alt="`Screenshot ${index + 1}`"
+             :src="`${getCurrentInstance().appContext.config.globalProperties.$apiAddress}/files/game${game.id}-${index}.png`" :alt="`Screenshot ${index + 1}`"
              :class="{ active: index === activeIndex}"/>
       </div>
       <div class="screenshot-gallery" v-else>
         <img  v-for="index in parseInt(game.screenshot)" :key="index"
-              :src="`http://localhost:8080/api/files/game${game.id}-${index}.png`" :alt="`Screenshot ${index + 1}`"
+              :src="`${getCurrentInstance().appContext.config.globalProperties.$apiAddress}/files/game${game.id}-${index}.png`" :alt="`Screenshot ${index + 1}`"
               :class="{ active: index === activeIndex + 1}"/>
       </div>
       <button @click="prevSlide" class="carousel-button prev">‹</button>
@@ -168,7 +172,7 @@ onMounted(() => {
     </div>
     <div class="game-info">
       <div class="left-part">
-        <img :src="`http://localhost:8080/api/files/game${game.iconId}.png`" alt="Game Icon"/>
+        <img :src="`${getCurrentInstance().appContext.config.globalProperties.$apiAddress}/files/game${game.iconId}.png`" alt="Game Icon"/>
         <div class="game-details">
           <h1>{{ game.name }}</h1>
           <p><strong>Release Date:</strong> {{ new Date(game.createdAt).toLocaleDateString() }}</p>

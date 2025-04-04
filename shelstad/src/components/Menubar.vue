@@ -31,10 +31,10 @@ onMounted(() => {
 <template>
   <nav class="menubar">
     <div class="menu-links">
-      <a href="/">Home</a>
-      <a href="/games">Games</a>
-      <a href="/tools">Tools</a>
-      <a href="/icons">Icons</a>
+      <router-link class="nav-link" to="/">Home</router-link>
+      <router-link class="nav-link" to="/games">Games</router-link>
+      <router-link class="nav-link" to="/tools">Tools</router-link>
+      <router-link class="nav-link" to="/icons">Icons</router-link>
     </div>
   </nav>
 </template>

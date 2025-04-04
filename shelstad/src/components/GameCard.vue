@@ -1,6 +1,5 @@
 <script setup lang="ts">
-import { createApp } from 'vue';
-import { version } from 'vue/compiler-sfc';
+import { ref, onMounted, getCurrentInstance } from 'vue';
 
 const props = defineProps({
   id: Number,
@@ -14,14 +13,22 @@ const props = defineProps({
 });
 
 const emit = defineEmits(['game-clicked']);
+const iconUrl = ref('');
 
-const getIcon = (iconId: number) => {
-  return `http://localhost:8080/api/files/game${iconId}.png`;
+const getIcon = async (iconId: number) => {
+  const { appContext } = getCurrentInstance()!;
+  const apiAddress = appContext.config.globalProperties.$apiAddress;
+  const response = await fetch(`${apiAddress}/files/game${iconId}.png`);
+  return response.url;
 };
 
 const handleClick = () => {
   emit('game-clicked', props.id);
 };
+
+onMounted(async () => {
+  iconUrl.value = await getIcon(props.iconId);
+});
 </script>
 
 <template>
@@ -29,7 +36,7 @@ const handleClick = () => {
     <div class="left-part">
       <div class="image-stack">
         <div class="background-square"></div>
-        <img :src="getIcon(iconId)" alt="title Icon" class="game-icon" />
+        <img :src="iconUrl" alt="title Icon" class="game-icon" />
       </div>
     </div>
     <div class="right-part">
@@ -45,7 +52,6 @@ const handleClick = () => {
     </div>
   </router-link>
 </template>
-
 <style scoped>
 .game-card {
   height: 150px;

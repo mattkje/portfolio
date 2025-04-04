@@ -1,5 +1,5 @@
 <script setup lang="ts">
-    import { ref, computed, onMounted } from 'vue';
+import {ref, computed, onMounted, getCurrentInstance} from 'vue';
     import IconButton from '@/components/IconButton.vue';
     import { Icon } from '@/assets/types';
 
@@ -8,7 +8,9 @@
     const showModal = ref(false);
 
     const fetchIcons = async () => {
-      const response = await fetch('http://localhost:8080/api/icons');
+      const { appContext } = getCurrentInstance()!;
+      const apiAddress = appContext.config.globalProperties.$apiAddress;
+      const response = await fetch(`${apiAddress}/icons`);
       icons.value = await response.json();
     };
 

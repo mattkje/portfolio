@@ -1,5 +1,5 @@
 <script setup lang="ts">
-import { computed, onMounted, ref } from 'vue';
+import {computed, getCurrentInstance, onMounted, ref} from 'vue';
 import { useRoute } from 'vue-router';
 import { marked } from 'marked';
 import { Tool } from '@/assets/types';
@@ -10,7 +10,9 @@ const toolLinks = ref<{ [key: string]: string | null }>({});
 const activeIndex = ref(0);
 
 const fetchTool = async (id: number) => {
-  const response = await fetch(`http://localhost:8080/api/tools/${id}`);
+  const { appContext } = getCurrentInstance()!;
+  const apiAddress = appContext.config.globalProperties.$apiAddress;
+  const response = await fetch(`${apiAddress}/tools/${id}`);
   tool.value = await response.json();
   await fetchToolLinks();
 };
@@ -18,9 +20,11 @@ const fetchTool = async (id: number) => {
 const fetchToolLinks = async () => {
   if (!tool.value) return;
 
+  const { appContext } = getCurrentInstance()!;
+  const apiAddress = appContext.config.globalProperties.$apiAddress;
   const platforms = ['win', 'mac', 'lin'];
   for (const platform of platforms) {
-    const link = `http://localhost:8080/api/files/${tool.value.name.trim().replace(/ /g, '')}-${platform}.zip`;
+    const link = `${apiAddress}/files/${tool.value.name.trim().replace(/ /g, '')}-${platform}.zip`;
     try {
       const response = await fetch(link, { method: 'HEAD' });
       if (response.status === 404) {
@@ -147,12 +151,12 @@ onMounted(() => {
             :class="{ active: activeIndex === 0 }"
         ></iframe>
         <img  v-for="index in parseInt(tool.screenshot)" :key="index"
-              :src="`http://localhost:8080/api/files/tool${tool.id}-${index}.png`" :alt="`Screenshot ${index + 1}`"
+              :src="`${getCurrentInstance().appContext.config.globalProperties.$apiAddress}/files/tool${tool.id}-${index}.png`" :alt="`Screenshot ${index + 1}`"
               :class="{ active: index === activeIndex}"/>
       </div>
       <div class="screenshot-gallery" v-else>
         <img  v-for="index in parseInt(tool.screenshot)" :key="index"
-              :src="`http://localhost:8080/api/files/tool${tool.id}-${index}.png`" :alt="`Screenshot ${index + 1}`"
+              :src="`${getCurrentInstance().appContext.config.globalProperties.$apiAddress}/files/tool${tool.id}-${index}.png`" :alt="`Screenshot ${index + 1}`"
               :class="{ active: index === activeIndex + 1}"/>
       </div>
       <button @click="prevSlide" class="carousel-button prev">‹</button>
@@ -170,7 +174,7 @@ onMounted(() => {
       <div class="left-part">
         <div class="image-stack">
           <div class="background-square"></div>
-          <img class="game-icon" :src="`http://localhost:8080/api/files/tool${tool.id}.png`" alt="Tool Icon" />
+          <img class="game-icon" :src="`${getCurrentInstance().appContext.config.globalProperties.$apiAddress}/files/tool${tool.id}.png`" alt="Tool Icon" />
         </div>
         <div class="tool-details">
           <h1>{{ tool.name }}</h1>
