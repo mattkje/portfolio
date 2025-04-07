@@ -44,7 +44,7 @@ const projects = [
     description: "A 4-player multiplayer minigame bonanza",
     icon: partyPoopersImage,
     link: "",
-    shelstadLink: "https://shelstad.store",
+    shelstadLink: "https://shelstad.store/game/1",
     context: 'School'
   },
   {
@@ -53,7 +53,7 @@ const projects = [
     description: "Simple story game made in Java",
     icon: pathsImage,
     link: "https://github.com/mattkje/Paths",
-    shelstadLink: "https://shelstad.store",
+    shelstadLink: "https://shelstad.store/game/2",
     context: 'School'
   },
   {
@@ -62,7 +62,7 @@ const projects = [
     description: "Simple car game made in Unity",
     icon: theCarGameImage,
     link: "",
-    shelstadLink: "https://shelstad.store",
+    shelstadLink: "https://shelstad.store/game/3",
     context: 'School'
   },
   {
@@ -71,7 +71,7 @@ const projects = [
     description: "Warehouse Simulator",
     icon: warehouseSimulatorImage,
     link: "https://github.com/mattkje/group01-bachelor-2025",
-    shelstadLink: "https://shelstad.store",
+    shelstadLink: "https://shelstad.store/tool/1",
     context: 'School'
   },
   {
@@ -80,7 +80,7 @@ const projects = [
     description: "Course store concept website",
     icon: learniverseConnectImage,
     link: "https://github.com/mattkje/course-project-team-5",
-    shelstadLink: "https://shelstad.store",
+    shelstadLink: "https://shelstad.store/tool/3",
     context: 'School'
   },
   {
@@ -89,25 +89,25 @@ const projects = [
     description: "Multiplayer team shooter made in unity",
     icon: baseBrwalersImage,
     link: "",
-    shelstadLink: "https://shelstad.store",
+    shelstadLink: "https://shelstad.store/game/4",
     context: 'Solo'
   },
   {
     date: "16/10/2023",
     title: "GitLocker",
-    description: "Simple git key manager made in jave",
+    description: "Simple git key manager made in java",
     icon: gitLockerImage,
     link: "",
-    shelstadLink: "https://shelstad.store",
+    shelstadLink: "https://shelstad.store/tool/2",
     context: 'Solo'
   },
   {
     date: "",
     title: "Fluentia",
-    description: "A speach training app for patients with aphasia",
+    description: "A speech training app for patients with aphasia",
     icon: fluentiaImage,
     link: "",
-    shelstadLink: "https://shelstad.store",
+    shelstadLink: "https://shelstad.store/tool/4",
     context: 'Group'
   },
   {
@@ -116,7 +116,7 @@ const projects = [
     description: "A personal fitness app",
     icon: fitnessImage,
     link: "https://github.com/AbsolutelyHaakon/FitnessApp-IDATA2503",
-    shelstadLink: "https://shelstad.store",
+    shelstadLink: "https://shelstad.store/tool/5",
     context: 'School'
   },
   {
@@ -125,7 +125,7 @@ const projects = [
     description: "A personal and commercial finance app",
     icon: econImage,
     link: "https://github.com/mattkje/idata1002_2023_05",
-    shelstadLink: "https://shelstad.store",
+    shelstadLink: "https://shelstad.store/tool/6",
     context: 'School'
   },
   // Add more projects as needed
