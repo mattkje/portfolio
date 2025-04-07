@@ -32,7 +32,7 @@ onMounted(fetchTools);
 
 <template>
   <div class="game-store">
-    <h1>Tools</h1>
+    <h1>Apps</h1>
     <div class="game-grid">
       <ToolCard
           v-for="tool in tools || []"

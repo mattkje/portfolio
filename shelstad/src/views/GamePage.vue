@@ -14,14 +14,12 @@ const fetchGame = async (id: number) => {
   const apiAddress = appContext.config.globalProperties.$apiAddress;
   const response = await fetch(`${apiAddress}/games/${id}`);
   game.value = await response.json();
-  await fetchGameLinks();
+  await fetchGameLinks(apiAddress);
 };
 
-const fetchGameLinks = async () => {
+const fetchGameLinks = async (apiAddress: string) => {
   if (!game.value) return;
 
-  const { appContext } = getCurrentInstance()!;
-  const apiAddress = appContext.config.globalProperties.$apiAddress;
   const platforms = ['win', 'mac', 'lin'];
   for (const platform of platforms) {
     const link = `${apiAddress}/files/${game.value.name.trim().replace(/ /g, '')}-${platform}.zip`;
@@ -125,7 +123,6 @@ const updateActiveIndex = () => {
 onMounted(() => {
   const gameId = Number(route.params.id);
   fetchGame(gameId).then(() => {
-
   });
 
   const gallery = document.querySelector('.screenshot-gallery');
@@ -369,31 +366,38 @@ onMounted(() => {
   margin: 2rem auto;
   font-size: 1rem;
 }
-
 .carousel-button {
   position: absolute;
-  top: 50%;
+  top: 68%;
   transform: translateY(-50%);
-  background-color: rgba(0, 0, 0, 0.5);
-  color: white;
+  background: none;
+  color: #3a3a3a;
   border: none;
   border-radius: 50%;
+  font-weight: 900;
+  font-size: 3rem;
+  text-align: center;
   width: 40px;
   height: 40px;
   cursor: pointer;
   z-index: 1;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-family: 'Arial Rounded MT Bold', sans-serif;
+  transition: color 0.3s, transform 0.3s;
 }
 
 .carousel-button.prev {
-  left: 10px;
+  left: 40%;
 }
 
 .carousel-button.next {
-  right: 10px;
+  right: 40%;
 }
 
 .carousel-button:hover {
-  background-color: rgba(0, 0, 0, 0.7);
+  color: hsl(0, 0%, 47%);
 }
 
 .vertical-separator {

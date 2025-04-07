@@ -185,7 +185,7 @@ onMounted(() => {
       <div class="download-box">
         <div class="download-buttons">
           <p v-if="tool.price === 0">Download for Free</p>
-          <p v-else-if="tool.price === -1">This game is unavailable</p>
+          <p v-else-if="tool.price === -1">This tool is unavailable</p>
           <p v-else-if="tool.price === -2">Coming Soon</p>
           <p v-else>{{ tool.price }}</p>
           <a v-if="toolLinks.win" class="download-button" :href="toolLinks.win" download>Download Windows</a>

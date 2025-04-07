@@ -32,8 +32,8 @@ onMounted(() => {
   <nav class="menubar">
     <div class="menu-links">
       <router-link class="nav-link" to="/">Home</router-link>
+      <router-link class="nav-link" to="/tools">Apps</router-link>
       <router-link class="nav-link" to="/games">Games</router-link>
-      <router-link class="nav-link" to="/tools">Tools</router-link>
       <router-link class="nav-link" to="/icons">Icons</router-link>
     </div>
   </nav>
