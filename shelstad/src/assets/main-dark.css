@@ -2,6 +2,7 @@
 
 :root {
   --border-color: #233244;
+    --border-color-2: #232f41;
   --text-color-1: #dae9fd;
   --text-color-2: #3b4e6c;
 }
@@ -25,7 +26,15 @@ html, body {
   justify-content: center;
   align-items: center;
   width: 100%;
+}
+
+.menu-links {
   background-color: #18212c;
+}
+
+.menu-links {
+  background-color: rgba(24, 33, 44, 0.7); /* Translucent white */
+  backdrop-filter: blur(10px); /* Blur effect */
 }
 
 .menu-links a {
@@ -42,6 +51,11 @@ html, body {
   flex-direction: column;
   justify-content: flex-start;
 }
+
+.nav-link img {
+  filter: invert();
+}
+
 
 
 

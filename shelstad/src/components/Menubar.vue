@@ -57,7 +57,7 @@ onMounted(() => {
 }
 
 .menu-links {
-  border: 1px solid #ececec;
+  border: 1px solid var(--border-color-2);
   border-radius: 2rem;
   padding: 0.5rem;
   list-style: none;
@@ -92,10 +92,10 @@ onMounted(() => {
 .active-link img {
   filter: invert(1);
 }
-
 .nav-link img {
   width: 15px;
   height: 15px;
   margin-right: 0.5rem;
 }
+
 </style>

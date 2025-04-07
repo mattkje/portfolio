@@ -5,13 +5,8 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="5cbcede9-ef8b-42d2-8e91-9d65f72643db" name="Changes" comment="Something more added">
-      <change afterPath="$PROJECT_DIR$/shelstad/src/assets/icons/apps.svg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/shelstad/src/assets/icons/games.svg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/shelstad/src/assets/icons/home.svg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/shelstad/src/assets/icons/icons.svg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/shelstad/src/assets/icons/info.svg" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/shelstad/src/App.vue" beforeDir="false" afterPath="$PROJECT_DIR$/shelstad/src/App.vue" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/shelstad/src/assets/main-dark.css" beforeDir="false" afterPath="$PROJECT_DIR$/shelstad/src/assets/main-dark.css" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/shelstad/src/assets/main.css" beforeDir="false" afterPath="$PROJECT_DIR$/shelstad/src/assets/main.css" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/shelstad/src/components/Menubar.vue" beforeDir="false" afterPath="$PROJECT_DIR$/shelstad/src/components/Menubar.vue" afterDir="false" />
     </list>
@@ -226,7 +221,7 @@
       <workItem from="1743514264552" duration="1005000" />
       <workItem from="1743516470868" duration="524000" />
       <workItem from="1743708625049" duration="21901000" />
-      <workItem from="1744018000207" duration="9358000" />
+      <workItem from="1744018000207" duration="10394000" />
     </task>
     <task id="LOCAL-00001" summary="Something more added">
       <option name="closed" value="true" />
