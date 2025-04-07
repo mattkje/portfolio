@@ -5,19 +5,15 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="5cbcede9-ef8b-42d2-8e91-9d65f72643db" name="Changes" comment="Something more added">
-      <change beforePath="$PROJECT_DIR$/.idea/dataSources.local.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/dataSources.local.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/dataSources/8b0f0414-3a60-4085-aa47-05f58772a2f5.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/dataSources/8b0f0414-3a60-4085-aa47-05f58772a2f5.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/shelstad/src/assets/icons/apps.svg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/shelstad/src/assets/icons/games.svg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/shelstad/src/assets/icons/home.svg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/shelstad/src/assets/icons/icons.svg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/shelstad/src/assets/icons/info.svg" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/backend/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/backend/pom.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/backend/src/main/resources/application.properties" beforeDir="false" afterPath="$PROJECT_DIR$/backend/src/main/resources/application.properties" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/shelstad/src/assets/graphics/background-home-2.svg" beforeDir="false" afterPath="$PROJECT_DIR$/shelstad/src/assets/graphics/background-home-2.svg" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/shelstad/src/App.vue" beforeDir="false" afterPath="$PROJECT_DIR$/shelstad/src/App.vue" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/shelstad/src/assets/main.css" beforeDir="false" afterPath="$PROJECT_DIR$/shelstad/src/assets/main.css" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/shelstad/src/components/Menubar.vue" beforeDir="false" afterPath="$PROJECT_DIR$/shelstad/src/components/Menubar.vue" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/shelstad/src/main.js" beforeDir="false" afterPath="$PROJECT_DIR$/shelstad/src/main.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/shelstad/src/views/GamePage.vue" beforeDir="false" afterPath="$PROJECT_DIR$/shelstad/src/views/GamePage.vue" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/shelstad/src/views/Home.vue" beforeDir="false" afterPath="$PROJECT_DIR$/shelstad/src/views/Home.vue" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/shelstad/src/views/ToolPage.vue" beforeDir="false" afterPath="$PROJECT_DIR$/shelstad/src/views/ToolPage.vue" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/shelstad/src/views/Tools.vue" beforeDir="false" afterPath="$PROJECT_DIR$/shelstad/src/views/Tools.vue" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -230,7 +226,7 @@
       <workItem from="1743514264552" duration="1005000" />
       <workItem from="1743516470868" duration="524000" />
       <workItem from="1743708625049" duration="21901000" />
-      <workItem from="1744018000207" duration="6969000" />
+      <workItem from="1744018000207" duration="9358000" />
     </task>
     <task id="LOCAL-00001" summary="Something more added">
       <option name="closed" value="true" />

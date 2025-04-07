@@ -31,10 +31,22 @@ onMounted(() => {
 <template>
   <nav class="menubar">
     <div class="menu-links">
-      <router-link class="nav-link" to="/">Home</router-link>
-      <router-link class="nav-link" to="/tools">Apps</router-link>
-      <router-link class="nav-link" to="/games">Games</router-link>
-      <router-link class="nav-link" to="/icons">Icons</router-link>
+      <router-link class="nav-link" active-class="active-link" to="/">
+        <img src="@/assets/icons/home.svg" alt="Logo" />
+        Home
+      </router-link>
+      <router-link class="nav-link" active-class="active-link" to="/tools">
+        <img src="@/assets/icons/apps.svg" alt="Logo" />
+        Apps
+      </router-link>
+      <router-link class="nav-link" active-class="active-link" to="/games">
+        <img src="@/assets/icons/games.svg" alt="Logo" />
+        Games
+      </router-link>
+      <router-link class="nav-link" active-class="active-link" to="/icons">
+        <img src="@/assets/icons/icons.svg" alt="Logo" />
+        Icons
+      </router-link>
     </div>
   </nav>
 </template>
@@ -45,28 +57,45 @@ onMounted(() => {
 }
 
 .menu-links {
+  border: 1px solid #ececec;
+  border-radius: 2rem;
+  padding: 0.5rem;
   list-style: none;
   display: flex;
-  padding: 1rem;
-  gap: 5rem;
 }
 
-.menu-links a {
+.nav-link {
+  padding: 0.8rem 2rem;
   font-weight: bold;
+  font-size: 0.8rem;
+  display: flex;
+  align-content: center;
+  justify-content: center;
+  border-radius: 2rem;
   text-decoration: none;
-  transition: transform 0.3s;
+  transition: transform 0.3s ease-in-out, background-color 0.3s ease-in-out, filter 0.3s ease-in-out;
 }
 
-.menu-links a:hover {
-  transform: scale(1.1);
+.nav-link:hover {
+  background-color: #efefef;
 }
 
-button {
-  padding: 0.7rem 1.2rem;
-  border-radius: 1.5rem;
-  background-color: hsla(210, 100%, 50%, 1);
-  color: #fff;
-  cursor: pointer;
-  border: none;
+.active-link {
+  background-color: #007bff;
+  color: white;
+}
+
+.active-link:hover {
+  background-color: #0056b3;
+}
+
+.active-link img {
+  filter: invert(1);
+}
+
+.nav-link img {
+  width: 15px;
+  height: 15px;
+  margin-right: 0.5rem;
 }
 </style>

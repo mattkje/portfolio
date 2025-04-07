@@ -15,7 +15,7 @@
   <style scoped>
   .menubar {
     position: fixed;
-    top: 0;
+    top: 1rem;
     left: 0;
     right: 0;
     z-index: 1000;
