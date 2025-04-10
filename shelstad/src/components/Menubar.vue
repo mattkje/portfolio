@@ -62,6 +62,7 @@ onMounted(() => {
   padding: 0.5rem;
   list-style: none;
   display: flex;
+  gap: 0.4rem;
 }
 
 .nav-link {

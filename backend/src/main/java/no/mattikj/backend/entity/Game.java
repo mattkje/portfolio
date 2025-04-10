@@ -33,6 +33,9 @@ public class Game {
     @Column(name = "link")
     private String link;
 
+    @Column(name = "video")
+    private String video;
+
     //created at (timestamp in sql)
     @Column(name = "created_at", nullable = false, updatable = false, insertable = false, columnDefinition = "TIMESTAMP DEFAULT CURRENT_TIMESTAMP")
     private Timestamp createdAt;
@@ -115,5 +118,13 @@ public class Game {
 
     public void setCreatedAt(Timestamp createdAt) {
         this.createdAt = createdAt;
+    }
+
+    public String getVideo() {
+        return video;
+    }
+
+    public void setVideo(String video) {
+        this.video = video;
     }
 }

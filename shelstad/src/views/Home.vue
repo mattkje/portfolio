@@ -11,6 +11,13 @@ const welcomeMessage = ref('Welcome to Shelstad Studios!');
       <img src="../assets/images/game/shelstad-color.svg" alt="Shelstad Studios Logo" class="main-logo" />
       <h1>{{ welcomeMessage }}</h1>
       <p>Independent Solo Developer</p>
+    </div>
+    <div class="update-box">
+      <h2>Welcome!</h2>
+      <p>Thank you for visiting my project website. Here, you can explore my projects and games.</p>
+      <p>Feel free to look around and discover my work! Most of the downloads are free</p>
+      <p>Best regards,</p>
+      <p>Matt</p>
       <h2>Socials</h2>
       <div class="social-icons">
         <a href="https://www.youtube.com/@Shelstad" target="_blank" rel="noopener noreferrer">
@@ -23,13 +30,6 @@ const welcomeMessage = ref('Welcome to Shelstad Studios!');
           <img src="../assets/icons/linkedin.png" alt="LinkedIn" />
         </a>
       </div>
-    </div>
-    <div class="update-box">
-      <h2>Welcome!</h2>
-      <p>Thank you for visiting my project website. Here, you can explore my projects and games.</p>
-      <p>Feel free to look around and discover my work!</p>
-      <p>Best regards,</p>
-      <p>Matt</p>
     </div>
   </div>
 </template>

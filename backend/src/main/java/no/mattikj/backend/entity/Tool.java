@@ -32,6 +32,9 @@ public class Tool {
     @Column(name = "link")
     private String link;
 
+    @Column(name = "video")
+    private String video;
+
     //created at (timestamp in sql)
     @Column(name = "created_at", nullable = false, updatable = false, insertable = false, columnDefinition = "TIMESTAMP DEFAULT CURRENT_TIMESTAMP")
     private Timestamp createdAt;
@@ -114,5 +117,13 @@ public class Tool {
 
     public void setIconId(Long iconId) {
         this.iconId = iconId;
+    }
+
+    public String getVideo() {
+        return video;
+    }
+
+    public void setVideo(String video) {
+        this.video = video;
     }
 }

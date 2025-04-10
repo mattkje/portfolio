@@ -53,12 +53,12 @@ onMounted(fetchTools);
 
 <style scoped>
 .game-store {
+  max-width: 1920px;
   text-align: left;
   padding: 5rem 2rem 0 2rem;
 }
 
 .game-grid {
-  max-width: 1920px;
   display: grid;
   grid-template-columns: repeat(auto-fill, minmax(400px, 1fr));
   gap: 1rem;

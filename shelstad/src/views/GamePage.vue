@@ -41,7 +41,7 @@ const nextSlide = () => {
   if (!game.value) return;
 
   const maxIndex = Number(game.value.screenshot);
-  if (game.value.link) {
+  if (game.value.video) {
     activeIndex.value = (activeIndex.value + 1) % (maxIndex + 1);
   } else {
     activeIndex.value = (activeIndex.value + 1) % (maxIndex);
@@ -52,7 +52,7 @@ const nextSlide = () => {
     if (gallery) {
       const childWidth = gallery.firstElementChild?.clientWidth || 0;
       const gap = parseInt(getComputedStyle(gallery).gap) || 0;
-      if (game.value?.link) {
+      if (game.value?.video) {
         if (activeIndex.value === 1) {
           gallery.scrollTo({ left: (childWidth + gap) * 2 * activeIndex.value, behavior: 'smooth' });
         }
@@ -79,7 +79,7 @@ const prevSlide = () => {
   if (!game.value) return;
 
   const maxIndex = Number(game.value.screenshot);
-  if (game.value.link) {
+  if (game.value.video) {
     activeIndex.value = (activeIndex.value - 1 + (maxIndex + 1)) % (maxIndex + 1);
   } else {
     activeIndex.value = (activeIndex.value - 1 + (maxIndex)) % (maxIndex);
@@ -90,7 +90,7 @@ const prevSlide = () => {
     if (gallery) {
       const childWidth = gallery.firstElementChild?.clientWidth || 0;
       const gap = parseInt(getComputedStyle(gallery).gap) || 0;
-      if (game.value?.link) {
+      if (game.value?.video) {
         if (activeIndex.value === 1) {
           gallery.scrollTo({ left: (childWidth + gap) * 2 * activeIndex.value, behavior: 'smooth' });
         }
@@ -120,6 +120,19 @@ const updateActiveIndex = () => {
   }
 };
 
+const checkPlatform = () => {
+  // what is the website name from game.link itch or github
+  if (game.value?.link) {
+    const url = new URL(game.value.link);
+    if (url.hostname.includes('itch')) {
+      return 'Itch.io';
+    } else if (url.hostname.includes('github')) {
+      return 'GitHub';
+    }
+  }
+
+};
+
 onMounted(() => {
   const gameId = Number(route.params.id);
   fetchGame(gameId).then(() => {
@@ -137,10 +150,10 @@ onMounted(() => {
 <template>
   <div v-if="game" class="game-page">
     <div class="screenshots">
-      <div class="screenshot-gallery" v-if="game.link">
+      <div class="screenshot-gallery" v-if="game.video">
         <iframe
-            v-if="game.link"
-            :src="game.link"
+            v-if="game.video"
+            :src="game.video"
             frameborder="0"
             allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
             allowfullscreen
@@ -156,15 +169,17 @@ onMounted(() => {
               :src="`${getCurrentInstance().appContext.config.globalProperties.$apiAddress}/files/game${game.id}-${index}.png`" :alt="`Screenshot ${index + 1}`"
               :class="{ active: index === activeIndex + 1}"/>
       </div>
-      <button @click="prevSlide" class="carousel-button prev">‹</button>
-      <button @click="nextSlide" class="carousel-button next">›</button>
-      <div class="dots" v-if="game.link">
+      <div class="dots" v-if="game.video">
+        <button @click="prevSlide" class="carousel-button prev">‹</button>
         <span v-for="index in parseInt(game.screenshot) + 1" :key="index"
               :class="{ active: index === activeIndex + 1 }"></span>
+        <button @click="nextSlide" class="carousel-button next">›</button>
       </div>
       <div class="dots" v-else>
+        <button @click="prevSlide" class="carousel-button prev">‹</button>
         <span v-for="index in parseInt(game.screenshot) " :key="index"
               :class="{ active: index === activeIndex +1 }"></span>
+        <button @click="nextSlide" class="carousel-button next">›</button>
       </div>
     </div>
     <div class="game-info">
@@ -185,7 +200,8 @@ onMounted(() => {
           <a v-if="gameLinks.win" class="download-button" :href="gameLinks.win" download>Download Windows</a>
           <a v-if="gameLinks.mac" class="download-button" :href="gameLinks.mac" download>Download Mac</a>
           <a v-if="gameLinks.lin" class="download-button" :href="gameLinks.lin" download>Download Linux</a>
-          <p v-if="!gameLinks.win && !gameLinks.mac && !gameLinks.lin">No downloads</p>
+          <a v-if="game.link" class="download-button" :href="game.link" target="_blank">See on {{ checkPlatform() }}</a>
+          <p v-if="!gameLinks.win && !gameLinks.mac && !gameLinks.lin && !game.link">No downloads</p>
         </div>
       </div>
     </div>
@@ -297,7 +313,8 @@ onMounted(() => {
 .screenshot-gallery img {
   min-width: 50%;
   aspect-ratio: 16 / 10;
-  object-fit: cover;
+  object-fit: contain;
+  background-color: #444444;
   border-radius: 3rem;
   scroll-snap-align: center;
   box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
@@ -367,8 +384,6 @@ onMounted(() => {
   font-size: 1rem;
 }
 .carousel-button {
-  position: absolute;
-  top: 68%;
   transform: translateY(-50%);
   background: none;
   color: #3a3a3a;

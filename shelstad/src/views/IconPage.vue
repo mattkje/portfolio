@@ -27,6 +27,7 @@ import {ref, computed, onMounted, getCurrentInstance} from 'vue';
 
     <template>
       <div class="main-store-container">
+        <h1>Icons</h1>
         <div class="search-bar">
           <input
             type="text"
@@ -54,7 +55,7 @@ import {ref, computed, onMounted, getCurrentInstance} from 'vue';
     .main-store-container {
       text-align: center;
       margin-top: 100px;
-      padding: 2rem;
+      width: auto;
     }
 
     .search-bar {

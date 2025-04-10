@@ -43,7 +43,7 @@ const nextSlide = () => {
   if (!tool.value) return;
 
   const maxIndex = Number(tool.value.screenshot);
-  if (tool.value.link) {
+  if (tool.value.video) {
     activeIndex.value = (activeIndex.value + 1) % (maxIndex + 1);
   } else {
     activeIndex.value = (activeIndex.value + 1) % (maxIndex);
@@ -54,7 +54,7 @@ const nextSlide = () => {
     if (gallery) {
       const childWidth = gallery.firstElementChild?.clientWidth || 0;
       const gap = parseInt(getComputedStyle(gallery).gap) || 0;
-      if (tool.value?.link) {
+      if (tool.value?.video) {
         if (activeIndex.value === 1) {
           gallery.scrollTo({ left: (childWidth + gap) * 2 * activeIndex.value, behavior: 'smooth' });
         }
@@ -81,7 +81,7 @@ const prevSlide = () => {
   if (!tool.value) return;
 
   const maxIndex = Number(tool.value.screenshot);
-  if (tool.value.link) {
+  if (tool.value.video) {
     activeIndex.value = (activeIndex.value - 1 + (maxIndex + 1)) % (maxIndex + 1);
   } else {
     activeIndex.value = (activeIndex.value - 1 + (maxIndex)) % (maxIndex);
@@ -92,7 +92,7 @@ const prevSlide = () => {
     if (gallery) {
       const childWidth = gallery.firstElementChild?.clientWidth || 0;
       const gap = parseInt(getComputedStyle(gallery).gap) || 0;
-      if (tool.value?.link) {
+      if (tool.value?.video) {
         if (activeIndex.value === 1) {
           gallery.scrollTo({ left: (childWidth + gap) * 2 * activeIndex.value, behavior: 'smooth' });
         }
@@ -122,6 +122,33 @@ const updateActiveIndex = () => {
   }
 };
 
+const checkPlatform = () => {
+  // what is the website name from game.link itch or github
+  if (tool.value?.link) {
+    const url = new URL(tool.value.link);
+    if (url.hostname.includes('appstore')) {
+      return 'App Store';
+    } else if (url.hostname.includes('playstore')) {
+      return 'Play Store';
+    } else if (url.hostname.includes('itch')) {
+      return 'Itch.io';
+    } else if (url.hostname.includes('steam')) {
+      return 'Steam';
+    } else if (url.hostname.includes('epicgames')) {
+      return 'Epic Games';
+    } else if (url.hostname.includes('origin')) {
+      return 'Origin';
+    } else if (url.hostname.includes('battle.net')) {
+      return 'Battle.net';
+    } else if (url.hostname.includes('uplay')) {
+      return 'Uplay';
+    } else if (url.hostname.includes('github')) {
+      return 'GitHub';
+    }
+  }
+
+};
+
 onMounted(() => {
   const gameId = Number(route.params.id);
   fetchTool(gameId).then(() => {
@@ -140,10 +167,10 @@ onMounted(() => {
 <template>
   <div v-if="tool" class="tool-page">
     <div class="screenshots">
-      <div class="screenshot-gallery" v-if="tool.link">
+      <div class="screenshot-gallery" v-if="tool.video">
         <iframe
-            v-if="tool.link"
-            :src="tool.link"
+            v-if="tool.video"
+            :src="tool.video"
             frameborder="0"
             allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
             allowfullscreen
@@ -159,15 +186,17 @@ onMounted(() => {
               :src="`${getCurrentInstance().appContext.config.globalProperties.$apiAddress}/files/tool${tool.id}-${index}.png`" :alt="`Screenshot ${index + 1}`"
               :class="{ active: index === activeIndex + 1}"/>
       </div>
-      <button @click="prevSlide" class="carousel-button prev">‹</button>
-      <button @click="nextSlide" class="carousel-button next">›</button>
-      <div class="dots" v-if="tool.link">
+      <div class="dots" v-if="tool.video">
+        <button @click="prevSlide" class="carousel-button prev">‹</button>
         <span v-for="index in parseInt(tool.screenshot) + 1" :key="index"
               :class="{ active: index === activeIndex + 1 }"></span>
+        <button @click="nextSlide" class="carousel-button next">›</button>
       </div>
       <div class="dots" v-else>
+        <button @click="prevSlide" class="carousel-button prev">‹</button>
         <span v-for="index in parseInt(tool.screenshot) " :key="index"
               :class="{ active: index === activeIndex +1 }"></span>
+        <button @click="nextSlide" class="carousel-button next">›</button>
       </div>
     </div>
     <div class="tool-info">
@@ -191,7 +220,8 @@ onMounted(() => {
           <a v-if="toolLinks.win" class="download-button" :href="toolLinks.win" download>Download Windows</a>
           <a v-if="toolLinks.mac" class="download-button" :href="toolLinks.mac" download>Download Mac</a>
           <a v-if="toolLinks.lin" class="download-button" :href="toolLinks.lin" download>Download Linux</a>
-          <p v-if="!toolLinks.win && !toolLinks.mac && !toolLinks.lin">No downloads</p>
+          <a v-if="tool.link" class="download-button" :href="tool.link" target="_blank">Download from {{ checkPlatform() }}</a>
+          <p v-if="!toolLinks.win && !toolLinks.mac && !toolLinks.lin && !tool.link">No downloads</p>
         </div>
       </div>
     </div>
@@ -301,7 +331,8 @@ onMounted(() => {
 .screenshot-gallery img {
   min-width: 50%;
   aspect-ratio: 16 / 10;
-  object-fit: cover;
+  object-fit: contain;
+  background-color: #444444;
   border-radius: 3rem;
   scroll-snap-align: center;
   box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
@@ -400,29 +431,35 @@ onMounted(() => {
 }
 
 .carousel-button {
-  position: absolute;
-  top: 50%;
   transform: translateY(-50%);
-  background-color: rgba(0, 0, 0, 0.5);
-  color: white;
+  background: none;
+  color: #3a3a3a;
   border: none;
   border-radius: 50%;
+  font-weight: 900;
+  font-size: 3rem;
+  text-align: center;
   width: 40px;
   height: 40px;
   cursor: pointer;
   z-index: 1;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-family: 'Arial Rounded MT Bold', sans-serif;
+  transition: color 0.3s, transform 0.3s;
 }
 
 .carousel-button.prev {
-  left: 10px;
+  left: 40%;
 }
 
 .carousel-button.next {
-  right: 10px;
+  right: 40%;
 }
 
 .carousel-button:hover {
-  background-color: rgba(0, 0, 0, 0.7);
+  color: hsl(0, 0%, 47%);
 }
 
 .vertical-separator {
