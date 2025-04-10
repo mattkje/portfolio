@@ -21,7 +21,7 @@
         "description": "# Paths\n\nPaths is a robust game engine designed specifically for crafting choice-based and interactive storytelling experiences.\n\n## Installation\n\nGetting started with Paths is a breeze. Simply follow these steps:\n\n1. Download the project ZIP file.\n2. Open it in an Integrated Development Environment (IDE) that supports Maven.\n3. Clean and compile the project.\n4. Use `JavaFX:Run` to start the application.\n\nNow you're ready to dive into the world of interactive storytelling!\n\n## 2023 Exam\nPaths was originally developed as part of a Computer Science exam assignment at NTNU in May 2023. It's a testament to the project's academic roots and commitment to excellence in interactive storytelling.",
         "icon_id": 2,
         "screenshot": "3",
-        "price": -1,
+        "price": 0,
         "link": "https://github.com/mattkje/Paths",
         "video": "",
         "created_at": "2023-06-01 00:00:00"
@@ -45,10 +45,22 @@
         "description": "# Base Brawlers\n\nBase Brawlers is a fast-paced, team-based multiplayer shooter inspired by games like Team Fortress 2. Built using the Unity engine, it combines vibrant visuals, unique character classes, and dynamic gameplay to deliver an engaging and competitive experience.\n\n## Gameplay\n\nPlayers are divided into two teams and compete in various game modes, such as capture the flag, king of the hill, and payload escort. Each player can choose from a roster of distinct character classes, each with their own abilities, weapons, and playstyles.\n\n## Features\n\n- **Class-Based Gameplay**: Choose from a variety of character classes, each with unique roles and abilities.\n- **Dynamic Maps**: Battle across diverse and interactive maps designed for strategic team play.\n- **Game Modes**: Enjoy multiple game modes that encourage teamwork and tactical thinking.\n- **Unity Engine**: Developed using Unity, ensuring smooth performance and visually appealing graphics.\n\n## Development Status\n\nBase Brawlers is currently in its early alpha stage. While the core gameplay mechanics are functional, additional features, maps, and classes are planned for future updates.\n\n## Version History\n\n- **Alpha 0.0.1**: Initial release with basic gameplay mechanics and one playable map.\n\n## Note\n\nAs this is an alpha release, players may encounter bugs or incomplete features. Feedback is highly appreciated to help improve the game in future updates.",
         "icon_id": 4,
         "screenshot": "3",
-        "price": -2,
+        "price": -1,
         "link": "https://shelstad.itch.io/base-brawlers",
         "video": "",
         "created_at": "2026-12-12 00:00:00"
+      },
+      {
+        "id": 5,
+        "name": "Nuke Game",
+        "version": "pre-MVP",
+        "description": " # NukeGame: A Guessing Game\n\n## Introduction\n\nNukeGame is a non-serious attempt at recreating BombParty from jklm.com.",
+        "icon_id": 5,
+        "screenshot": "1",
+        "price": -1,
+        "link": "https://github.com/mattkje/NukeGame",
+        "video": "",
+        "created_at": ""
       }
     ],
     "tools": [
@@ -67,11 +79,11 @@
       {
         "id": 2,
         "name": "GitLocker",
-        "version": "1.0.0",
-        "description": "A simple tool for managing git keys",
+        "version": "0.1.0-beta2",
+        "description": "# GitLocker: Securely Manage SSH Keys for Effortless Git Operations\n\nGitLocker is the ultimate solution for securely storing and efficiently managing SSH keys, simplifying your Git-related tasks. Say goodbye to the hassle of manual SSH key management and enjoy a seamless experience with GitLocker.\n\n## Features\n\n- **Secure Storage**: Protect your SSH keys with advanced encryption for maximum security.\n- **Effortless Management**: Add, edit, or remove SSH keys easily with an intuitive interface.\n- **Git Integration**: Integrate seamlessly with Git for smooth and secure version control operations.\n- **Cross-Platform Compatibility**: Works on Windows, macOS, and Linux for a consistent experience across all platforms.\n- **User-Friendly Design**: Simplifies SSH key management, making it accessible even for beginners.\n\n## Installation\n\nGitLocker is built in Java and may require Java to be installed on your machine.\n",
         "icon_id": 2,
         "screenshot": "2",
-        "price": -1,
+        "price": 0,
         "link": "",
         "video": "",
         "created_at": "2023-10-17 00:00:00"
@@ -83,44 +95,172 @@
         "description": "# G5 Fitness\n\nG5 Fitness is a fitness application designed to help users create, complete, and log workouts. Users can create their own exercises or choose from a range of pre-made exercises. The app allows users to build personalized workout routines and schedules. During workouts, users can log their progress, monitor breaks, and track weight goals. Over time, users can review their progress and stay motivated on their fitness journey.\n\n## Features\n\n- Create and log custom exercises and workouts.\n- Choose from a library of pre-made exercises.\n- Build personalized workout routines and schedules.\n- Track progress with detailed logs and statistics.\n- Monitor weight goals and fitness achievements.\n\n## Services Used\n\n- Firebase for cloud storage.\n\n## Project Highlights\n\n- User-friendly interface with multiple pages.\n- Authentication with email and password.\n- Remote database for storing user data.\n- CRUD operations for managing workouts and exercises.\n- Input forms with validation and error messages.",
         "icon_id": 3,
         "screenshot": "3",
-        "price": -1,
+        "price": 0,
         "link": "https://github.com/AbsolutelyHaakon/FitnessApp-IDATA2503",
         "video": "",
         "created_at": "2024-12-12 00:00:00"
+      },
+      {
+        "id": 4,
+        "name": "Econ&Me",
+        "version": "1.0.0",
+        "description": "# idata1002_2023_05\n## Project status\nThis project will no longer be developed after April 2023.\n\n## Name\nEcon & Me\n\n## Description\nEcon & Me is a finance and budgetting application for small businesses with a low employee count. The application allows for good seperation of personal and commercial finance\nby seperating it into two applications that can be switched between effortlessly.\nAdd your own incomes and expenses and see them visualised. Plan activities and set deadlines for payments or budget your expenses and compare with your previous months.\nThis application even helps you progress your startup by offer you financial advice and teaching you valuable lessons regarding financial responsibilities.\n\nAll data and settings are stored locally on your computer.\n\n## Getting started and Installation\n\nTo run this project when pulling the project from gitlab you will require an IDE that supports Maven.\nRun the project by cleaning, compiling and then using JavaFX:Run to start the application\n\nAll databases are pre-loaded as .txt files with custom information for testing purposes. If you like you can remove the files and the dataset will be empty upon launch.\n\nAlternatively download the application as an .exe file here: (Insert link when available)\n\n## Support\nAll bugs can be reported to haakokar@ntnu.no\n\n## Roadmap\nFuture editions will include:\n- Better improvement suggestions\n- Custom labels for budgetting\n- Removal of unwanted labels\n- Better overview for Financial Health\n\n## Contributing\nThis project does not want to receive any contributions as it will not be developed further after the deadline.\n\n## Authors and acknowledgment\nDevelopers:\n- Håkon Svensen Karlsen\n- Matti Kjellstadli\n- Adrian Faustino Johansen\n- Mathias Westergaard Johansen\n- Di Xie\n\n## License\nOpen license to be used of personal and commercial purposes\n",
+        "icon_id": 4,
+        "screenshot": "3",
+        "price": 0,
+        "link": "https://github.com/mattkje/idata1002_2023_05",
+        "video": "",
+        "created_at": ""
       }
     ],
     "icons": [
-      { "id": 1, "fileName": "pause", "createdAt": "CURRENT_TIMESTAMP" },
-      { "id": 2, "fileName": "play", "createdAt": "CURRENT_TIMESTAMP" },
-      { "id": 3, "fileName": "add", "createdAt": "CURRENT_TIMESTAMP" },
-      { "id": 4, "fileName": "bell", "createdAt": "CURRENT_TIMESTAMP" },
-      { "id": 5, "fileName": "bell-update", "createdAt": "CURRENT_TIMESTAMP" },
-      { "id": 6, "fileName": "busy", "createdAt": "CURRENT_TIMESTAMP" },
-      { "id": 7, "fileName": "check", "createdAt": "CURRENT_TIMESTAMP" },
-      { "id": 8, "fileName": "edit", "createdAt": "CURRENT_TIMESTAMP" },
-      { "id": 9, "fileName": "error", "createdAt": "CURRENT_TIMESTAMP" },
-      { "id": 10, "fileName": "fast-forward-1x", "createdAt": "CURRENT_TIMESTAMP" },
-      { "id": 11, "fileName": "fast-forward-2x", "createdAt": "CURRENT_TIMESTAMP" },
-      { "id": 12, "fileName": "fast-forward-5x", "createdAt": "CURRENT_TIMESTAMP" },
-      { "id": 13, "fileName": "fast-forward-10x", "createdAt": "CURRENT_TIMESTAMP" },
-      { "id": 14, "fileName": "clock", "createdAt": "CURRENT_TIMESTAMP" },
-      { "id": 15, "fileName": "factory", "createdAt": "CURRENT_TIMESTAMP" },
-      { "id": 16, "fileName": "ready", "createdAt": "CURRENT_TIMESTAMP" },
-      { "id": 17, "fileName": "settings", "createdAt": "CURRENT_TIMESTAMP" },
-      { "id": 18, "fileName": "simulation", "createdAt": "CURRENT_TIMESTAMP" },
-      { "id": 19, "fileName": "skip", "createdAt": "CURRENT_TIMESTAMP" },
-      { "id": 20, "fileName": "staff", "createdAt": "CURRENT_TIMESTAMP" },
-      { "id": 21, "fileName": "copy", "createdAt": "CURRENT_TIMESTAMP" },
-      { "id": 22, "fileName": "trash", "createdAt": "CURRENT_TIMESTAMP" },
-      { "id": 23, "fileName": "warning-red", "createdAt": "CURRENT_TIMESTAMP" },
-      { "id": 24, "fileName": "warning-yellow", "createdAt": "CURRENT_TIMESTAMP" },
-      { "id": 25, "fileName": "profile", "createdAt": "CURRENT_TIMESTAMP" },
-      { "id": 26, "fileName": "panels", "createdAt": "CURRENT_TIMESTAMP" },
-      { "id": 27, "fileName": "tasks", "createdAt": "CURRENT_TIMESTAMP" },
-      { "id": 28, "fileName": "info", "createdAt": "CURRENT_TIMESTAMP" }
+      {
+        "id": 1,
+        "fileName": "pause",
+        "createdAt": "CURRENT_TIMESTAMP"
+      },
+      {
+        "id": 2,
+        "fileName": "play",
+        "createdAt": "CURRENT_TIMESTAMP"
+      },
+      {
+        "id": 3,
+        "fileName": "add",
+        "createdAt": "CURRENT_TIMESTAMP"
+      },
+      {
+        "id": 4,
+        "fileName": "bell",
+        "createdAt": "CURRENT_TIMESTAMP"
+      },
+      {
+        "id": 5,
+        "fileName": "bell-update",
+        "createdAt": "CURRENT_TIMESTAMP"
+      },
+      {
+        "id": 6,
+        "fileName": "busy",
+        "createdAt": "CURRENT_TIMESTAMP"
+      },
+      {
+        "id": 7,
+        "fileName": "check",
+        "createdAt": "CURRENT_TIMESTAMP"
+      },
+      {
+        "id": 8,
+        "fileName": "edit",
+        "createdAt": "CURRENT_TIMESTAMP"
+      },
+      {
+        "id": 9,
+        "fileName": "error",
+        "createdAt": "CURRENT_TIMESTAMP"
+      },
+      {
+        "id": 10,
+        "fileName": "fast-forward-1x",
+        "createdAt": "CURRENT_TIMESTAMP"
+      },
+      {
+        "id": 11,
+        "fileName": "fast-forward-2x",
+        "createdAt": "CURRENT_TIMESTAMP"
+      },
+      {
+        "id": 12,
+        "fileName": "fast-forward-5x",
+        "createdAt": "CURRENT_TIMESTAMP"
+      },
+      {
+        "id": 13,
+        "fileName": "fast-forward-10x",
+        "createdAt": "CURRENT_TIMESTAMP"
+      },
+      {
+        "id": 14,
+        "fileName": "clock",
+        "createdAt": "CURRENT_TIMESTAMP"
+      },
+      {
+        "id": 15,
+        "fileName": "factory",
+        "createdAt": "CURRENT_TIMESTAMP"
+      },
+      {
+        "id": 16,
+        "fileName": "ready",
+        "createdAt": "CURRENT_TIMESTAMP"
+      },
+      {
+        "id": 17,
+        "fileName": "settings",
+        "createdAt": "CURRENT_TIMESTAMP"
+      },
+      {
+        "id": 18,
+        "fileName": "simulation",
+        "createdAt": "CURRENT_TIMESTAMP"
+      },
+      {
+        "id": 19,
+        "fileName": "skip",
+        "createdAt": "CURRENT_TIMESTAMP"
+      },
+      {
+        "id": 20,
+        "fileName": "staff",
+        "createdAt": "CURRENT_TIMESTAMP"
+      },
+      {
+        "id": 21,
+        "fileName": "copy",
+        "createdAt": "CURRENT_TIMESTAMP"
+      },
+      {
+        "id": 22,
+        "fileName": "trash",
+        "createdAt": "CURRENT_TIMESTAMP"
+      },
+      {
+        "id": 23,
+        "fileName": "warning-red",
+        "createdAt": "CURRENT_TIMESTAMP"
+      },
+      {
+        "id": 24,
+        "fileName": "warning-yellow",
+        "createdAt": "CURRENT_TIMESTAMP"
+      },
+      {
+        "id": 25,
+        "fileName": "profile",
+        "createdAt": "CURRENT_TIMESTAMP"
+      },
+      {
+        "id": 26,
+        "fileName": "panels",
+        "createdAt": "CURRENT_TIMESTAMP"
+      },
+      {
+        "id": 27,
+        "fileName": "tasks",
+        "createdAt": "CURRENT_TIMESTAMP"
+      },
+      {
+        "id": 28,
+        "fileName": "info",
+        "createdAt": "CURRENT_TIMESTAMP"
+      }
     ],
     "files": [
-      { "id": 1, "fileName": "pause.svg", "createdAt": "CURRENT_TIMESTAMP" }
+      {
+        "id": 1,
+        "fileName": "pause.svg",
+        "createdAt": "CURRENT_TIMESTAMP"
+      }
     ]
   }
 }

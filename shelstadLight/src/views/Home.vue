@@ -54,6 +54,19 @@ html, body {
 
 .main-logo {
   height: 200px;
+  animation: rotate 15s ease-in-out infinite;
+}
+
+@keyframes rotate {
+  0% {
+    transform: rotate(-10deg);
+  }
+  50% {
+    transform: rotate(10deg);
+  }
+  100% {
+    transform: rotate(-10deg);
+  }
 }
 
 .update-box {

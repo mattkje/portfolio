@@ -136,8 +136,19 @@ const checkPlatform = () => {
 
 };
 
+const getLocalCurrency = () => {
+  const locale = 'en-US';
+  const currency = 'USD';
+  const conversionRate = 1;
+
+  if (game.value.price != null) {
+    const convertedPrice = game.value.price * conversionRate;
+    return new Intl.NumberFormat(locale, { style: 'currency', currency }).format(convertedPrice);
+  }
+  return 'N/A';
+};
+
 onMounted(() => {
-  const gameId = Number(route.params.id);
   fetchGameLinks()
 
   const gallery = document.querySelector('.screenshot-gallery');
@@ -191,7 +202,7 @@ onMounted(() => {
           <h1>{{ game.name }}</h1>
           <p><strong>Release Date:</strong> {{ new Date(game.created_at).toLocaleDateString() }}</p>
           <p><strong>Current Version:</strong> {{ game.version }}</p>
-          <p v-if="contentLength"><strong>File Size:</strong>
+          <p v-if="contentLength && Number(contentLength) === 0"><strong>File Size:</strong>
             {{ contentLength && !isNaN(Number(contentLength))
                 ? (Number(contentLength) / 1024 / 1024).toFixed(2) + ' MB'
                 : 'Not Available' }}
@@ -203,7 +214,7 @@ onMounted(() => {
           <p v-if="game.price === 0">Download for Free</p>
           <p v-else-if="game.price === -1">This game is unavailable</p>
           <p v-else-if="game.price === -2">Coming Soon</p>
-          <p v-else>{{ game.price }}</p>
+          <p v-else>{{ getLocalCurrency() }}</p>
           <a v-if="gameLinks.win" class="download-button" :href="gameLinks.win" download>Download Windows</a>
           <a v-if="gameLinks.mac" class="download-button" :href="gameLinks.mac" download>Download Mac</a>
           <a v-if="gameLinks.lin" class="download-button" :href="gameLinks.lin" download>Download Linux</a>

@@ -48,6 +48,11 @@ onMounted(() => {
         Icons
       </router-link>
     </div>
+    <div class="about">
+    <router-link class="about-nav-link" active-class="active-link" to="/about">
+      ?
+    </router-link>
+    </div>
   </nav>
 </template>
 
@@ -63,6 +68,28 @@ onMounted(() => {
   list-style: none;
   display: flex;
   gap: 0.4rem;
+}
+
+.about {
+  border: 1px solid var(--border-color-2);
+  border-radius: 2rem;
+  padding: 0.5rem;
+  position: absolute;
+  width: 3rem;
+  right: 1rem;
+  top: 0;
+}
+
+.about-nav-link {
+  padding: 0.8rem;
+  font-weight: bold;
+  font-size: 0.8rem;
+  display: flex;
+  align-content: center;
+  justify-content: center;
+  border-radius: 2rem;
+  text-decoration: none;
+  transition: transform 0.3s ease-in-out, background-color 0.3s ease-in-out, filter 0.3s ease-in-out;
 }
 
 .nav-link {
@@ -98,5 +125,6 @@ onMounted(() => {
   height: 15px;
   margin-right: 0.5rem;
 }
+
 
 </style>

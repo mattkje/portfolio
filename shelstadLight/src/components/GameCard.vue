@@ -11,6 +11,18 @@ const props = defineProps({
   price: Number,
   createdAt: String,
 });
+
+const getLocalCurrency = () => {
+  const locale = 'en-US';
+  const currency = 'USD';
+  const conversionRate = 1;
+
+  if (props.price != null) {
+    const convertedPrice = props.price * conversionRate;
+    return new Intl.NumberFormat(locale, { style: 'currency', currency }).format(convertedPrice);
+  }
+  return 'N/A';
+};
 </script>
 
 <template>
@@ -30,7 +42,7 @@ const props = defineProps({
       <p class="pre-release-price" v-if="price === -2">Coming Soon</p>
       <p class="unavailable-price" v-else-if="price === -1">Unavailable</p>
       <p class="price" v-else-if="price === 0">Free</p>
-      <p class="price" v-else>{{ price }}</p>
+      <p class="price" v-else>{{ getLocalCurrency() }}</p>
     </div>
   </router-link>
 </template>

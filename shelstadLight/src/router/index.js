@@ -5,6 +5,7 @@ import Tools from '../views/Tools.vue';
 import GamePage from "@/views/GamePage.vue";
 import ToolPage from "@/views/ToolPage.vue";
 import IconPage from "@/views/IconPage.vue";
+import AboutPage from "@/views/AboutPage.vue";
 
 const routes = [
     {
@@ -38,6 +39,11 @@ const routes = [
         path: '/icons',
         name: 'icons',
         component: IconPage
+    },
+    {
+        path: '/about',
+        name: 'about',
+        component: AboutPage
     }
 ];
 

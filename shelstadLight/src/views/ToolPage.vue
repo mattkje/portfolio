@@ -9,6 +9,7 @@ const route = useRoute();
 const tool = ref<Tool | null>(jsonData.tables.tools.find((tool) => tool.id === Number(route.params.id)) || null);
 const toolLinks = ref<{ [key: string]: string | null }>({});
 const activeIndex = ref(0);
+let contentLength = ref<string | null>(null);
 
 
 const fetchToolLinks = async () => {
@@ -22,6 +23,7 @@ const fetchToolLinks = async () => {
       const response = await fetch(filePath, { method: 'GET' });
 
       const contentType = response.headers.get('Content-Type');
+      contentLength = response.headers.get('Content-Length');
       const isZip = contentType?.includes('application/zip');
 
       if (response.ok && isZip) {
@@ -145,6 +147,18 @@ const checkPlatform = () => {
 
 };
 
+const getLocalCurrency = () => {
+  const locale = 'en-US';
+  const currency = 'USD';
+  const conversionRate = 1;
+
+  if (tool.value.price != null) {
+    const convertedPrice = tool.value.price * conversionRate;
+    return new Intl.NumberFormat(locale, { style: 'currency', currency }).format(convertedPrice);
+  }
+  return 'N/A';
+};
+
 onMounted(() => {
   fetchToolLinks()
   const gallery = document.querySelector('.screenshot-gallery');
@@ -201,6 +215,11 @@ onMounted(() => {
           <h1>{{ tool.name }}</h1>
           <p><strong>Release Date:</strong> {{ new Date(tool.created_at).toLocaleDateString() }}</p>
           <p><strong>Current Version:</strong> {{ tool.version }}</p>
+          <p v-if="contentLength"><strong>File Size:</strong>
+            {{ contentLength && !isNaN(Number(contentLength))
+                ? (Number(contentLength) / 1024 / 1024).toFixed(2) + ' MB'
+                : 'Not Available' }}
+          </p>
         </div>
       </div>
       <div class="download-box">
@@ -208,7 +227,7 @@ onMounted(() => {
           <p v-if="tool.price === 0">Download for Free</p>
           <p v-else-if="tool.price === -1">This tool is unavailable</p>
           <p v-else-if="tool.price === -2">Coming Soon</p>
-          <p v-else>{{ tool.price }}</p>
+          <p v-else>{{ getLocalCurrency() }}</p>
           <a v-if="toolLinks.win" class="download-button" :href="toolLinks.win" download>Download Windows</a>
           <a v-if="toolLinks.mac" class="download-button" :href="toolLinks.mac" download>Download Mac</a>
           <a v-if="toolLinks.lin" class="download-button" :href="toolLinks.lin" download>Download Linux</a>
@@ -466,5 +485,11 @@ onMounted(() => {
   border-top: 3px solid #e3e3e3;
   width: 70%;
   border-radius: 5px;
+}
+
+.tool-details p {
+  margin: 0.5rem 0;
+  font-size: 1rem;
+  color: #8c8c8c;
 }
 </style>
