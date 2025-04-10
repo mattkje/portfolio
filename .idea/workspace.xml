@@ -5,21 +5,11 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="5cbcede9-ef8b-42d2-8e91-9d65f72643db" name="Changes" comment="Something more added">
-      <change afterPath="$PROJECT_DIR$/shelstadLight/public/data/game5.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/shelstadLight/public/data/tool4-1.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/shelstadLight/public/data/tool4-2.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/shelstadLight/public/data/tool4-3.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/shelstadLight/public/data/tool4.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/shelstadLight/src/views/AboutPage.vue" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/shelstadLight/src/assets/data.json" beforeDir="false" afterPath="$PROJECT_DIR$/shelstadLight/src/assets/data.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/shelstadLight/src/assets/main-dark.css" beforeDir="false" afterPath="$PROJECT_DIR$/shelstadLight/src/assets/main-dark.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/shelstadLight/src/assets/main.css" beforeDir="false" afterPath="$PROJECT_DIR$/shelstadLight/src/assets/main.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/shelstadLight/src/components/GameCard.vue" beforeDir="false" afterPath="$PROJECT_DIR$/shelstadLight/src/components/GameCard.vue" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/shelstadLight/src/components/Menubar.vue" beforeDir="false" afterPath="$PROJECT_DIR$/shelstadLight/src/components/Menubar.vue" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/shelstadLight/src/router/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/shelstadLight/src/router/index.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/shelstadLight/node_modules/.package-lock.json" beforeDir="false" afterPath="$PROJECT_DIR$/shelstadLight/node_modules/.package-lock.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/shelstadLight/package-lock.json" beforeDir="false" afterPath="$PROJECT_DIR$/shelstadLight/package-lock.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/shelstadLight/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/shelstadLight/package.json" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/shelstadLight/src/views/GamePage.vue" beforeDir="false" afterPath="$PROJECT_DIR$/shelstadLight/src/views/GamePage.vue" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/shelstadLight/src/views/Home.vue" beforeDir="false" afterPath="$PROJECT_DIR$/shelstadLight/src/views/Home.vue" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/shelstadLight/src/views/ToolPage.vue" beforeDir="false" afterPath="$PROJECT_DIR$/shelstadLight/src/views/ToolPage.vue" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -249,7 +239,7 @@
       <workItem from="1743708625049" duration="21901000" />
       <workItem from="1744018000207" duration="14022000" />
       <workItem from="1744120151074" duration="15054000" />
-      <workItem from="1744269962968" duration="13596000" />
+      <workItem from="1744269962968" duration="17467000" />
     </task>
     <task id="LOCAL-00001" summary="Something more added">
       <option name="closed" value="true" />

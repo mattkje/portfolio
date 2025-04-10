@@ -3,6 +3,8 @@ import { computed, getCurrentInstance, onMounted, ref } from 'vue';
 import { useRoute } from 'vue-router';
 import { marked } from 'marked';
 import { Game } from "@/assets/types";
+import { Carousel, Slide, Pagination, Navigation } from 'vue3-carousel'
+import 'vue3-carousel/carousel.css'
 import jsonData from '@/assets/data.json';
 
 
@@ -10,10 +12,15 @@ import jsonData from '@/assets/data.json';
 const route = useRoute();
 const game = ref<Game | null>(jsonData.tables.games.find((game) => game.id === Number(route.params.id)) || null);
 const gameLinks = ref<{ [key: string]: string | null }>({});
-const activeIndex = ref(0);
 let contentLength = ref<string | null>(null);
 
 
+const carouselConfig = {
+  itemsToShow: 2.5,
+  wrapAround: true,
+  autoplay: 5000,
+  transition: 300
+};
 const fetchGameLinks = async () => {
   if (!game.value) return;
 
@@ -36,90 +43,6 @@ const fetchGameLinks = async () => {
     } catch (error) {
       console.error(`Error checking file: ${filePath}`, error);
     }
-  }
-};
-
-
-const nextSlide = () => {
-  if (!game.value) return;
-
-  const maxIndex = Number(game.value.screenshot);
-  if (game.value.video) {
-    activeIndex.value = (activeIndex.value + 1) % (maxIndex + 1);
-  } else {
-    activeIndex.value = (activeIndex.value + 1) % (maxIndex);
-  }
-
-  setTimeout(() => {
-    const gallery = document.querySelector('.screenshot-gallery');
-    if (gallery) {
-      const childWidth = gallery.firstElementChild?.clientWidth || 0;
-      const gap = parseInt(getComputedStyle(gallery).gap) || 0;
-      if (game.value?.video) {
-        if (activeIndex.value === 1) {
-          gallery.scrollTo({ left: (childWidth + gap) * 2 * activeIndex.value, behavior: 'smooth' });
-        }
-        else {
-          gallery.scrollTo({ left: (childWidth + gap) * (activeIndex.value + 1), behavior: 'smooth' });
-        }
-      }
-      else {
-        if (activeIndex.value === 1) {
-          gallery.scrollTo({ left: (childWidth + gap) * 2 * activeIndex.value, behavior: 'smooth' });
-        }
-        else {
-          gallery.scrollTo({ left: (childWidth + gap) * (activeIndex.value + 1), behavior: 'smooth' });
-        }
-      }
-
-
-    }
-  }, 0);
-  console.log('Next:', activeIndex.value);
-};
-
-const prevSlide = () => {
-  if (!game.value) return;
-
-  const maxIndex = Number(game.value.screenshot);
-  if (game.value.video) {
-    activeIndex.value = (activeIndex.value - 1 + (maxIndex + 1)) % (maxIndex + 1);
-  } else {
-    activeIndex.value = (activeIndex.value - 1 + (maxIndex)) % (maxIndex);
-  }
-
-  setTimeout(() => {
-    const gallery = document.querySelector('.screenshot-gallery');
-    if (gallery) {
-      const childWidth = gallery.firstElementChild?.clientWidth || 0;
-      const gap = parseInt(getComputedStyle(gallery).gap) || 0;
-      if (game.value?.video) {
-        if (activeIndex.value === 1) {
-          gallery.scrollTo({ left: (childWidth + gap) * 2 * activeIndex.value, behavior: 'smooth' });
-        }
-        else {
-          gallery.scrollTo({ left: (childWidth + gap) * (activeIndex.value + 1), behavior: 'smooth' });
-        }
-      }
-      else {
-        if (activeIndex.value === 1) {
-          gallery.scrollTo({ left: (childWidth + gap) * 2 * activeIndex.value, behavior: 'smooth' });
-        }
-        else {
-          gallery.scrollTo({ left: (childWidth + gap) * (activeIndex.value + 1), behavior: 'smooth' });
-        }
-      }
-    }
-  }, 0);
-};
-
-const updateActiveIndex = () => {
-  const gallery = document.querySelector('.screenshot-gallery');
-  if (gallery) {
-    const scrollLeft = gallery.scrollLeft;
-    const childWidth = gallery.clientWidth || 0;
-    const gap = parseInt(getComputedStyle(gallery).gap) || 0;
-    activeIndex.value = Math.round(scrollLeft / (childWidth + gap));
   }
 };
 
@@ -150,51 +73,33 @@ const getLocalCurrency = () => {
 
 onMounted(() => {
   fetchGameLinks()
-
-  const gallery = document.querySelector('.screenshot-gallery');
-  if (gallery) {
-    gallery.scrollLeft = 0; // Set initial scroll position to 0
-    gallery.addEventListener('scroll', updateActiveIndex);
-    updateActiveIndex(); // Ensure the active index is correctly set initially
-  }
 });
 </script>
 
 <template>
   <div v-if="game" class="game-page">
-    <div class="screenshots">
-      <div class="screenshot-gallery" v-if="game.video">
-        <iframe
-            v-if="game.video"
-            :src="game.video"
-            frameborder="0"
-            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
-            allowfullscreen
-            class="youtube-miniplayer"
-            :class="{ active: activeIndex === 0 }"
-        ></iframe>
-        <img  v-for="index in parseInt(game.screenshot)" :key="index"
-             :src="`/data/game${game.id}-${index}.png`" :alt="`Screenshot ${index + 1}`"
-             :class="{ active: index === activeIndex}"/>
-      </div>
-      <div class="screenshot-gallery" v-else>
-        <img  v-for="index in parseInt(game.screenshot)" :key="index"
-              :src="`/data/game${game.id}-${index}.png`" :alt="`Screenshot ${index + 1}`"
-              :class="{ active: index === activeIndex + 1}"/>
-      </div>
-      <div class="dots" v-if="game.video">
-        <button @click="prevSlide" class="carousel-button prev">‹</button>
-        <span v-for="index in parseInt(game.screenshot) + 1" :key="index"
-              :class="{ active: index === activeIndex + 1 }"></span>
-        <button @click="nextSlide" class="carousel-button next">›</button>
-      </div>
-      <div class="dots" v-else>
-        <button @click="prevSlide" class="carousel-button prev">‹</button>
-        <span v-for="index in parseInt(game.screenshot) " :key="index"
-              :class="{ active: index === activeIndex +1 }"></span>
-        <button @click="nextSlide" class="carousel-button next">›</button>
-      </div>
-    </div>
+    <Carousel v-bind="carouselConfig">
+      <Slide v-if="game.video">
+      <iframe
+          v-if="game?.video"
+          :src="game.video"
+          frameborder="0"
+          allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+          allowfullscreen
+      ></iframe>
+      </Slide>
+      <Slide v-for="slide in parseInt(game?.screenshot || '0')" :key="slide ">
+        <img
+          :src="`/data/game${game?.id}-${slide}.png`"
+          :alt="`Screenshot ${slide}`"
+        />
+      </Slide>
+
+      <template #addons>
+        <Navigation />
+        <Pagination />
+      </template>
+    </Carousel>
     <div class="game-info">
       <div class="left-part">
         <img :src="`/data/game${game.icon_id}.png`" alt="Game Icon"/>
@@ -247,8 +152,8 @@ onMounted(() => {
 }
 
 .game-page img {
-  width: 200px;
-  height: auto;
+  aspect-ratio: 16 / 10;
+  margin: 1rem;
   border-radius: 3rem;
 }
 
@@ -304,87 +209,15 @@ onMounted(() => {
   transform: scale(1.1);
 }
 
-.screenshot-gallery {
-  display: flex;
-  gap: 1rem;
+iframe {
   width: 100%;
-  padding: 0 0 2.5rem 0;
-  overflow-x: scroll;
-  user-select: none;
-  scroll-snap-type: x mandatory;
-  position: relative;
-  scrollbar-width: none; /* Firefox */
-  -ms-overflow-style: none; /* Internet Explorer 10+ */
-}
-
-.screenshot-gallery::-webkit-scrollbar {
-  display: none; /* Safari and Chrome */
-}
-
-.screenshot-gallery::before,
-.screenshot-gallery::after {
-  content: '';
-  min-width: 50%;
-  flex-shrink: 0;
-}
-
-.screenshot-gallery img {
-  min-width: 50%;
-  aspect-ratio: 16 / 10;
-  object-fit: contain;
-  background-color: #444444;
-  border-radius: 3rem;
-  scroll-snap-align: center;
-  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
-  transition: transform 0.3s, opacity 0.3s;
-}
-
-.screenshot-gallery img.active{
-  transform: scale(1);
-}
-
-.screenshot-gallery img:not(.active) {
-  transform: scale(0.8);
-  opacity: 0.3;
-}
-
-.screenshot-gallery iframe {
-  min-width: 50%;
+  height: 100%;
   aspect-ratio: 16 / 10;
   object-fit: cover;
   border-radius: 3rem;
   scroll-snap-align: center;
   box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
   transition: transform 0.3s;
-}
-
-.screenshot-gallery iframe.active{
-  transform: scale(1);
-  transition: transform 0.3s, opacity 0.3s;
-}
-
-.screenshot-gallery iframe:not(.active) {
-  transform: scale(0.8);
-  opacity: 0.3;
-}
-
-.dots {
-  display: flex;
-  justify-content: center;
-  margin-top: 1rem;
-}
-
-.dots span {
-  width: 10px;
-  height: 10px;
-  background-color: #ccc;
-  border-radius: 50%;
-  margin: 0 5px;
-  transition: background-color 0.3s;
-}
-
-.dots span.active {
-  background-color: #000;
 }
 
 .download-box {
@@ -401,44 +234,6 @@ onMounted(() => {
   margin: 2rem auto;
   font-size: 1rem;
 }
-.carousel-button {
-  transform: translateY(-50%);
-  background: none;
-  color: #3a3a3a;
-  border: none;
-  border-radius: 50%;
-  font-weight: 900;
-  font-size: 3rem;
-  text-align: center;
-  width: 40px;
-  height: 40px;
-  cursor: pointer;
-  z-index: 1;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  font-family: 'Arial Rounded MT Bold', sans-serif;
-  transition: color 0.3s, transform 0.3s;
-}
-
-.carousel-button.prev {
-  left: 40%;
-}
-
-.carousel-button.next {
-  right: 40%;
-}
-
-.carousel-button:hover {
-  color: hsl(0, 0%, 47%);
-}
-
-.vertical-separator {
-  border: none;
-  border-left: 3px solid #e3e3e3;
-  margin: 3rem 0;
-  border-radius: 5px;
-}
 
 .horizontal-separator {
   border: none;
@@ -451,5 +246,66 @@ onMounted(() => {
   margin: 0.5rem 0;
   font-size: 1rem;
   color: #8c8c8c;
+}
+
+.carousel {
+  --vc-pgn-background-color: rgba(255, 255, 255, 0.7);
+  --vc-pgn-active-color: rgba(255, 255, 255, 1);
+  --vc-nav-background: rgba(255, 255, 255, 0.7);
+  --vc-nav-border-radius: 100%;
+}
+
+img {
+  border-radius: 8px;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.carousel__viewport {
+  perspective: 2000px;
+}
+
+.carousel__track {
+  transform-style: preserve-3d;
+  transition: transform 0.5s ease-in-out, left 0.5s ease-in-out;
+}
+
+.carousel__slide--sliding {
+  transition:
+      opacity 0.5s ease-in-out,
+      transform 0.5s ease-in-out;
+}
+
+.carousel.is-dragging .carousel__slide {
+  transition:
+      opacity 0.5s ease-in-out,
+      transform 0.5s ease-in-out;
+}
+
+
+.carousel__slide {
+  opacity: 0.3;
+  transform: translateX(10px) rotateY(-12deg) scale(0.8);
+}
+
+.carousel__slide--prev {
+  opacity: 0.3;
+  transform: rotateY(-10deg) scale(0.8);
+}
+
+.carousel__slide--active {
+  opacity: 1;
+  transform: rotateY(0) scale(1);
+}
+
+.carousel__slide--next {
+  opacity: 0.3;
+  transform: rotateY(10deg) scale(0.8);
+}
+
+.carousel__slide--next ~ .carousel__slide {
+  opacity: 0.3;
+  transform: translateX(-10px) rotateY(12deg) scale(0.8);
 }
 </style>
