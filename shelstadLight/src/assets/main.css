@@ -1,0 +1,54 @@
+@import './base.css';
+@import url('https://fonts.googleapis.com/css2?family=Enriqueta:wght@400;500;600;700&family=Epilogue:ital,wght@0,100..900;1,100..900&family=Istok+Web:ital,wght@0,400;0,700;1,400;1,700&family=Jost:ital,wght@0,100..900;1,100..900&family=Lato:ital,wght@0,100;0,300;0,400;0,700;0,900;1,100;1,300;1,400;1,700;1,900&family=Montserrat:ital,wght@0,100..900;1,100..900&family=Nunito:ital,wght@0,200..1000;1,200..1000&family=Sen:wght@400..800&display=swap');
+:root {
+  --border-color: #ccc;
+    --border-color-2: #ddd;
+    --text-color-1: #333;
+  --text-color-2: #666;
+}
+
+#app {
+  font-family: Avenir, "Sen", sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  text-align: center;
+  color: #2c3e50;
+}
+
+html, body {
+  height: 100%;
+  margin: 0;
+}
+
+.menubar {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  color: #18212c;
+}
+
+.menu-links {
+  background-color: rgba(255, 255, 255, 0.7); /* Translucent white */
+  backdrop-filter: blur(10px); /* Blur effect */
+}
+
+.menu-links a {
+  color: #2c3e50;
+  text-decoration: none;
+}
+
+.home {
+  background: url("@/assets/graphics/background-home-2.svg") no-repeat 0 calc(100% + 10rem);
+  background-size: calc(100% + 1rem);
+  text-align: center;
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+}
+
+
+
+
+

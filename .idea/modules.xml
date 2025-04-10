@@ -5,6 +5,7 @@
       <module fileurl="file://$PROJECT_DIR$/backend/backend.iml" filepath="$PROJECT_DIR$/backend/backend.iml" />
       <module fileurl="file://$PROJECT_DIR$/portfolio/portfolio.iml" filepath="$PROJECT_DIR$/portfolio/portfolio.iml" />
       <module fileurl="file://$PROJECT_DIR$/shelstad/shelstad.iml" filepath="$PROJECT_DIR$/shelstad/shelstad.iml" />
+      <module fileurl="file://$PROJECT_DIR$/shelstadLight/shelstadLight.iml" filepath="$PROJECT_DIR$/shelstadLight/shelstadLight.iml" />
     </modules>
   </component>
 </project>

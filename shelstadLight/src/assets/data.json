@@ -1,0 +1,126 @@
+{
+  "database": "shelstad",
+  "tables": {
+    "games": [
+      {
+        "id": 1,
+        "name": "Party Poopers",
+        "version": "1.1.0",
+        "description": "**Party Poopers**\n\nParty Poopers features a collection of engaging minigames designed for multiplayer fun. Each minigame is easy to grasp yet competitive, offering a blend of skill and light-hearted enjoyment for friends. The controls are intuitive, primarily utilizing the WASD keys and a jump function, allowing the gameplay to shine.\n\nThis game served as the final project for the Game Development course at NTNU in autumn 2024.\n\n**Version History:**\n\n- 1.0.0: Initial game release as the exam delivery candidate.\n- 1.0.1: Minor map adjustments in the \"Crane Climbers\" and \"Pole Thrusters\" mini games.\n- 1.1.0: Removed Unity Relay services. Players must now use IP to play together.\n\nPlease note, the project is no longer under active development, and future bug fixes are not planned. Despite this, Party Poopers should still be playable.\n\n**Install instructions**\n\n1. Download the appropriate build for your platform.\n2. Choose the version that matches your operating system.\n3. Run the executable file.\n4. After downloading, locate the file and double-click it to start the game (No installation required).\n\n**Note about potential warnings:**\n\nSome systems might flag the file as a potential risk. This is a common false positive and can be safely ignored.",
+        "icon_id": 1,
+        "screenshot": "7",
+        "price": 0,
+        "link": "https://shelstad.itch.io/party-poopers",
+        "video": "https://www.youtube.com/embed/FPyl7lJiniE",
+        "created_at": "2024-12-13 00:00:00"
+      },
+      {
+        "id": 2,
+        "name": "Paths",
+        "version": "1.0.0",
+        "description": "# Paths\n\nPaths is a robust game engine designed specifically for crafting choice-based and interactive storytelling experiences.\n\n## Installation\n\nGetting started with Paths is a breeze. Simply follow these steps:\n\n1. Download the project ZIP file.\n2. Open it in an Integrated Development Environment (IDE) that supports Maven.\n3. Clean and compile the project.\n4. Use `JavaFX:Run` to start the application.\n\nNow you're ready to dive into the world of interactive storytelling!\n\n## 2023 Exam\nPaths was originally developed as part of a Computer Science exam assignment at NTNU in May 2023. It's a testament to the project's academic roots and commitment to excellence in interactive storytelling.",
+        "icon_id": 2,
+        "screenshot": "3",
+        "price": -1,
+        "link": "https://github.com/mattkje/Paths",
+        "video": "",
+        "created_at": "2023-06-01 00:00:00"
+      },
+      {
+        "id": 3,
+        "name": "The Car Game",
+        "version": "1.0.0",
+        "description": "## This is a simple car sandbox where you can drive around crashing into objects with no other goal than to relax.\n\n### Controls:\n\n- Move: WASD\n- Increase FOV: F\n- Decrease FOV: G\n- Toggle Perspective (1st/3rd person): V\n- Toggle Orthographic/Perspective: 1\n\n### Features:\n\n- Eight different obstacles:\n  - Glass\n  - Light post\n  - Green Car\n  - Red Truck\n  - Concrete Barrier\n  - Football\n  - Benches\n  - Wheels\n- Physics-focused car (rolling wheels and momentum)\n- Fancy lighting",
+        "icon_id": 3,
+        "screenshot": "1",
+        "price": 0,
+        "link": "https://shelstad.itch.io/the-car-game",
+        "video": "",
+        "created_at": "2024-10-09 00:00:00"
+      },
+      {
+        "id": 4,
+        "name": "Base Brawlers",
+        "version": "Alpha 0.0.1",
+        "description": "# Base Brawlers\n\nBase Brawlers is a fast-paced, team-based multiplayer shooter inspired by games like Team Fortress 2. Built using the Unity engine, it combines vibrant visuals, unique character classes, and dynamic gameplay to deliver an engaging and competitive experience.\n\n## Gameplay\n\nPlayers are divided into two teams and compete in various game modes, such as capture the flag, king of the hill, and payload escort. Each player can choose from a roster of distinct character classes, each with their own abilities, weapons, and playstyles.\n\n## Features\n\n- **Class-Based Gameplay**: Choose from a variety of character classes, each with unique roles and abilities.\n- **Dynamic Maps**: Battle across diverse and interactive maps designed for strategic team play.\n- **Game Modes**: Enjoy multiple game modes that encourage teamwork and tactical thinking.\n- **Unity Engine**: Developed using Unity, ensuring smooth performance and visually appealing graphics.\n\n## Development Status\n\nBase Brawlers is currently in its early alpha stage. While the core gameplay mechanics are functional, additional features, maps, and classes are planned for future updates.\n\n## Version History\n\n- **Alpha 0.0.1**: Initial release with basic gameplay mechanics and one playable map.\n\n## Note\n\nAs this is an alpha release, players may encounter bugs or incomplete features. Feedback is highly appreciated to help improve the game in future updates.",
+        "icon_id": 4,
+        "screenshot": "3",
+        "price": -2,
+        "link": "https://shelstad.itch.io/base-brawlers",
+        "video": "",
+        "created_at": "2026-12-12 00:00:00"
+      }
+    ],
+    "tools": [
+      {
+        "id": 1,
+        "name": "WWS",
+        "version": "1.0.0",
+        "description": "A warehouse workflow simulator",
+        "icon_id": 1,
+        "screenshot": "2",
+        "price": -2,
+        "link": "https://github.com/mattkje/group01-bachelor-2025",
+        "video": "",
+        "created_at": "2025-05-20 00:00:00"
+      },
+      {
+        "id": 2,
+        "name": "GitLocker",
+        "version": "1.0.0",
+        "description": "A simple tool for managing git keys",
+        "icon_id": 2,
+        "screenshot": "2",
+        "price": -1,
+        "link": "",
+        "video": "",
+        "created_at": "2023-10-17 00:00:00"
+      },
+      {
+        "id": 3,
+        "name": "G5 Fitness",
+        "version": "1.0.0",
+        "description": "# G5 Fitness\n\nG5 Fitness is a fitness application designed to help users create, complete, and log workouts. Users can create their own exercises or choose from a range of pre-made exercises. The app allows users to build personalized workout routines and schedules. During workouts, users can log their progress, monitor breaks, and track weight goals. Over time, users can review their progress and stay motivated on their fitness journey.\n\n## Features\n\n- Create and log custom exercises and workouts.\n- Choose from a library of pre-made exercises.\n- Build personalized workout routines and schedules.\n- Track progress with detailed logs and statistics.\n- Monitor weight goals and fitness achievements.\n\n## Services Used\n\n- Firebase for cloud storage.\n\n## Project Highlights\n\n- User-friendly interface with multiple pages.\n- Authentication with email and password.\n- Remote database for storing user data.\n- CRUD operations for managing workouts and exercises.\n- Input forms with validation and error messages.",
+        "icon_id": 3,
+        "screenshot": "3",
+        "price": -1,
+        "link": "https://github.com/AbsolutelyHaakon/FitnessApp-IDATA2503",
+        "video": "",
+        "created_at": "2024-12-12 00:00:00"
+      }
+    ],
+    "icons": [
+      { "id": 1, "fileName": "pause", "createdAt": "CURRENT_TIMESTAMP" },
+      { "id": 2, "fileName": "play", "createdAt": "CURRENT_TIMESTAMP" },
+      { "id": 3, "fileName": "add", "createdAt": "CURRENT_TIMESTAMP" },
+      { "id": 4, "fileName": "bell", "createdAt": "CURRENT_TIMESTAMP" },
+      { "id": 5, "fileName": "bell-update", "createdAt": "CURRENT_TIMESTAMP" },
+      { "id": 6, "fileName": "busy", "createdAt": "CURRENT_TIMESTAMP" },
+      { "id": 7, "fileName": "check", "createdAt": "CURRENT_TIMESTAMP" },
+      { "id": 8, "fileName": "edit", "createdAt": "CURRENT_TIMESTAMP" },
+      { "id": 9, "fileName": "error", "createdAt": "CURRENT_TIMESTAMP" },
+      { "id": 10, "fileName": "fast-forward-1x", "createdAt": "CURRENT_TIMESTAMP" },
+      { "id": 11, "fileName": "fast-forward-2x", "createdAt": "CURRENT_TIMESTAMP" },
+      { "id": 12, "fileName": "fast-forward-5x", "createdAt": "CURRENT_TIMESTAMP" },
+      { "id": 13, "fileName": "fast-forward-10x", "createdAt": "CURRENT_TIMESTAMP" },
+      { "id": 14, "fileName": "clock", "createdAt": "CURRENT_TIMESTAMP" },
+      { "id": 15, "fileName": "factory", "createdAt": "CURRENT_TIMESTAMP" },
+      { "id": 16, "fileName": "ready", "createdAt": "CURRENT_TIMESTAMP" },
+      { "id": 17, "fileName": "settings", "createdAt": "CURRENT_TIMESTAMP" },
+      { "id": 18, "fileName": "simulation", "createdAt": "CURRENT_TIMESTAMP" },
+      { "id": 19, "fileName": "skip", "createdAt": "CURRENT_TIMESTAMP" },
+      { "id": 20, "fileName": "staff", "createdAt": "CURRENT_TIMESTAMP" },
+      { "id": 21, "fileName": "copy", "createdAt": "CURRENT_TIMESTAMP" },
+      { "id": 22, "fileName": "trash", "createdAt": "CURRENT_TIMESTAMP" },
+      { "id": 23, "fileName": "warning-red", "createdAt": "CURRENT_TIMESTAMP" },
+      { "id": 24, "fileName": "warning-yellow", "createdAt": "CURRENT_TIMESTAMP" },
+      { "id": 25, "fileName": "profile", "createdAt": "CURRENT_TIMESTAMP" },
+      { "id": 26, "fileName": "panels", "createdAt": "CURRENT_TIMESTAMP" },
+      { "id": 27, "fileName": "tasks", "createdAt": "CURRENT_TIMESTAMP" },
+      { "id": 28, "fileName": "info", "createdAt": "CURRENT_TIMESTAMP" }
+    ],
+    "files": [
+      { "id": 1, "fileName": "pause.svg", "createdAt": "CURRENT_TIMESTAMP" }
+    ]
+  }
+}
