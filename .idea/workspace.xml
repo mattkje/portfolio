@@ -5,78 +5,8 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="5cbcede9-ef8b-42d2-8e91-9d65f72643db" name="Changes" comment="Something more added">
-      <change afterPath="$PROJECT_DIR$/shelstad/src/assets/data.json" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/shelstadLight/ shims-vite.d.ts" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/shelstadLight/portfolio.iml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/shelstadLight/public/data/PartyPoopers-mac.zip" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/shelstadLight/public/data/PartyPoopers-win.zip" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/shelstadLight/public/data/TheCarGame-mac.zip" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/shelstadLight/public/data/game1-1.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/shelstadLight/public/data/game1-2.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/shelstadLight/public/data/game1-3.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/shelstadLight/public/data/game1-4.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/shelstadLight/public/data/game1-5.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/shelstadLight/public/data/game1-6.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/shelstadLight/public/data/game1-7.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/shelstadLight/public/data/game1.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/shelstadLight/public/data/game2-1.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/shelstadLight/public/data/game2-2.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/shelstadLight/public/data/game2-3.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/shelstadLight/public/data/game2.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/shelstadLight/public/data/game3-1.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/shelstadLight/public/data/game3.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/shelstadLight/public/data/game3.svg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/shelstadLight/public/data/game4-1.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/shelstadLight/public/data/game4-2.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/shelstadLight/public/data/game4-3.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/shelstadLight/public/data/game4.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/shelstadLight/public/data/icons/add.svg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/shelstadLight/public/data/icons/bell-update.svg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/shelstadLight/public/data/icons/bell.svg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/shelstadLight/public/data/icons/busy.svg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/shelstadLight/public/data/icons/check.svg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/shelstadLight/public/data/icons/clock.svg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/shelstadLight/public/data/icons/copy.svg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/shelstadLight/public/data/icons/edit.svg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/shelstadLight/public/data/icons/error.svg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/shelstadLight/public/data/icons/factory.svg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/shelstadLight/public/data/icons/fast-forward-10x.svg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/shelstadLight/public/data/icons/fast-forward-1x.svg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/shelstadLight/public/data/icons/fast-forward-2x.svg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/shelstadLight/public/data/icons/fast-forward-5x.svg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/shelstadLight/public/data/icons/info.svg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/shelstadLight/public/data/icons/panels.svg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/shelstadLight/public/data/icons/pause.svg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/shelstadLight/public/data/icons/play.svg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/shelstadLight/public/data/icons/profile.svg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/shelstadLight/public/data/icons/ready.svg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/shelstadLight/public/data/icons/settings.svg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/shelstadLight/public/data/icons/simulation.svg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/shelstadLight/public/data/icons/skip.svg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/shelstadLight/public/data/icons/staff.svg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/shelstadLight/public/data/icons/tasks.svg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/shelstadLight/public/data/icons/trash.svg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/shelstadLight/public/data/icons/warning-red.svg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/shelstadLight/public/data/icons/warning-yellow.svg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/shelstadLight/public/data/tool1-1.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/shelstadLight/public/data/tool1-2.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/shelstadLight/public/data/tool1.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/shelstadLight/public/data/tool2-1.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/shelstadLight/public/data/tool2-2.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/shelstadLight/public/data/tool2.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/shelstadLight/public/data/tool2.svg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/shelstadLight/public/data/tool3-1.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/shelstadLight/public/data/tool3-1.svg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/shelstadLight/public/data/tool3-2.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/shelstadLight/public/data/tool3-3.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/shelstadLight/public/data/tool3.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/shelstadLight/public/data/ts.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/shelstadLight/shelstad.iml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/shelstadLight/shelstadLight.iml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/dataSources.local.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/dataSources.local.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/modules.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/modules.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/shelstad/src/main.js" beforeDir="false" afterPath="$PROJECT_DIR$/shelstad/src/main.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/shelstadLight/src/components/IconButton.vue" beforeDir="false" afterPath="$PROJECT_DIR$/shelstadLight/src/components/IconButton.vue" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -305,7 +235,7 @@
       <workItem from="1743708625049" duration="21901000" />
       <workItem from="1744018000207" duration="14022000" />
       <workItem from="1744120151074" duration="15054000" />
-      <workItem from="1744269962968" duration="8378000" />
+      <workItem from="1744269962968" duration="8675000" />
     </task>
     <task id="LOCAL-00001" summary="Something more added">
       <option name="closed" value="true" />

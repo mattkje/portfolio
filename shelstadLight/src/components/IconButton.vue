@@ -37,12 +37,12 @@ const props = defineProps<{ icon: Icon }>();
 </script>
 
 <template>
-  <div class="icon-button" >
+  <a class="icon-button" :href="`/data/icons/${icon.fileName}.svg`" :download="icon.fileName">
     <img :src="`/data/icons/${icon.fileName}.svg`" :alt="props.icon.fileName.split('.')[0]" class="icon-image"/>
     <div class="bottom-box">
       <p>{{ props.icon.fileName }}</p>
     </div>
-  </div>
+  </a>
 </template>
 
 <style scoped>
